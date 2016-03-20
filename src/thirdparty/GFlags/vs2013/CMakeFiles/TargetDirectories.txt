@@ -1,0 +1,6 @@
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/ALL_BUILD.dir
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/gflags-static.dir
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/ZERO_CHECK.dir
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/gflags_nothreads.dir
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/gflags.dir
+E:/GitCode/Caffe_Test/src/thirdparty/GFlags/vs2013/CMakeFiles/gflags_nothreads-static.dir
