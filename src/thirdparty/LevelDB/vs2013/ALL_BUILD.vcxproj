@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{21EFAAA9-7E24-4FF8-90C3-5F40D7C39B68}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master -BE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindBoost.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master -BE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindBoost.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master -BE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindBoost.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master -BE:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/leveldb-master/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindBoost.cmake;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\leveldb-master\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/ZERO_CHECK.vcxproj">
+      <Project>F5B62050-A1D9-4A59-A6B2-CADB42A2733D</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb.vcxproj">
+      <Project>67B54516-6494-4E83-9FDA-B4D295818FB7</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_arena_test.vcxproj">
+      <Project>AF7893C5-0386-45F5-BBD0-A6AF9BE5C315</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_bloom_test.vcxproj">
+      <Project>500F3F29-75AB-4D9E-B7E2-36433BC51F6C</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_cache_test.vcxproj">
+      <Project>6D92BBFA-0FF6-444A-A031-A43652FA8BB3</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_coding_test.vcxproj">
+      <Project>AB9BE37C-1285-4C0F-A2B5-EEF549A83E8A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_corruption_test.vcxproj">
+      <Project>2AE2EEE7-ADAB-4DA3-95D2-9591540C5F7F</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_crc32_test.vcxproj">
+      <Project>704D381E-8E2C-4629-A041-1A681D95B29E</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_db_bench_test.vcxproj">
+      <Project>3D89C2C9-4B01-4C99-B285-40D117C8EDDE</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_db_test.vcxproj">
+      <Project>84AF9F14-774E-45D0-A6CE-4BCF46291016</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_dbformat_test.vcxproj">
+      <Project>148BCADA-9AC3-466C-966D-432557F26002</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_env_test.vcxproj">
+      <Project>E1C2F81B-5146-4B03-B3AA-766635577F39</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_filename_test.vcxproj">
+      <Project>D556F986-0FE0-43DD-BA85-E1F7B742C5EF</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_filter_block_test.vcxproj">
+      <Project>3C7ED1CB-8723-46C4-B94C-9C9250A7FFCA</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_hash_test.vcxproj">
+      <Project>5E36557A-ABE4-4711-9B59-92FEAF642EAC</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_log_test.vcxproj">
+      <Project>80E15E8A-09E9-4D11-B865-93C8976DB14C</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_skiplist_test.vcxproj">
+      <Project>6D5710AF-EDB7-483C-A7B9-00D62CC46CE0</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_table_test.vcxproj">
+      <Project>5DE5DAC2-D658-4F12-8BAB-93B40D9351BF</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_test_rt.vcxproj">
+      <Project>1428F93D-028B-4F4B-A12A-F149EE4DB242</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_version_edit_test.vcxproj">
+      <Project>2BDF1607-92A3-4CC1-A087-A1425BBF0307</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_version_set_test.vcxproj">
+      <Project>047BC3B0-4A36-49B8-9E8B-E42FDC7652C4</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldb_write_batch_test.vcxproj">
+      <Project>9D308A23-68A5-4832-95E4-D4EB5334B1B0</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/LevelDB/vs2013/leveldbutil.vcxproj">
+      <Project>DB6FAB32-3630-48F7-93C2-D71568AFAEBB</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
