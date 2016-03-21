@@ -1,0 +1,5 @@
+# CMake generation dependency list for this directory.
+E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5dump/CMakeLists.txt
+E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5dump/CMakeTests.cmake
+E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5dump/CMakeTestsPBITS.cmake
+E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5dump/CMakeTestsXML.cmake

@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\testhdf5.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tarray.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tattr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tchecksum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tconfig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tcoords.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tfile.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tgenprop.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\th5o.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\th5s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\theap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\titerate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tmeta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tmisc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\trefer.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\trefstr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tselect.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tskiplist.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tsohm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\ttime.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\ttst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tunicode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tvltypes.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\tvlstr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{740C9EE8-8551-4C73-8FED-6B5B7EDD0C93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

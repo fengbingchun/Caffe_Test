@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5DO.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5DS.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5IM.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5LTanalyze.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5LTparse.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5PT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5TB.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5DOpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5DSpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5IMpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5LTparse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5LTpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5PTpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\H5TBpublic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\hdf5_hl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\hl\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{740C9EE8-8551-4C73-8FED-6B5B7EDD0C93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C7D3FDC3-5DFE-4B48-A1D4-67113F9D039C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

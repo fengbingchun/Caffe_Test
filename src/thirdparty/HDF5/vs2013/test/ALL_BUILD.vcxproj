@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{D1C9553E-EEF1-4C8D-94C7-7B5554235C6E}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1 -BE:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/test/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\H5srcdir_str.h.in;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeTests.cmake;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/test/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1 -BE:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/test/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\H5srcdir_str.h.in;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeTests.cmake;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\test\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/accum.vcxproj">
+      <Project>C11094CF-FCDC-4D77-A6F2-A233709FDC77</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/app_ref.vcxproj">
+      <Project>A0025D6E-0431-4CC3-BF5C-9E3D7EE9FF55</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/big.vcxproj">
+      <Project>F443BD24-2D01-400A-9123-D01F95312B20</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/bittests.vcxproj">
+      <Project>81783FEE-EF66-41A1-A75F-B0F754A97285</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/btree2.vcxproj">
+      <Project>4F1F3433-7DE5-4B4B-9241-2A01DAB071AA</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/cache.vcxproj">
+      <Project>1FF43103-0F04-4182-83D2-729ED6EE366C</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/cache_api.vcxproj">
+      <Project>8C6459FC-BE11-4EFC-80DD-78BBDECA4857</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/cmpd_dset.vcxproj">
+      <Project>6B53329C-2A76-402E-A632-9A8918FC268A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/cross_read.vcxproj">
+      <Project>4B96EDCA-AD92-4D2A-BD8B-2828A77E44EB</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/dangle.vcxproj">
+      <Project>EE6F74AA-4D6B-4C9A-B84C-BC02866F646F</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/dsets.vcxproj">
+      <Project>03B9657B-7D62-4308-AE65-67A24EA0C2AE</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/dt_arith.vcxproj">
+      <Project>9D3C33BD-F005-416C-8A46-C95B6C572A92</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/dtransform.vcxproj">
+      <Project>EF68801F-0094-4B8E-97E9-14B65258A15E</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/dtypes.vcxproj">
+      <Project>4801AF29-6502-4C16-A1DD-95ED20655DDE</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/efc.vcxproj">
+      <Project>ECB0CE62-0242-4F24-9396-ECBE8782686B</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/enum.vcxproj">
+      <Project>FC714065-B05C-4ACA-B142-855070AADAAB</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/err_compat.vcxproj">
+      <Project>68D1C275-C07D-4BBF-9343-999458F61B0B</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/error_test.vcxproj">
+      <Project>1B563930-394E-40E6-8EE8-28D8F3112B61</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/extend.vcxproj">
+      <Project>3A754208-C5E5-44FB-92F1-CF7A2E328876</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/external.vcxproj">
+      <Project>55D37662-CEF2-49BA-888B-F9B3E413F314</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/fheap.vcxproj">
+      <Project>2118FBFE-12B6-4B97-9F59-36AA1578A2E1</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/file_image.vcxproj">
+      <Project>A55B2764-F752-4012-8F39-A084C170BECD</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/fillval.vcxproj">
+      <Project>B68DE08E-634F-4AC1-86E8-76490F2BF435</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/filter_fail.vcxproj">
+      <Project>ACBBD0A6-C128-4644-A3C9-CD840A169DB1</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/flush1.vcxproj">
+      <Project>B176B880-B9CE-4894-A27D-A8BEA596388A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/flush2.vcxproj">
+      <Project>5BEF5F74-C2D3-4B11-BFD0-D23FFADB64D2</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/freespace.vcxproj">
+      <Project>9E31EF08-1482-4400-B865-ACCD101E245C</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/getname.vcxproj">
+      <Project>4290C6EB-4FDE-4F6B-9418-047D62B26CFD</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/gheap.vcxproj">
+      <Project>C9182E5B-CB5F-4D7B-91A2-9E85F08D0CAF</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/hdf5_test.vcxproj">
+      <Project>A49EB121-227F-4A3B-B669-63F539AC5898</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/hyperslab.vcxproj">
+      <Project>71CA3A5D-3FF5-408B-9236-8F76AD953047</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/istore.vcxproj">
+      <Project>9BA13006-CE84-417A-B36B-9C8ACB19F7C9</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/lheap.vcxproj">
+      <Project>A31476E9-373D-4D00-9EBB-03FA62DC2511</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/links.vcxproj">
+      <Project>BD0A8625-FE86-4FCC-BB8B-BE334C31B40D</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/links_env.vcxproj">
+      <Project>58602DEB-4FA1-401D-A44B-CC7A38BBD96A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/mf.vcxproj">
+      <Project>0243EC68-BF79-4AAF-A6FA-D47F2296D28B</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/mount.vcxproj">
+      <Project>5D1C6B14-65E3-43E2-8535-5EC1B739895D</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/mtime.vcxproj">
+      <Project>006BBBD2-2D0A-49F3-891C-B68B1463E43A</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/ntypes.vcxproj">
+      <Project>D81B5533-1560-4DFD-9D6D-BA494CD3DE31</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/objcopy.vcxproj">
+      <Project>202EA615-D361-4F9D-995F-768022A03DE3</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/ohdr.vcxproj">
+      <Project>E175D880-D227-486E-BCD6-CD27C171CF69</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/pool.vcxproj">
+      <Project>3CA76C24-87DD-4E7A-842E-DA45547C4EE5</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/reserved.vcxproj">
+      <Project>ACC1627C-73AA-46F8-A876-E3756AB1DD86</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/set_extent.vcxproj">
+      <Project>F31A2D99-2DE0-42F6-9933-ECFD1982D5C6</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/stab.vcxproj">
+      <Project>A2D86AAD-F91B-4A98-85D2-0A76D5FD08AA</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/tcheck_version.vcxproj">
+      <Project>63D943B5-AAD9-4F3D-8F35-4691C5C9EF08</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/testhdf5.vcxproj">
+      <Project>1F010D4F-AC64-4D47-BB22-105E7101367E</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/testmeta.vcxproj">
+      <Project>F921D626-B5E7-4979-BBE9-950795D90C17</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/ttsafe.vcxproj">
+      <Project>69D56EAB-E344-4470-9C29-A328DA84A6E9</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/unlink.vcxproj">
+      <Project>D3024173-581D-45CC-A082-E996137BC562</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/unregister.vcxproj">
+      <Project>8343608A-9AEE-424A-A39A-9310D26DE2B2</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/test/vfd.vcxproj">
+      <Project>4319EB31-08FD-4E09-B22C-7124C0534F7E</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

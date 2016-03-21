@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\h5test.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\testframe.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\cache_common.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\h5test.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\test\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{740C9EE8-8551-4C73-8FED-6B5B7EDD0C93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{C7D3FDC3-5DFE-4B48-A1D4-67113F9D039C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

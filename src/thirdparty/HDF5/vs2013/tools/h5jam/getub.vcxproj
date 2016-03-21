@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{2829986C-1C24-41CD-93E0-66F3A4D9F5E5}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>getub</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">getub.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">getub</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">getub.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">getub</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+      <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+      <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_CRT_SECURE_NO_WARNINGS;_CONSOLE;NDEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_CRT_SECURE_NO_WARNINGS;_CONSOLE;NDEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 /debug %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\bin\Debug\libhdf5_tools_D.lib;..\..\bin\Debug\libhdf5_D.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/bin/Debug/getub.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/bin/Debug/getub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_CRT_SECURE_NO_WARNINGS;_CONSOLE;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_BIND_TO_CURRENT_VCLIBS_VERSION=1;_CRT_SECURE_NO_WARNINGS;_CONSOLE;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\src;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\bin;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\lib;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Link>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;..\..\bin\Release\libhdf5_tools.lib;..\..\bin\Release\libhdf5.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/bin/Release/getub.lib</ImportLibrary>
+      <ProgramDataBaseFile>E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/bin/Release/getub.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+      <Version></Version>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5jam/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1 -BE:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\h5jam\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5jam/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeTests.cmake;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\h5jam\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5jam/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1 -BE:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\h5jam\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/GitCode/Caffe_Test/src/thirdparty/HDF5/hdf5-1.8.15-patch1/tools/h5jam/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeTests.cmake;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\HDF5\vs2013\tools\h5jam\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\HDF5\hdf5-1.8.15-patch1\tools\h5jam\getub.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/ZERO_CHECK.vcxproj">
+      <Project>2680E8E9-0E0A-4C76-8CD3-0B158A852F91</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/src/hdf5.vcxproj">
+      <Project>AB7B73F8-DAC7-458D-831F-94446E48A741</Project>
+    </ProjectReference>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/HDF5/vs2013/tools/lib/hdf5_tools.vcxproj">
+      <Project>0F76662B-9FCD-43FD-BE4A-97FD974E822E</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
