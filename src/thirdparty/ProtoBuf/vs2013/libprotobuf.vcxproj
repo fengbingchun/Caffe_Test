@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{E1C59F55-E233-4E87-8E1E-579B6512552C}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>libprotobuf</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotobuf.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotobuf</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotobuf.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotobuf</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotobuf.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotobuf</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotobuf.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotobuf</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4018;4355;4800;4251;4996;4146;4305</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4244;4267;4018;4355;4800;4251;4996;4146;4305</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DisableSpecificWarnings>4244;4267;4018;4355;4800;4251;4996;4146;4305</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4244;4267;4018;4355;4800;4251;4996;4146;4305</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOBUF_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake -BE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCCompiler.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindThreads.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\extract_includes.bat.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf-lite.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\install.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\GNUInstallDirs.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config-version.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-module.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake -BE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCCompiler.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindThreads.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\extract_includes.bat.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf-lite.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\install.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\GNUInstallDirs.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config-version.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-module.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake -BE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCCompiler.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindThreads.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\extract_includes.bat.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf-lite.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\install.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\GNUInstallDirs.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config-version.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-module.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\ProgramFiles\CMake\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake -BE:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013 --check-stamp-file E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/protobuf-master/cmake/CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInitialize.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCCompiler.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeCXXCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeSystemSpecificInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeGenericSystem.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\WindowsPaths.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-C.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\3.3.0\CMakeRCCompiler.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeRCInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCXXInformation.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Compiler\MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC-CXX.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\Platform\Windows-MSVC.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeCommonLanguageInclude.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindThreads.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckIncludeFiles.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckLibraryExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CheckSymbolExists.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageHandleStandardArgs.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\FindPackageMessage.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\CMakeParseArguments.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\extract_includes.bat.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf-lite.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotobuf.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\libprotoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protoc.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\install.cmake;D:\ProgramFiles\CMake\share\cmake-3.3\Modules\GNUInstallDirs.cmake;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-config-version.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\protobuf-module.cmake.in;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\cmake\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\arena.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\arenastring.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\extension_set.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\generated_message_util.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\coded_stream.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\zero_copy_stream.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\zero_copy_stream_impl_lite.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\message_lite.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\repeated_field.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\atomicops_internals_x86_gcc.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\atomicops_internals_x86_msvc.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\bytestream.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\common.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\once.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\status.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\statusor.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\stringpiece.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\stringprintf.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\strutil.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\time.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\wire_format_lite.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\any.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\any.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\api.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\importer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\parser.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\descriptor.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\descriptor.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\descriptor_database.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\duration.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\dynamic_message.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\empty.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\extension_set_heavy.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\field_mask.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\generated_message_reflection.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\gzip_stream.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\printer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\strtod.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\tokenizer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\io\zero_copy_stream_impl.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\map_field.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\message.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\reflection_ops.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\service.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\source_context.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\struct.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\mathlimits.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\structurally_valid.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\stubs\substitute.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\text_format.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\timestamp.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\type.pb.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\unknown_field_set.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\field_comparator.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\datapiece.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\default_value_objectwriter.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\error_listener.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\field_mask_utility.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\json_escaping.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\json_objectwriter.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\json_stream_parser.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\object_writer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\protostream_objectsource.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\protostream_objectwriter.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\type_info.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\type_info_test_helper.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\internal\utility.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\json_util.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\message_differencer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\util\type_resolver_util.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\wire_format.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\wrappers.pb.cc"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/ZERO_CHECK.vcxproj">
+      <Project>BE4A5F59-CA56-4F19-8BA2-A4B3A7C124CF</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
