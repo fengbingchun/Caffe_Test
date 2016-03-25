@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -56,25 +56,25 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Debug\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotoc.dir\Debug\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotoc</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Release\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc.dir\Release\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\MinSizeRel\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotoc.dir\MinSizeRel\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotoc</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\RelWithDebInfo\</OutDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotoc.dir\RelWithDebInfo\</IntDir>
-      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotoc</TargetName>
-      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotoc.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">libprotoc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">libprotoc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotoc.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">libprotoc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotoc.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">libprotoc</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\vs2013;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -87,7 +87,7 @@
       <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
       <Optimization>Disabled</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -116,12 +116,13 @@
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <Optimization>MaxSpeed</Optimization>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -151,7 +152,8 @@
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
-      <DebugInformationFormat></DebugInformationFormat>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;LIBPROTOC_EXPORTS;GOOGLE_PROTOBUF_CMAKE_BUILD;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -253,93 +255,93 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\code_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\command_line_interface.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_enum.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_extension.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_file.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_helpers.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_map_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_message.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_service.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_string_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_enum.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_field_base.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_helpers.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_map_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_message.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_source_generator_base.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_umbrella_class.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_wrapper_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_context.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_doc_comment.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_extension.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_file.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_generator_factory.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_helpers.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_lazy_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_lazy_message_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_map_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_map_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_builder.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_builder_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_name_resolver.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_primitive_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_service.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_shared_code_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_string_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_string_field_lite.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_enum.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_extension.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_file.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_helpers.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_map_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_message.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_enum.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_enum_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_extension.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_file.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_helpers.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_map_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_message.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_message_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_oneof.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_primitive_field.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\plugin.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\plugin.pb.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\python\python_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\ruby\ruby_generator.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\subprocess.cc"  />
-    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\zip_writer.cc"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\code_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\command_line_interface.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_enum.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_extension.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_file.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_helpers.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_map_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_message.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_service.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\cpp\cpp_string_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_enum.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_field_base.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_helpers.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_map_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_message.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_source_generator_base.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_umbrella_class.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\csharp\csharp_wrapper_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_context.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_doc_comment.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_enum_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_extension.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_file.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_generator_factory.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_helpers.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_lazy_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_lazy_message_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_map_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_map_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_builder.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_builder_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_message_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_name_resolver.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_primitive_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_service.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_shared_code_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_string_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\java\java_string_field_lite.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_enum.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_extension.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_file.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_helpers.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_map_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_message.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\javanano\javanano_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_enum.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_enum_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_extension.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_file.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_helpers.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_map_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_message.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_message_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_oneof.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\objectivec\objectivec_primitive_field.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\plugin.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\plugin.pb.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\python\python_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\ruby\ruby_generator.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\subprocess.cc" />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\protobuf-master\src\google\protobuf\compiler\zip_writer.cc" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/ZERO_CHECK.vcxproj">
