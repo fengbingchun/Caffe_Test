@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testThridLibrary", "..\testThridLibrary\testThridLibrary.vcxproj", "{AEAC3DBD-707F-497A-B0B7-2B99B3002A88}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "caffe_vs2013_lib", "..\caffe_vs2013_lib\caffe_vs2013_lib.vcxproj", "{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -13,6 +15,10 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{AEAC3DBD-707F-497A-B0B7-2B99B3002A88}.Debug|x64.ActiveCfg = Debug|x64
 		{AEAC3DBD-707F-497A-B0B7-2B99B3002A88}.Release|x64.ActiveCfg = Release|x64
+		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Debug|x64.ActiveCfg = Debug|x64
+		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Debug|x64.Build.0 = Debug|x64
+		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Release|x64.ActiveCfg = Release|x64
+		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

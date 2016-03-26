@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="源文件\layers">
+      <UniqueIdentifier>{ed31c8cb-6f8a-4488-af09-2588b9c8ce31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\proto">
+      <UniqueIdentifier>{e241bc92-4908-4538-994e-83d6cefc939e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\util">
+      <UniqueIdentifier>{1eb2aa01-3484-458b-9ff6-27b5a108e3dd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\blob.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\common.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\data_reader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\data_transformer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\internal_thread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layer_factory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\net.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\solver.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\syncedmem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\absval_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\accuracy_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\argmax_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\base_conv_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\base_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\bnll_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\concat_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\contrastive_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\conv_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_conv_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_pooling_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_relu_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_sigmoid_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_softmax_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\cudnn_tanh_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\deconv_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\dropout_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\dummy_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\eltwise_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\euclidean_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\exp_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\filter_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\flatten_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\hdf5_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\hdf5_output_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\hinge_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\im2col_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\image_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\infogain_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\inner_product_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\log_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\lrn_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\memory_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\multinomial_logistic_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\mvn_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\neuron_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\pooling_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\power_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\prelu_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\reduction_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\relu_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\reshape_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\sigmoid_cross_entropy_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\sigmoid_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\silence_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\slice_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\softmax_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\softmax_loss_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\split_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\spp_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\tanh_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\threshold_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\layers\window_data_layer.cpp">
+      <Filter>源文件\layers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\proto\caffe.pb.cc">
+      <Filter>源文件\proto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\benchmark.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\blocking_queue.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\cudnn.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\db.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\db_leveldb.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\db_lmdb.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\hdf5.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\im2col.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\insert_splits.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\io.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\math_functions.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\caffe\caffe\src\caffe\util\upgrade_proto.cpp">
+      <Filter>源文件\util</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
