@@ -83,7 +83,7 @@ void convert_dataset(const char* image_filename, const char* label_filename,
 		// 创建指定的存放目录
 		//CHECK_EQ(mkdir(db_path, 0744), 0)
 		std::string strPath = std::string(db_path);
-		std::string delPath = "rm -rf " + strPath;
+		std::string delPath = "rmdir /s/q " + strPath;
 		system(delPath.c_str());
 		strPath = "mkdir " + strPath;
 		system(strPath.c_str());
@@ -193,13 +193,13 @@ int main(int argc, char* argv[])
 	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x86_vc12/tools_convert_mnist_data[rel_x86_vc12].exe";
 #endif
 	//mnist test images
-	argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte";
-	argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte";
-	argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\test";
+	//argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte";
+	//argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte";
+	//argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\test";
 	//mnist train images
-	//argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-images.idx3-ubyte";
-	//argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte";
-	//argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train";
+	argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-images.idx3-ubyte";
+	argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte";
+	argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train";
 
 	// 用来设定usage说明
 	gflags::SetUsageMessage("This script converts the MNIST dataset to\n"
