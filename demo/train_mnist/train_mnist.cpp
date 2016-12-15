@@ -107,9 +107,9 @@ int main(int argc, char* argv[])
 {
 	argc = 2;
 #ifdef _DEBUG  
-	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x86_vc12/train_mnist[dbg_x86_vc12].exe";
+	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/train_mnist.exe";
 #else  
-	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x86_vc12/train_mnist[rel_x86_vc12].exe";
+	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/train_mnist.exe";
 #endif 
 	argv[1] = "train";
 

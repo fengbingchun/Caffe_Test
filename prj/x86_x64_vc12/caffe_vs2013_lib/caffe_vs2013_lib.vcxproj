@@ -22,6 +22,7 @@
     <ProjectGuid>{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>caffe_vs2013_lib</RootNamespace>
+    <ProjectName>caffe</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -67,12 +68,12 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\</OutDir>
-    <IntDir>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\</IntDir>
+    <OutDir>.\../../../obj/dbg/x64_vc12/caffe_lib\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/caffe_lib\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\</OutDir>
-    <IntDir>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\</IntDir>
+    <OutDir>.\../../../obj/rel/x64_vc12/caffe_lib\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/caffe_lib\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -95,11 +96,11 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;CPU_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;USE_LEVELDB;USE_LMDB;USE_HDF5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\caffe_vs2013_lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\</AssemblerListingLocation>
-      <ObjectFileName>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\</ObjectFileName>
-      <ProgramDataBaseFileName>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\caffe\caffe\include;E:\GitCode\Caffe_Test\src\caffe\caffe\src;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\GFlags\install\include;E:\GitCode\Caffe_Test\src\thirdparty\GLog\install\include;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LMDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\OpenBLAS\install\include;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\install\include;E:\GitCode\Caffe_Test\src\thirdparty\Snappy\install\include;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include\opencv;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include\opencv2;E:\GitCode\Caffe_Test\src\thirdparty\other;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/caffe_lib\caffe_lib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/caffe_lib\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/caffe_lib\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/caffe_lib\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\caffe\caffe\include;E:\GitCode\Caffe_Test\src\caffe\caffe\src;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\GFlags\install\include;E:\GitCode\Caffe_Test\src\thirdparty\GLog\install\include;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LMDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\OpenBLAS\install\include;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\install\include;E:\GitCode\Caffe_Test\src\thirdparty\Snappy\install\include;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include;E:\GitCode\Caffe_Test\src\thirdparty\other;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeTypeInfo>
       </RuntimeTypeInfo>
       <CompileAs>Default</CompileAs>
@@ -110,10 +111,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <OutputFile>../../../lib/dbg/x86_vc12/caffe_vs2013_lib[dbg_x86_vc12].lib</OutputFile>
+      <OutputFile>../../../lib/dbg/x64_vc12/caffe.lib</OutputFile>
     </Lib>
     <Bscmake>
-      <OutputFile>.\../../../obj/dbg/x86_vc12/caffe_vs2013_lib\caffe_vs2013_lib.bsc</OutputFile>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/caffe_lib\caffe_lib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -137,18 +138,17 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;CPU_ONLY;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\caffe_vs2013_lib.pch</PrecompiledHeaderOutputFile>
-      <AssemblerListingLocation>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\</AssemblerListingLocation>
-      <ObjectFileName>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\</ObjectFileName>
-      <ProgramDataBaseFileName>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\caffe\caffe\include;E:\GitCode\Caffe_Test\src\caffe\caffe\src;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\GFlags\install\include;E:\GitCode\Caffe_Test\src\thirdparty\GLog\install\include;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LMDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\OpenBLAS\install\include;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\install\include;E:\GitCode\Caffe_Test\src\thirdparty\Snappy\install\include;E:\GitCode\Caffe_Test\src\thirdparty\other;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include\opencv;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include\opencv2;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/caffe_lib\caffe_lib.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/caffe_lib\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/caffe_lib\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/caffe_lib\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\caffe\caffe\include;E:\GitCode\Caffe_Test\src\caffe\caffe\src;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\thirdparty\GFlags\install\include;E:\GitCode\Caffe_Test\src\thirdparty\GLog\install\include;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\LMDB\install\include;E:\GitCode\Caffe_Test\src\thirdparty\OpenBLAS\install\include;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\install\include;E:\GitCode\Caffe_Test\src\thirdparty\Snappy\install\include;E:\GitCode\Caffe_Test\src\thirdparty\other;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,10 +157,10 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <OutputFile>../../../lib/rel/x86_vc12/caffe_vs2013_lib[rel_x86_vc12].lib</OutputFile>
+      <OutputFile>../../../lib/rel/x64_vc12/caffe.lib</OutputFile>
     </Lib>
     <Bscmake>
-      <OutputFile>.\../../../obj/rel/x86_vc12/caffe_vs2013_lib\caffe_vs2013_lib.bsc</OutputFile>
+      <OutputFile>.\../../../obj/rel/x64_vc12/caffe_lib\caffe_lib.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>

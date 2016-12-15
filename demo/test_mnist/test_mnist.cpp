@@ -143,17 +143,18 @@ RegisterBrewFunction(test);
 
 int main(int argc, char* argv[])
 {
-	// https://initialneil.wordpress.com/2015/07/16/caffe-vs2013-opencv-in-windows-tutorial-ii/
-	// https://initialneil.wordpress.com/2015/01/11/build-caffe-in-windows-with-visual-studio-2013-cuda-6-5-opencv-2-4-9/
-	// https://github.com/BVLC/caffe/issues/2499
-	// http://ju.outofmemory.cn/entry/139417
-	// http://pz124578126.lofter.com/tag/caffe
-	// https://github.com/BVLC/caffe/pull/1907
+	/* reference: https://initialneil.wordpress.com/2015/07/16/caffe-vs2013-opencv-in-windows-tutorial-ii/
+                      https://initialneil.wordpress.com/2015/01/11/build-caffe-in-windows-with-visual-studio-2013-cuda-6-5-opencv-2-4-9/
+                      https://github.com/BVLC/caffe/issues/2499
+                      http://ju.outofmemory.cn/entry/139417
+                      http://pz124578126.lofter.com/tag/caffe
+                      https://github.com/BVLC/caffe/pull/1907
+	*/
 	argc = 2;
 #ifdef _DEBUG  
-	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x86_vc12/test_mnist[dbg_x86_vc12].exe";
+	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/test_mnist.exe";
 #else  
-	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x86_vc12/test_mnist[rel_x86_vc12].exe";
+	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/test_mnist.exe";
 #endif 
 	argv[1] = "test";
 

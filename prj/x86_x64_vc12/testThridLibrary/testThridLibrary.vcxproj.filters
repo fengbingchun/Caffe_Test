@@ -24,12 +24,18 @@
     <ClCompile Include="..\..\..\demo\thrid_library\ml.helloworld.pb.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\thrid_library\funset.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\thrid_library\caffe_tmp.pb.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\demo\thrid_library\ml.helloworld.pb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\demo\thrid_library\funset.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
