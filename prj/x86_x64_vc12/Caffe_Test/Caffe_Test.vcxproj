@@ -126,10 +126,15 @@
       <OutputFile>.\../../../lib/dbg/x64_vc12/Caffe_Test.exe</OutputFile>
       <AdditionalLibraryDirectories>D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0;E:\GitCode\Caffe_Test\src\thirdparty\GFlags\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\GLog\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\HDF5\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\LevelDB\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\LMDB\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\OpenBLAS\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\ProtoBuf\install\lib\Debug;E:\GitCode\Caffe_Test\src\thirdparty\Snappy\install\lib\Debug;D:\soft\OpenCV2.4.9\vs2013_x64_dll_MD\install\x64\vc12\lib;E:\GitCode\Caffe_Test\lib\dbg\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>shlwapi.lib;gflags.lib;gflags_nothreads.lib;libglog.lib;libglog_static.lib;libhdf5_cpp_D.lib;libhdf5_D.lib;libhdf5_hl_cpp_D.lib;libhdf5_hl_D.lib;libhdf5_test_D.lib;libhdf5_tools_D.lib;leveldb_test_rtd.lib;leveldbd.lib;lmdb.lib;libopenblas.lib;libprotobuf.lib;libprotobuf-lite.lib;libprotoc.lib;snappy.lib;opencv_core249d.lib;opencv_highgui249d.lib;opencv_imgproc249d.lib;caffe.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OptimizeReferences>
+      </OptimizeReferences>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/dbg/x64_vc12/Caffe_Test\Caffe_Test.bsc</OutputFile>
     </Bscmake>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
