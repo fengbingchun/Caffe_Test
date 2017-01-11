@@ -21,13 +21,7 @@
     <ClCompile Include="..\..\..\demo\Caffe_Test\funset.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_train.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_predict.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_convert.cpp">
+    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

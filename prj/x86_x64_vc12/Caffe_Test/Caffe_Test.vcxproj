@@ -21,9 +21,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\..\demo\Caffe_Test\Caffe_Test.cpp" />
     <ClCompile Include="..\..\..\demo\Caffe_Test\funset.cpp" />
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_convert.cpp" />
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_predict.cpp" />
-    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist_train.cpp" />
+    <ClCompile Include="..\..\..\demo\Caffe_Test\mnist.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\Caffe_Test\common.hpp" />

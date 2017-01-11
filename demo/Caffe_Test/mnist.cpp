@@ -1,8 +1,94 @@
 #include "funset.hpp"
 #include "common.hpp"
 
-// gflags中的数据类型，c++ string，在这里指定转换到lmdb还是leveldb
-DEFINE_string(backend, "lmdb", "The backend for storing the result");
+int mnist_train()
+{
+	Caffe::set_mode(Caffe::CPU);
+
+	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+
+	caffe::SolverParameter solver_param;
+	caffe::ReadProtoFromTextFileOrDie(filename, &solver_param);
+
+	shared_ptr<Solver<float> > solver(caffe::GetSolver<float>(solver_param));
+
+	LOG(INFO) << "Starting Optimization";
+	solver->Solve();
+
+	LOG(INFO) << "Optimization Done.";
+
+	fprintf(stderr, "train finish\n");
+	return 0;
+}
+
+int mnist_predict()
+{
+	Caffe::set_mode(Caffe::CPU);
+
+	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt" };
+	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
+	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/" };
+
+	// Instantiate the caffe net.
+	Net<float> caffe_net(param_file, caffe::TEST);
+	caffe_net.CopyTrainedLayersFrom(trained_filename);
+
+	std::vector<int> target{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	std::vector<int> result;
+
+	for (int i = 0; i < target.size(); i++) {
+		std::string str = std::to_string(i);
+		str += ".png";
+		str = image_path + str;
+
+		cv::Mat mat = cv::imread(str.c_str(), 1);
+		if (!mat.data) {
+			fprintf(stderr, "load image error: %s\n", str.c_str());
+			return -1;
+		}
+
+		cv::cvtColor(mat, mat, CV_BGR2GRAY);
+		cv::resize(mat, mat, cv::Size(28, 28));
+		cv::bitwise_not(mat, mat);
+
+		// set the patch for testing
+		vector<cv::Mat> patches;
+		patches.push_back(mat);
+
+		// push vector<Mat> to data layer
+		float loss = 0.0;
+		boost::shared_ptr<caffe::MemoryDataLayer<float> > memory_data_layer;
+		memory_data_layer = boost::static_pointer_cast<caffe::MemoryDataLayer<float>>(caffe_net.layer_by_name("data"));
+
+		vector<int> labels(patches.size());
+		memory_data_layer->AddMatVector(patches, labels);
+
+		// Net forward
+		const vector<Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss);
+		float* output = results[1]->mutable_cpu_data();
+
+		float tmp = -1;
+		int pos = -1;
+
+		// Display the output
+		fprintf(stderr, "actual digit is: %d\n", target[i]);
+		for (int j = 0; j < 10; j++) {
+			printf("Probability to be Number %d is: %.3f\n", j, output[j]);
+			if (tmp < output[j]) {
+				pos = j;
+				tmp = output[j];
+			}
+		}
+
+		result.push_back(pos);
+	}
+
+	for (int i = 0; i < 10; i++)
+		fprintf(stderr, "actual digit is: %d, result digit is: %d\n", target[i], result[i]);
+
+	fprintf(stderr, "predict finish\n");
+	return 0;
+}
 
 static uint32_t swap_endian(uint32_t val) {
 	val = ((val << 8) & 0xFF00FF00) | ((val >> 8) & 0xFF00FF);
@@ -166,58 +252,21 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	delete[] pixels;
 }
 
-int MNIST_convert()
+// mnist convert to lmdb or leveldb
+int mnist_convert()
 {
-#ifndef GFLAGS_GFLAGS_H_
-	namespace gflags = google;
-#endif
-	int argc = 4;
-	char* tmp[4] = { "", "", "", "" };
-	char** argv = &tmp[0];
-
-#ifdef _DEBUG
-	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_Test.exe";
-#else
-	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_Test.exe";
-#endif
 	//mnist test images
-	//argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte";
-	//argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte";
-	//argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\test";
+	const std::string argv_test[] {"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte",
+		"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte",
+		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\test"};
 	//mnist train images
-	argv[1] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-images.idx3-ubyte";
-	argv[2] = "E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte";
-	argv[3] = "E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train";
+	const std::string argv_train[] { "E:/GitCode/Caffe_Test/test_data/MNIST/train-images.idx3-ubyte",
+		"E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte",
+		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train" };
 
-	// 用来设定usage说明
-	gflags::SetUsageMessage("This script converts the MNIST dataset to\n"
-		"the lmdb/leveldb format used by Caffe to load data.\n"
-		"Usage:\n"
-		"    convert_mnist_data [FLAGS] input_image_file input_label_file "
-		"output_db_file\n"
-		"The MNIST dataset could be downloaded at\n"
-		"    http://yann.lecun.com/exdb/mnist/\n"
-		"You should gunzip them after downloading,"
-		"or directly use data/mnist/get_mnist.sh\n");
-	// 解析命令行参数
-	gflags::ParseCommandLineFlags(&argc, &argv, true);
+	//convert_dataset(argv_train[0].c_str(), argv_train[1].c_str(), argv_train[2].c_str(), "lmdb");
+	convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");
 
-	// 获取标志参数backend的值
-	const string& db_backend = FLAGS_backend;
-
-	if (argc != 4) {
-		// 输出usage说明
-		gflags::ShowUsageWithFlagsRestrict(argv[0],
-			"examples/mnist/convert_mnist_data");
-	}
-	else {
-		// 设置日志文件名中"文件名"字段
-		// 每个进程中至少要执行一次InitGoogleLogging，否则不产生日志文件
-		google::InitGoogleLogging(argv[0]);
-		convert_dataset(argv[1], argv[2], argv[3], db_backend);
-	}
-
-	std::cout << "ok!" << std::endl;
-
+	fprintf(stderr, "mnist convert finish\n");
 	return 0;
 }
