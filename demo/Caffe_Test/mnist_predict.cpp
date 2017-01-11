@@ -7,39 +7,8 @@ DEFINE_string(weights_predict, "E:/GitCode/Caffe_Test/test_data/model/mnist/lene
 	"Optional; the pretrained weights to initialize finetuning, "
 	"separated by ','. Cannot be set simultaneously with snapshot.");
 
-// A simple registry for caffe commands.
-typedef int(*BrewFunction)();
-typedef std::map<caffe::string, BrewFunction> BrewMap_predict;
-BrewMap_predict g_brew_map_predict;
-
-#define RegisterBrewFunction_predict(func) \
-namespace { \
-class __Registerer_##func{ \
-public: /* NOLINT */ \
-	__Registerer_##func() { \
-	g_brew_map_predict[#func] = &func; \
-	} \
-}; \
-	__Registerer_##func g_registerer_##func; \
-}
-
-static BrewFunction GetBrewFunction(const caffe::string& name) {
-	if (g_brew_map_predict.count(name)) {
-		return g_brew_map_predict[name];
-	}
-	else {
-		LOG(ERROR) << "Available caffe actions:";
-		for (BrewMap_predict::iterator it = g_brew_map_predict.begin();
-			it != g_brew_map_predict.end(); ++it) {
-			LOG(ERROR) << "\t" << it->first;
-		}
-		LOG(FATAL) << "Unknown action: " << name;
-		return NULL;  // not reachable, just to suppress old compiler warnings.
-	}
-}
-
 // Test: score a model.
-static int test() {
+static int predict() {
 	CHECK_GT(FLAGS_model.size(), 0) << "Need a model definition to score.";
 	CHECK_GT(FLAGS_weights_predict.size(), 0) << "Need model weights to score.";
 
@@ -110,7 +79,6 @@ static int test() {
 
 	return 0;
 }
-RegisterBrewFunction_predict(test);
 
 int MNIST_predict()
 {
@@ -152,13 +120,12 @@ int MNIST_predict()
 	gflags::ParseCommandLineFlags(&argc, &argv, true);
 
 	if (argc == 2) {
-		return GetBrewFunction(caffe::string(argv[1]))();
-	}
-	else {
+		predict();
+	} else {
 		gflags::ShowUsageWithFlagsRestrict(argv[0], "tools/caffe");
 	}
 
-	std::cout << "OK!!!" << std::endl;
+	std::cout << "predict finish" << std::endl;
 
 	return 0;
 }

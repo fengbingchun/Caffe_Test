@@ -9,50 +9,7 @@ DEFINE_string(weights, "E:/GitCode/Caffe_Test/test_data/model/mnist/weights.caff
 	"Optional; the pretrained weights to initialize finetuning, "
 	"separated by ','. Cannot be set simultaneously with snapshot.");
 
-// A simple registry for caffe commands.
-typedef int(*BrewFunction)();
-typedef std::map<caffe::string, BrewFunction> BrewMap;
-BrewMap g_brew_map;
-
-#define RegisterBrewFunction(func) \
-namespace { \
-class __Registerer_##func{ \
-public: /* NOLINT */ \
-	__Registerer_##func() { \
-	g_brew_map[#func] = &func; \
-	} \
-}; \
-	__Registerer_##func g_registerer_##func; \
-}
-
-static BrewFunction GetBrewFunction(const caffe::string& name) {
-	if (g_brew_map.count(name)) {
-		return g_brew_map[name];
-	}
-	else {
-		LOG(ERROR) << "Available caffe actions:";
-		for (BrewMap::iterator it = g_brew_map.begin(); it != g_brew_map.end(); ++it) {
-			LOG(ERROR) << "\t" << it->first;
-		}
-		LOG(FATAL) << "Unknown action: " << name;
-		return NULL;  // not reachable, just to suppress old compiler warnings.
-	}
-}
-
-// Load the weights from the specified caffemodel(s) into the train and test nets.
-static void CopyLayers(caffe::Solver<float>* solver, const std::string& model_list) {
-	std::vector<std::string> model_names;
-	boost::split(model_names, model_list, boost::is_any_of(","));
-	for (int i = 0; i < model_names.size(); ++i) {
-		LOG(INFO) << "Finetuning from " << model_names[i];
-		solver->net()->CopyTrainedLayersFrom(model_names[i]);
-		for (int j = 0; j < solver->test_nets().size(); ++j) {
-			solver->test_nets()[j]->CopyTrainedLayersFrom(model_names[i]);
-		}
-	}
-}
-
-// Train / Finetune a model.
+// Train Finetune a model.
 static int train() {
 	CHECK_GT(FLAGS_solver.size(), 0) << "Need a solver definition to train.";
 	//CHECK(!FLAGS_snapshot.size() || !FLAGS_weights.size()) << "Give a snapshot to resume training or weights to finetune but not both.";
@@ -70,7 +27,6 @@ static int train() {
 	LOG(INFO) << "Optimization Done.";
 	return 0;
 }
-RegisterBrewFunction(train);
 
 int MNIST_train()
 {
@@ -103,13 +59,12 @@ int MNIST_train()
 	gflags::ParseCommandLineFlags(&argc, &argv, true);
 
 	if (argc == 2) {
-		return GetBrewFunction(caffe::string(argv[1]))();
-	}
-	else {
+		train();
+	} else {
 		gflags::ShowUsageWithFlagsRestrict(argv[0], "tools/caffe");
 	}
 
-	std::cout << "OK!!!" << std::endl;
+	std::cout << "train finish" << std::endl;
 
 	return 0;
 }

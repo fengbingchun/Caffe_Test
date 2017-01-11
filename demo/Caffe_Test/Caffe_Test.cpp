@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = get_layer_type_list();
+	int ret = MNIST_predict();
 
 	if (0 == ret) fprintf(stderr, "test success\n");
 	else fprintf(stderr, "test fail\n");
