@@ -1,39 +1,29 @@
 #include "funset.hpp"
 #include "common.hpp"
 
-DEFINE_string(model, "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt",
-	"The model definition protocol buffer text file..");
-DEFINE_string(weights_predict, "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel",
-	"Optional; the pretrained weights to initialize finetuning, "
-	"separated by ','. Cannot be set simultaneously with snapshot.");
-
-// Test: score a model.
-static int predict() {
-	CHECK_GT(FLAGS_model.size(), 0) << "Need a model definition to score.";
-	CHECK_GT(FLAGS_weights_predict.size(), 0) << "Need model weights to score.";
-
-	LOG(INFO) << "Use CPU.";
+int MNIST_predict()
+{
 	Caffe::set_mode(Caffe::CPU);
 
+	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt" };
+	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
+	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/" };
+
 	// Instantiate the caffe net.
-	Net<float> caffe_net(FLAGS_model, caffe::TEST);
-	caffe_net.CopyTrainedLayersFrom(FLAGS_weights_predict);
+	Net<float> caffe_net(param_file, caffe::TEST);
+	caffe_net.CopyTrainedLayersFrom(trained_filename);
 
-	int target[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	int result[10] = { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 };
+	std::vector<int> target{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	std::vector<int> result;
 
-	std::string image_path = "E:/GitCode/Caffe_Test/test_data/images/";
-	for (int i = 0; i < 10; i++) {
-		char ch[15];
-		sprintf(ch, "%d", i);
-		std::string str;
-		str = std::string(ch);
+	for (int i = 0; i < target.size(); i++) {
+		std::string str = std::to_string(i);
 		str += ".png";
 		str = image_path + str;
 
 		cv::Mat mat = cv::imread(str.c_str(), 1);
 		if (!mat.data) {
-			std::cout << "load image error" << std::endl;
+			fprintf(stderr, "load image error: %s\n", str.c_str());
 			return -1;
 		}
 
@@ -54,78 +44,28 @@ static int predict() {
 		memory_data_layer->AddMatVector(patches, labels);
 
 		// Net forward
-		const vector<Blob<float>*> & results = caffe_net.ForwardPrefilled(&loss);
-		float *output = results[1]->mutable_cpu_data();
+		const vector<Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss);
+		float* output = results[1]->mutable_cpu_data();
 
 		float tmp = -1;
 		int pos = -1;
 
 		// Display the output
-		std::cout << "actuarl digit is: " << i << std::endl;
+		fprintf(stderr, "actual digit is: %d\n", target[i]);
 		for (int j = 0; j < 10; j++) {
-			printf("Probability to be Number %d is %.3f\n", j, output[j]);
+			printf("Probability to be Number %d is: %.3f\n", j, output[j]);
 			if (tmp < output[j]) {
 				pos = j;
 				tmp = output[j];
 			}
 		}
 
-		result[i] = pos;
+		result.push_back(pos);
 	}
 
-	for (int i = 0; i < 10; i++) {
-		std::cout << "actual digit is : " << target[i] << ", result digit is: " << result[i] << std::endl;
-	}
+	for (int i = 0; i < 10; i++)
+		fprintf(stderr, "actual digit is: %d, result digit is: %d\n", target[i], result[i]);
 
-	return 0;
-}
-
-int MNIST_predict()
-{
-	/* reference:
-		https://initialneil.wordpress.com/2015/07/16/caffe-vs2013-opencv-in-windows-tutorial-ii/
-		https://initialneil.wordpress.com/2015/01/11/build-caffe-in-windows-with-visual-studio-2013-cuda-6-5-opencv-2-4-9/
-		https://github.com/BVLC/caffe/issues/2499
-		http://ju.outofmemory.cn/entry/139417
-		http://pz124578126.lofter.com/tag/caffe
-		https://github.com/BVLC/caffe/pull/1907
-	*/
-	int argc = 2;
-	char* tmp[2] = { "", "" };
-	char** argv = &tmp[0];
-
-#ifdef _DEBUG
-	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_Test.exe";
-#else  
-	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_Test.exe";
-#endif 
-	argv[1] = "test";
-
-	// 每个进程中至少要执行1次InitGoogleLogging(),否则不产生日志文件
-	google::InitGoogleLogging(argv[0]);
-	// 设置日志文件保存目录，此目录必须是已经存在的
-	FLAGS_log_dir = "E:\\GitCode\\Caffe_Test\\test_data";
-	FLAGS_max_log_size = 1024;//MB
-
-	// Print output to stderr (while still logging).
-	FLAGS_alsologtostderr = 1;
-	// Usage message.
-	gflags::SetUsageMessage("command line brew\n"
-		"usage: caffe <command> <args>\n\n"
-		"commands:\n"
-		"  test            score a model");
-	// Run tool or show usage.
-	//caffe::GlobalInit(&argc, &argv);
-	// 解析命令行参数  
-	gflags::ParseCommandLineFlags(&argc, &argv, true);
-
-	if (argc == 2) {
-		predict();
-	} else {
-		gflags::ShowUsageWithFlagsRestrict(argv[0], "tools/caffe");
-	}
-
-	std::cout << "predict finish" << std::endl;
-
+	fprintf(stderr, "predict finish\n");
 	return 0;
 }

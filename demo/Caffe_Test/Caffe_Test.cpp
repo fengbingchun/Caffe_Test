@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = MNIST_predict();
+	int ret = MNIST_convert();
 
 	if (0 == ret) fprintf(stderr, "test success\n");
 	else fprintf(stderr, "test fail\n");
