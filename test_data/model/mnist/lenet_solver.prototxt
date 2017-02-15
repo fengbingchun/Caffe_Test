@@ -1,25 +1,36 @@
 # The train/test net protocol buffer definition
+# Proto filename for the train net, possibly combined with one or more test nets.
 net: "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test.prototxt"
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of MNIST, we have test batch size 100 and 100 test iterations,
 # covering the full 10,000 testing images.
+# The number of iterations for each test net.
 test_iter: 100
 # Carry out testing every 500 training iterations.
+# The number of iterations between two testing phases.
 test_interval: 500
 # The base learning rate, momentum and the weight decay of the network.
+# The base learning rate
 base_lr: 0.01
+# The momentum value
 momentum: 0.9
+# The weight decay
 weight_decay: 0.0005
 # The learning rate policy
 lr_policy: "inv"
+# The parameter to compute the learning rate
 gamma: 0.0001
+# The parameter to compute the learning rate
 power: 0.75
 # Display every 100 iterations
+# the number of iterations between displaying info.
+# If display = 0, no info will be displayed.
 display: 100
 # The maximum number of iterations
 max_iter: 10000
 # snapshot intermediate results
 snapshot: 5000
+# The prefix for the snapshot, file save position
 snapshot_prefix: "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet"
 # solver mode: CPU or GPU
 solver_mode: CPU

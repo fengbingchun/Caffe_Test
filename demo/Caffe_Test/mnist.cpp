@@ -3,19 +3,20 @@
 
 int mnist_train()
 {
-	Caffe::set_mode(Caffe::CPU);
-
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
 
 	caffe::SolverParameter solver_param;
-	caffe::ReadProtoFromTextFileOrDie(filename, &solver_param);
+	if (!caffe::ReadProtoFromTextFile(filename.c_str(), &solver_param)) {
+		fprintf(stderr, "parse solver.prototxt fail\n");
+		return -1;
+	}
 
-	shared_ptr<Solver<float> > solver(caffe::GetSolver<float>(solver_param));
+	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
 
-	LOG(INFO) << "Starting Optimization";
+	fprintf(stderr, "Starting Optimization\n");
 	solver->Solve();
-
-	LOG(INFO) << "Optimization Done.";
+	fprintf(stderr, "Optimization Done\n");
 
 	fprintf(stderr, "train finish\n");
 	return 0;
@@ -23,14 +24,14 @@ int mnist_train()
 
 int mnist_predict()
 {
-	Caffe::set_mode(Caffe::CPU);
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 
 	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt" };
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/" };
 
 	// Instantiate the caffe net.
-	Net<float> caffe_net(param_file, caffe::TEST);
+	caffe::Net<float> caffe_net(param_file, caffe::TEST);
 	caffe_net.CopyTrainedLayersFrom(trained_filename);
 
 	std::vector<int> target{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
@@ -52,7 +53,7 @@ int mnist_predict()
 		cv::bitwise_not(mat, mat);
 
 		// set the patch for testing
-		vector<cv::Mat> patches;
+		std::vector<cv::Mat> patches;
 		patches.push_back(mat);
 
 		// push vector<Mat> to data layer
@@ -60,11 +61,11 @@ int mnist_predict()
 		boost::shared_ptr<caffe::MemoryDataLayer<float> > memory_data_layer;
 		memory_data_layer = boost::static_pointer_cast<caffe::MemoryDataLayer<float>>(caffe_net.layer_by_name("data"));
 
-		vector<int> labels(patches.size());
+		std::vector<int> labels(patches.size());
 		memory_data_layer->AddMatVector(patches, labels);
 
 		// Net forward
-		const vector<Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss);
+		const std::vector<caffe::Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss);
 		float* output = results[1]->mutable_cpu_data();
 
 		float tmp = -1;
@@ -96,7 +97,7 @@ static uint32_t swap_endian(uint32_t val) {
 }
 
 static void convert_dataset(const char* image_filename, const char* label_filename,
-	const char* db_path, const string& db_backend) {
+	const char* db_path, const std::string& db_backend) {
 	// Open files
 	std::ifstream image_file(image_filename, std::ios::in | std::ios::binary);
 	std::ifstream label_file(label_filename, std::ios::in | std::ios::binary);
@@ -178,7 +179,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	int count = 0;
 	const int kMaxKeyLength = 10;
 	char key_cstr[kMaxKeyLength];
-	string value;
+	std::string value;
 
 	caffe::Datum datum; // CaffeÊý¾ÝÀà
 	datum.set_channels(1);
@@ -199,7 +200,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 			key_cstr[kMaxKeyLength - 1] = 0;
 		}
 		datum.SerializeToString(&value);
-		string keystr(key_cstr);
+		std::string keystr(key_cstr);
 
 		// Put in db
 		if (db_backend == "leveldb") {  // leveldb

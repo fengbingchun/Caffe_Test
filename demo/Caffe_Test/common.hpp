@@ -30,16 +30,4 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 
-using caffe::Blob;
-using caffe::Caffe;
-using caffe::Net;
-using caffe::Layer;
-using caffe::Solver;
-using caffe::shared_ptr;
-using caffe::string;
-using caffe::Timer;
-using caffe::vector;
-using std::ostringstream;
-
-
 #endif // FBC_CAFFE_TEST_COMMON_HPP_
