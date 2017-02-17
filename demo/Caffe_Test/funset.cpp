@@ -2,6 +2,13 @@
 #include <string>
 #include "common.hpp"
 
+int test_caffe_proto()
+{
+
+
+	return 0;
+}
+
 int get_layer_type_list()
 {
 	caffe::LayerRegistry<double>::CreatorRegistry& registry = caffe::LayerRegistry<double>::Registry();

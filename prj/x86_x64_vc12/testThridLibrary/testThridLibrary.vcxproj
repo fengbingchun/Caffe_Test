@@ -169,6 +169,7 @@
     <ClCompile Include="..\..\..\demo\thrid_library\funset.cpp" />
     <ClCompile Include="..\..\..\demo\thrid_library\ml.helloworld.pb.cc" />
     <ClCompile Include="..\..\..\demo\thrid_library\testThridLibrary.cpp" />
+    <ClCompile Include="..\..\..\demo\thrid_library\test_openblas.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\thrid_library\caffe_tmp.pb.h" />
