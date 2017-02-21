@@ -25,6 +25,7 @@
 #include <caffe/common.hpp>
 #include <caffe/layer_factory.hpp>
 #include <caffe/proto/caffe.pb.h>
+#include <caffe/util/math_functions.hpp>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>

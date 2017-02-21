@@ -6,6 +6,7 @@ int mnist_predict();
 int mnist_convert();
 int get_layer_type_list();
 int test_caffe_common();
-int test_caffe_proto();
+int test_caffe_util_mkl_alternate();
+int test_caffe_util_math_functions();
 
 #endif // FBC_CAFFE_TEST_FUNSET_HPP_
