@@ -2,6 +2,57 @@
 #include <string>
 #include "common.hpp"
 
+int test_caffe_syncedmem()
+{
+	caffe::SyncedMemory mem(10);
+	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
+
+	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
+		mem.size() != 10 ||
+		p_mem->size() != 10 * sizeof(float) ||
+		mem.cpu_data() == nullptr ||
+		mem.mutable_cpu_data() == nullptr ||
+		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	fprintf(stderr, "p_mem size: %d\n", p_mem->size());
+	fprintf(stderr, "mem size: %d\n", mem.size());
+
+	void* cpu_data = mem.mutable_cpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	caffe::caffe_memset(mem.size(), 1, cpu_data);
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(cpu_data))[i] != 1) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}
+
+	cpu_data = mem.mutable_cpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	caffe::caffe_memset(mem.size(), 2, cpu_data);
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(cpu_data))[i] != 2) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}
+
+	delete p_mem;
+
+	return 0;
+}
+
 int test_caffe_util_math_functions()
 {
 	float alpha{ 0.5f }, beta{ 0.1f };

@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_caffe_util_math_functions();
+	int ret = test_caffe_syncedmem();
 
 	if (0 == ret) fprintf(stderr, "test success\n");
 	else fprintf(stderr, "test fail\n");

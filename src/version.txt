@@ -1,0 +1,5 @@
+1. caffe:
+	commit: 09868ac;
+	date: 2015.08.15;
+	url: https://github.com/BVLC/caffe
+2. 

@@ -8,7 +8,7 @@
 #include <vector>
 #include <stdint.h>
 #include <sys/stat.h>
-#include <fstream>  // NOLINT(readability/streams)
+#include <fstream>
 
 #include <gflags/gflags.h>
 #include <glog/logging.h>
@@ -26,6 +26,7 @@
 #include <caffe/layer_factory.hpp>
 #include <caffe/proto/caffe.pb.h>
 #include <caffe/util/math_functions.hpp>
+#include <caffe/syncedmem.hpp>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
