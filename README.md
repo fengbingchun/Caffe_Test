@@ -8,6 +8,7 @@
     - caffe/util/mkl_alternate.hpp
     - caffe/util/math_functions.hpp
 	- caffe/syncedmem.hpp
+	- caffe/blob.hpp
 
 **The project support platform: windows7 64 bits. It can be directly build with VS2013 in windows7 64bits.**
 
