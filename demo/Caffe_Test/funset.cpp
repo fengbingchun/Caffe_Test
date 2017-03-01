@@ -1,6 +1,124 @@
 #include "funset.hpp"
 #include <string>
+#include <vector>
 #include "common.hpp"
+
+int test_caffe_blob()
+{
+	caffe::Blob<float> blob1;
+
+	std::vector<int> shape{ 2, 3, 4, 5 };
+	caffe::Blob<float> blob2(shape);
+
+	std::vector<int> blob_shape = blob2.shape();
+	fprintf(stderr, "blob shape: ");
+	for (auto index : blob_shape) {
+		fprintf(stderr, "%d    ", index);
+	}
+	std::vector<int> shape_{ 6, 7, 8, 9 };
+	blob2.Reshape(shape_);
+	std::vector<int> blob_shape_ = blob2.shape();
+	fprintf(stderr, "\nnew blob shape: ");
+	for (auto index : blob_shape_) {
+		fprintf(stderr, "%d    ", index);
+	}
+	fprintf(stderr, "\n");
+
+	int value = blob2.shape(-1);
+	fprintf(stdout, "blob index -1: %d\n", value);
+	int num_axes = blob2.num_axes();
+	fprintf(stderr, "blob num axes(dimension): %d\n", num_axes);
+	int count = blob2.count();
+	fprintf(stderr, "blob count sum: %d\n", count);
+	count = blob2.count(2, 4);
+	fprintf(stderr, "blob count(start_axis(2), end_axis(4)): %d\n", count);
+	count = blob2.count(1);
+	fprintf(stderr, "blob count(start_axis(1)): %d\n", count);
+	int canonical_axis_index = blob2.CanonicalAxisIndex(-2);
+	fprintf(stderr, "blob canonical axis index: %d\n", canonical_axis_index);
+
+	int num = blob2.num();
+	int channels = blob2.channels();
+	int height = blob2.height();
+	int width = blob2.width();
+	int legacy_shape = blob2.LegacyShape(-2);
+	fprintf(stderr, "blob num: %d, channels: %d, height: %d, width: %d, legacy shape(-2): %d\n",
+		num, channels, height, width, legacy_shape);
+
+	std::vector<int> indices{ 2, 3, 7, 6 };
+	int offset1 = blob2.offset(indices);
+	int offset2 = blob2.offset(indices[0], indices[1], indices[2], indices[3]);
+	fprintf(stderr, "blob offset1: %d, offset2: %d\n", offset1, offset2);
+
+	std::string shape_string = blob2.shape_string();
+	fprintf(stderr, "shape string: %s\n", shape_string.c_str());
+
+	caffe::BlobProto blob_proto;
+	blob_proto.set_num(6);
+	blob_proto.set_channels(7);
+	blob_proto.set_height(8);
+	blob_proto.set_width(9);
+
+	bool flag = blob2.ShapeEquals(blob_proto);
+	fprintf(stderr, "blob2's shape and blob_proto's shape are equal: %d\n", flag);
+	int blob_proto_data_size_float = blob_proto.data_size();
+	int blob_proto_data_size_double = blob_proto.double_data_size();
+	int blob_proto_diff_size_float = blob_proto.diff_size();
+	int blob_proto_diff_size_double = blob_proto.double_diff_size();
+	fprintf(stderr, "blob_proto data/diff size: %d, %d, %d, %d\n", blob_proto_data_size_float,
+		blob_proto_data_size_double, blob_proto_diff_size_float, blob_proto_diff_size_double);
+
+	caffe::BlobShape blob_proto_shape;
+	for (int i = 0; i < 4; ++i) {
+		blob_proto_shape.add_dim(i + 10);
+	}
+	blob2.Reshape(blob_proto_shape);
+	blob_shape_ = blob2.shape();
+	fprintf(stderr, "new blob shape: ");
+	for (auto index : blob_shape_) {
+		fprintf(stderr, "%d    ", index);
+	}
+	fprintf(stderr, "\n");
+
+	fprintf(stderr, "blob proto shape: ");
+	for (int i = 0; i < blob_proto_shape.dim_size(); ++i) {
+		fprintf(stderr, "%d    ", blob_proto_shape.dim(i));
+	}
+	fprintf(stderr, "\n");
+
+	// 注：以上进行的所有操作均不会申请分配任何内存
+
+	// cv::Mat -> Blob
+	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
+	cv::Mat mat = cv::imread(image_name, 1);
+	if (!mat.data) {
+		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
+		return -1;
+	}
+	cv::Mat mat2;
+	mat.convertTo(mat2, CV_32FC3);
+	std::vector<int> mat_reshape{ 1, mat2.channels(), mat2.rows, mat2.cols };
+	blob2.Reshape(mat_reshape);
+	float sum1 = blob2.asum_data();
+	blob2.set_cpu_data((float*)mat2.data);
+	float sum2 = blob2.asum_data();
+	blob2.scale_data(0.5);
+	float sum3 = blob2.asum_data();
+	float sum4 = blob2.sumsq_data();
+	fprintf(stderr, "sum1: %f, sum2: %f, sum3: %f, sum4: %f\n", sum1, sum2, sum3, sum4);
+
+	float value2 = blob2.data_at(0, 2, 100, 200);
+	fprintf(stderr, "data at value: %f\n", value2);
+	const float* data = blob2.cpu_data();
+	fprintf(stderr, "data at 0: %f\n", data[0]);
+
+	cv::Mat mat3;
+	mat2.convertTo(mat3, CV_8UC3);
+	image_name = "E:/GitCode/Caffe_Test/test_data/images/a_ret.jpg";
+	cv::imwrite(image_name, mat3);
+
+	return 0;
+}
 
 int test_caffe_syncedmem()
 {

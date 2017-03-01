@@ -9,5 +9,6 @@ int test_caffe_common();
 int test_caffe_util_mkl_alternate();
 int test_caffe_util_math_functions();
 int test_caffe_syncedmem();
+int test_caffe_blob();
 
 #endif // FBC_CAFFE_TEST_FUNSET_HPP_
