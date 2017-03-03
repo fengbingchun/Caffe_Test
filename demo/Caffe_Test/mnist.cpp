@@ -12,6 +12,10 @@ int mnist_train()
 		return -1;
 	}
 
+	//
+	std::string str = "E:/GitCode/Caffe_Test/test_data/aa.prototxt";
+	caffe::WriteProtoToTextFile(solver_param, str);
+
 	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
 
 	fprintf(stderr, "Starting Optimization\n");
