@@ -12,10 +12,6 @@ int mnist_train()
 		return -1;
 	}
 
-	//
-	std::string str = "E:/GitCode/Caffe_Test/test_data/aa.prototxt";
-	caffe::WriteProtoToTextFile(solver_param, str);
-
 	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
 
 	fprintf(stderr, "Starting Optimization\n");
@@ -269,8 +265,8 @@ int mnist_convert()
 		"E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte",
 		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train" };
 
-	//convert_dataset(argv_train[0].c_str(), argv_train[1].c_str(), argv_train[2].c_str(), "lmdb");
-	convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");
+	convert_dataset(argv_train[0].c_str(), argv_train[1].c_str(), argv_train[2].c_str(), "lmdb");
+	//convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");
 
 	fprintf(stderr, "mnist convert finish\n");
 	return 0;
