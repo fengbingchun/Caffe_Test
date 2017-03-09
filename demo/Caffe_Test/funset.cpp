@@ -3,6 +3,94 @@
 #include <vector>
 #include "common.hpp"
 
+int test_caffe_layer_pooling()
+{
+	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+
+	// set layer parameter
+	caffe::LayerParameter layer_param;
+	layer_param.set_phase(caffe::Phase::TRAIN);
+
+	// cv::Mat -> caffe::Blob
+	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
+	cv::Mat mat1 = cv::imread(image_name, 1);
+	if (!mat1.data) {
+		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
+		return -1;
+	}
+	mat1.convertTo(mat1, CV_32FC3);
+	std::vector<cv::Mat> mat2;
+	cv::split(mat1, mat2);
+	std::vector<int> mat_reshape{ 1, (int)mat2.size(), mat2[0].rows, mat2[0].cols };
+
+	caffe::Blob<float> blob;
+	blob.Reshape(mat_reshape);
+	size_t size = mat2[0].rows * mat2[0].cols;
+	float* data = new float[mat2.size() * size];
+	memcpy(data, mat2[0].data, size * sizeof(float));
+	memcpy(data + size, mat2[1].data, size * sizeof(float));
+	memcpy(data + 2 * size, mat2[2].data, size * sizeof(float));
+	blob.set_cpu_data(data);
+
+	for (int method = 0; method < 2; ++method) {
+		// set pooling parameter
+		caffe::PoolingParameter* pooling_param = layer_param.mutable_pooling_param();
+		if (method == 0) pooling_param->set_pool(caffe::PoolingParameter::MAX);
+		else pooling_param->set_pool(caffe::PoolingParameter::AVE);
+		pooling_param->set_kernel_size(3);
+		pooling_param->set_pad(2);
+		pooling_param->set_stride(2);
+		pooling_param->set_global_pooling(false);
+
+		std::vector<caffe::Blob<float>*> bottom_blob{ &blob }, top_blob{ &caffe::Blob<float>()/*, &caffe::Blob<float>() */ };
+
+		// test PoolingLayer function
+		caffe::PoolingLayer<float> pooling_layer(layer_param);
+		pooling_layer.SetUp(bottom_blob, top_blob);
+		fprintf(stderr, "top blob info: channels: %d, height: %d, width: %d\n",
+			top_blob[0]->channels(), top_blob[0]->height(), top_blob[0]->width());
+
+		pooling_layer.Forward(bottom_blob, top_blob);
+
+		int height = top_blob[0]->height();
+		int width = top_blob[0]->width();
+		const float* p = top_blob[0]->cpu_data();
+		std::vector<cv::Mat> mat3{ cv::Mat(height, width, CV_32FC1, (float*)p),
+			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
+			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
+		cv::Mat mat4;
+		cv::merge(mat3, mat4);
+		mat4.convertTo(mat4, CV_8UC3);
+		if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/forward0.jpg";
+		else image_name = "E:/GitCode/Caffe_Test/test_data/images/forward1.jpg";
+		cv::imwrite(image_name, mat4);
+
+		for (int i = 0; i < bottom_blob[0]->count(); ++i)
+			bottom_blob[0]->mutable_cpu_diff()[i] = bottom_blob[0]->cpu_data()[i];
+		for (int i = 0; i < top_blob[0]->count(); ++i)
+			top_blob[0]->mutable_cpu_diff()[i] = top_blob[0]->cpu_data()[i];
+
+		std::vector<bool> propagate_down{ true };
+		pooling_layer.Backward(top_blob, propagate_down, bottom_blob);
+
+		height = bottom_blob[0]->height();
+		width = bottom_blob[0]->width();
+		p = bottom_blob[0]->cpu_diff();
+		std::vector<cv::Mat> mat5{ cv::Mat(height, width, CV_32FC1, (float*)p),
+			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
+			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
+		cv::Mat mat6;
+		cv::merge(mat5, mat6);
+		mat6.convertTo(mat6, CV_8UC3);
+		if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/backward0.jpg";
+		else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
+		cv::imwrite(image_name, mat6);
+	}
+
+	delete[] data;
+	return 0;
+}
+
 static bool ReadImageToDatumReference(const std::string& filename, const int label,
 	const int height, const int width, const bool is_color, caffe::Datum* datum)
 {
