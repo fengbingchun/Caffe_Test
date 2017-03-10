@@ -15,13 +15,6 @@
 
 namespace caffe {
 
-/* force register */
-//#define FORCE_REG(type) \
-//	extern LayerRegisterer<float> g_creator_f_##type; \
-//	extern LayerRegisterer<double> g_creator_d_##type; \
-//	LayerRegisterer<float> *__g_creator_f_##type = &g_creator_f_##type; \
-//	LayerRegisterer<double> *__g_creator_d_##type = &g_creator_d_##type
-
 /**
  * @brief Connects Layer%s together into a directed acyclic graph (DAG)
  *        specified by a NetParameter.
