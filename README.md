@@ -11,6 +11,7 @@
 	- caffe/blob.hpp
 	- caffe/util/io.hpp
 	- caffe/layers/pooling_layer.hpp
+	- caffe/net.hpp
 
 **The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
 

@@ -1,0 +1,79 @@
+name: "TrickyTestNetwork"  # 可以为双引号也可以为单引号
+#force_backward: true
+layer { 
+  name: "data" 
+  type: "DummyData" 
+  dummy_data_param { 
+    num: 5 
+    channels: 2 
+    height: 3 
+    width: 4 
+    num: 5 
+    channels: 1 
+    height: 1 
+    width: 1 
+    data_filler { 
+      type: "gaussian" 
+      std: 0.01 
+    } 
+  } 
+  top: "data" 
+  top: "label" 
+} 
+layer { 
+  name: "innerproduct" 
+  type: "InnerProduct" 
+  inner_product_param { 
+    num_output: 1000 
+    weight_filler { 
+      type: "gaussian" 
+      std: 0.01 
+    } 
+    bias_filler { 
+      type: "constant" 
+      value: 0 
+    } 
+  } 
+  param { 
+    lr_mult: 1 
+    decay_mult: 1 
+  } 
+  param { 
+    lr_mult: 2 
+    decay_mult: 0
+  } 
+  bottom: "data" 
+  top: "transformed_data" 
+} 
+layer { 
+  name: "innerproduct" 
+  type: "InnerProduct" 
+  inner_product_param { 
+    num_output: 1 
+    weight_filler { 
+      type: "gaussian" 
+      std: 0.01 
+    }
+    bias_filler { 
+      type: "constant" 
+      value: 0 
+    } 
+  } 
+  param { 
+    lr_mult: 1 
+    decay_mult: 1 
+  }
+  param { 
+    lr_mult: 2 
+    decay_mult: 0
+  } 
+  bottom: "label"
+  top: "transformed_label"
+} 
+layer { 
+  name: "loss" 
+  type: "SoftmaxWithLoss"
+  loss_weight: 0.5
+  bottom: "transformed_data" 
+  bottom: "transformed_label" 
+} 

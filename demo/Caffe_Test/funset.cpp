@@ -1,7 +1,358 @@
 #include "funset.hpp"
 #include <string>
 #include <vector>
+#include <map>
 #include "common.hpp"
+
+int test_caffe_net2()
+{
+	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+
+	// reference: caffe/src/caffe/test/test_net.cpp
+	std::string prototxt{ "E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt" };
+	caffe::Phase phase = caffe::Phase::TRAIN;
+
+	// 1. Net(const string& param_file, Phase phase, const Net* root_net = NULL)
+	boost::shared_ptr<caffe::Net<float>> net(new caffe::Net<float>(prototxt, phase, nullptr));
+
+	//caffe::Caffe::set_random_seed(1701);
+
+	{
+		std::vector<caffe::Blob<float>*> bottom;
+		// 2. Dtype ForwardBackward(const vector<Blob<Dtype>* > & bottom)
+		float loss = net->ForwardBackward(bottom);
+		fprintf(stderr, "loss: %f\n", loss);
+	}
+
+	{
+		// 3. Dtype ForwardFromTo(int start, int end)
+		float loss = net->ForwardFromTo(0, net->layers().size() - 1);
+		// 4. void BackwardFromTo(int start, int end)
+		net->BackwardFromTo(net->layers().size() - 1, 0);
+		fprintf(stderr, "loss: %f\n", loss);
+	}
+
+	{
+		// 5.  Dtype ForwardTo(int end)
+		float loss = net->ForwardTo(net->layers().size() - 2);
+		// 6. void BackwardFrom(int start)
+		net->BackwardFrom(net->layers().size() - 2);
+		fprintf(stderr, "loss: %f\n", loss);
+	}
+
+	{
+		// 7. Dtype ForwardFrom(int start)
+		float loss = net->ForwardFrom(1);
+		// 8. void BackwardTo(int end)
+		net->BackwardTo(1);
+		fprintf(stderr, "loss: %f\n", loss);
+	}
+
+	{
+		// 9. vector<Blob<Dtype>*>& ForwardPrefilled(Dtype* loss = NULL)
+		float loss;
+		std::vector<caffe::Blob<float>*> net_output_blobs = net->ForwardPrefilled(&loss);
+		// 10. void Backward()
+		net->Backward();
+		fprintf(stderr, "net output blobs size: %d; loss: %f\n", net_output_blobs.size(), loss);
+	}
+
+	{
+		// 11. string Forward(const string& input_blob_protos, Dtype* loss = NULL)
+		std::string input_blob_protos{ " " };
+		float loss;
+		std::string output = net->Forward(input_blob_protos, &loss);
+		net->Backward();
+		fprintf(stderr, "output string: %s; loss: %f\n", output.c_str(), loss);
+	}
+
+	{
+		// 12. vector<Blob<Dtype>*>& Forward(const vector<Blob<Dtype>* > & bottom, Dtype* loss = NULL)
+		std::vector<caffe::Blob<float>*> bottom;
+		float loss;
+		std::vector<caffe::Blob<float>*> net_output_blobs = net->Forward(bottom, &loss);
+		net->Backward();
+		fprintf(stderr, "net output blobs size: %d; loss: %f\n", net_output_blobs.size(), loss);
+	}
+
+	// 13. void ShareWeights()
+	net->ShareWeights();
+	// 14. void Update()
+	net->Update();
+	// 15. void Reshape()
+	net->Reshape();
+	// 16. void ClearParamDiffs()
+	net->ClearParamDiffs();
+
+	// 17. void CopyTrainedLayersFrom(const NetParameter& param)
+	caffe::NetParameter net_param;
+	net->ToProto(&net_param, false);
+	net->CopyTrainedLayersFrom(net_param);
+
+	// 加载已训练好的模型
+	// 18. void CopyTrainedLayersFrom(const string trained_filename)
+	std::string trained_filename{ " " };
+	//net->CopyTrainedLayersFrom(trained_filename);
+	// 19. void CopyTrainedLayersFromBinaryProto(const string trained_filename)
+	//net->CopyTrainedLayersFromBinaryProto(trained_filename);
+	// 20. void CopyTrainedLayersFromHDF5(const string trained_filename)
+	//net->CopyTrainedLayersFromHDF5(trained_filename);
+
+	// 21. void ShareTrainedLayersWith(const Net* other)
+	caffe::Net<float> net1(prototxt, phase, nullptr);
+	net->ShareTrainedLayersWith(&net1);
+
+	// 22. static void FilterNet(const NetParameter& param, NetParameter* param_filtered)
+	caffe::NetParameter param1, param2;
+	net->FilterNet(param1, &param2);
+
+	// 23. static bool StateMeetsRule(const NetState& state, const NetStateRule& rule, const string& layer_name)
+	const caffe::NetState state;
+	const caffe::NetStateRule rule;
+	const std::string layer_name;
+	bool ret = net->StateMeetsRule(state, rule, layer_name);
+	fprintf(stderr, "state meet rule: %d\n", ret);
+
+	return 0;
+}
+
+int test_caffe_net1()
+{
+	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+
+	// reference: caffe/src/caffe/test/test_net.cpp
+	std::string prototxt{"E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt"}; // 1~8
+	caffe::NetParameter param;
+	caffe::ReadNetParamsFromTextFileOrDie(prototxt, &param);
+
+	// 1. Net(const NetParameter& param, const Net* root_net = NULL)
+	boost::shared_ptr<caffe::Net<float>> net(new caffe::Net<float>(param, nullptr));
+
+	// 2. const string& name()
+	std::string name = net->name();
+	fprintf(stderr, "Net name: %s\n", name.c_str());
+
+	// 3. const vector<string>& layer_names()
+	std::vector<std::string> layer_names = net->layer_names();
+	fprintf(stderr, "print all layer names: layer size: %d\n", layer_names.size());
+	for (auto layer_name : layer_names) {
+		fprintf(stderr, "    %s\n", layer_name.c_str());
+	}
+
+	// 4. const vector<string>& blob_names()
+	std::vector<std::string> blob_names = net->blob_names();
+	fprintf(stderr, "print all blob names: blob size:  %d\n", blob_names.size());
+	for (auto blob_name : blob_names) {
+		fprintf(stderr, "    %s\n", blob_name.c_str());
+	}
+
+	// 5. const vector<shared_ptr<Blob<Dtype> > >& blobs()
+	std::vector<boost::shared_ptr<caffe::Blob<float>>> blobs = net->blobs();
+	fprintf(stderr, "print all blobs dim: blob size: %d\n", blobs.size());
+	for (auto blob : blobs) {
+		std::vector<int> shape = blob->shape();
+		fprintf(stderr, "blob dim: %d, ", shape.size());
+		for (auto value : shape) {
+			fprintf(stderr, "  %d  ", value);
+		}
+		fprintf(stderr, "\n");
+	}
+
+	// 6. const vector<shared_ptr<Layer<Dtype> > >& layers()
+	std::vector<boost::shared_ptr<caffe::Layer<float>>> layers = net->layers();
+	fprintf(stderr, "print all layers bottom and top blobs num: layer size: %d\n", layers.size());
+	for (const auto layer : layers) {
+		fprintf(stderr, "layer type: %s, bottom blob num: %d, top blob num: %d\n",
+			layer->type(), layer->ExactNumBottomBlobs(), layer->ExactNumTopBlobs());
+	}
+
+	// 7. Phase phase()
+	caffe::Phase phase = net->phase();
+	fprintf(stderr, "net phase: %d\n", phase);
+
+	// 8. const vector<vector<Blob<Dtype>*> >& bottom_vecs()
+	std::vector<std::vector<caffe::Blob<float>*>> bottom_vecs = net->bottom_vecs();
+	fprintf(stderr, "print layer bottom blob: layer size: %d\n", bottom_vecs.size());
+	for (auto layer : bottom_vecs) {
+		for (auto blob : layer) {
+			fprintf(stderr, "layer blob shape: %s\n", (blob->shape_string()).c_str());
+		}
+	}
+
+	// 9. const vector<vector<Blob<Dtype>*> >& top_vecs()
+	std::vector<std::vector<caffe::Blob<float>*>> top_vecs = net->top_vecs();
+	fprintf(stderr, "print layer top blol: layer size: %d\n", top_vecs.size());
+	for (auto layer : top_vecs) {
+		for (const auto blob : layer) {
+			fprintf(stderr, "layer top shape: %s\n", (blob->shape_string()).c_str());
+		}
+	}
+
+	// 10. const vector<vector<bool> >& bottom_need_backward()
+	std::vector<std::vector<bool>> bottom_need_backward = net->bottom_need_backward();
+	fprintf(stderr, "print bottom need backward info: layer size: %d\n", bottom_need_backward.size());
+	for (auto layer : bottom_need_backward) {
+		for (auto flag : layer) {
+			fprintf(stderr, "  %s  ", flag ? "true" : "false");
+		}
+		fprintf(stderr, "\n");
+	}
+	fprintf(stderr, "\n");
+
+	// 11. const vector<Dtype>& blob_loss_weights()
+	std::vector<float> blob_loss_weights = net->blob_loss_weights();
+	fprintf(stderr, "print blob loss weights: blob size: %d\n", blob_loss_weights.size());
+	for (auto weight : blob_loss_weights) {
+		fprintf(stderr, "weight: %f\n", weight);
+	}
+
+	// 12. const vector<bool>& layer_need_backward()
+	std::vector<bool> layer_need_backward = net->layer_need_backward();
+	fprintf(stderr, "print layer need backward: layer size: %d\n", layer_need_backward.size());
+	for (auto flag : layer_need_backward) {
+		fprintf(stderr, "layer need backward: %s\n", flag ? "true" : "false");
+	}
+
+	// 13. const vector<shared_ptr<Blob<Dtype> > >& params()
+	std::vector<boost::shared_ptr<caffe::Blob<float>>> params = net->params();
+	fprintf(stderr, "print net params info: blob size: %d\n", params.size());
+	for (auto blob : params) {
+		fprintf(stderr, "blob shape: %s\n", blob->shape_string().c_str());
+	}
+
+	// 14. const vector<Blob<Dtype>*>& learnable_params()
+	std::vector<caffe::Blob<float>*> learnable_params = net->learnable_params();
+	fprintf(stderr, "print learnable params info: blob size: %d\n", learnable_params.size());
+	for (const auto blob : learnable_params) {
+		fprintf(stderr, "blob shape: %s\n", blob->shape_string().c_str());
+	}
+
+	// 15. const vector<float>& params_lr()
+	std::vector<float> params_lr = net->params_lr();
+	fprintf(stderr, "print learnable rate info: size: %d\n", params_lr.size());
+	for (auto value : params_lr) {
+		fprintf(stderr, "learnable rate: %f\n", value);
+	}
+
+	// 16. const vector<bool>& has_params_lr()
+	std::vector<bool> has_params_lr = net->has_params_lr();
+	fprintf(stderr, "print has learnable rate info: size: %d\n", has_params_lr.size());
+	for (auto flag : has_params_lr) {
+		fprintf(stderr, "has learnable rate: %s\n", flag ? "true" : "false");
+	}
+
+	// 17. const vector<float>& params_weight_decay()
+	std::vector<float> params_weight_decay = net->params_weight_decay();
+	fprintf(stderr, "print weight decay info: size: %d\n", params_weight_decay.size());
+	for (auto value : params) {
+		fprintf(stderr, "weight decay: %f\n", value);
+	}
+
+	// 18. const vector<bool>& has_params_decay()
+	std::vector<bool> has_params_decay = net->has_params_decay();
+	fprintf(stderr, "print has decay info: size: %d\n", has_params_decay.size());
+	for (auto value : has_params_decay) {
+		fprintf(stderr, "has decay: %s\n", value ? "true" : "false");
+	}
+
+	// 19. const map<string, int>& param_names_index()
+	const std::map<std::string, int> param_names_index = net->param_names_index();
+	fprintf(stderr, "print param names index info: size: %d\n", param_names_index.size());
+	auto it = param_names_index.begin();
+	while (it != param_names_index.end()) {
+		fprintf(stderr, "param names index: %s : %d\n", it->first.c_str(), it->second);
+		++it;
+	}
+
+	// 20. const vector<int>& param_owners()
+	std::vector<int> param_owers = net->param_owners();
+	fprintf(stderr, "print param owers info: size: %d\n", param_owers.size());
+	for (auto value : param_owers) {
+		fprintf(stderr, "param owers: %d\n", value);
+	}
+
+	// 21. int num_inputs() const
+	int num_inputs = net->num_inputs();
+	fprintf(stderr, "num inputs: %d\n", num_inputs);
+
+	// 22. int num_outputs() const
+	int num_outputs = net->num_outputs();
+	fprintf(stderr, "num outputs: %d\n", num_outputs);
+
+	// 23. const vector<Blob<Dtype>*>& input_blobs()
+	const std::vector<caffe::Blob<float>*> input_blobs = net->input_blobs();
+	fprintf(stderr, "print input blobs info: %d\n", input_blobs.size());
+	for (auto blob : input_blobs) {
+		fprintf(stderr, "input blob shape: %s\n", blob->shape_string().c_str());
+	}
+
+	// 24. const vector<Blob<Dtype>*>& output_blobs()
+	const std::vector<caffe::Blob<float>*> output_blobs = net->output_blobs();
+	fprintf(stderr, "print output blobs info: %d\n", output_blobs.size());
+	for (auto blob : output_blobs) {
+		fprintf(stderr, "output blob shape: %s\n", blob->shape_string().c_str());
+	}
+
+	// 25. const vector<int>& input_blob_indices()
+	std::vector<int> input_blob_indices = net->input_blob_indices();
+	fprintf(stderr, "print input blob indices info: size: %d\n", input_blob_indices.size());
+	for (auto value : input_blob_indices) {
+		fprintf(stderr, "input blob indices: %d\n", value);
+	}
+
+	// 26. const vector<int>& output_blob_indices()
+	std::vector<int> output_blob_indices = net->output_blob_indices();
+	fprintf(stderr, "print output blob indices info: size: %d\n", output_blob_indices.size());
+	for (auto value : output_blob_indices) {
+		fprintf(stderr, "output blob indices: %d\n", value);
+	}
+
+	// 27. bool has_blob(const string& blob_name)
+	bool has_blob1 = net->has_blob("data");
+	bool has_blob2 = net->has_blob("loss");
+	fprintf(stderr, "net has blob data: %d, has blob loss: %d\n", has_blob1, has_blob2);
+
+	// 28. const shared_ptr<Blob<Dtype> > blob_by_name
+	const std::vector<std::string> blob_by_names{ "innerproduct", "loss" };
+	for (auto name : blob_by_names) {
+		const boost::shared_ptr<caffe::Blob<float>> blob = net->blob_by_name(name);
+		if (blob != nullptr)
+			fprintf(stderr, "blob shape: %s\n", blob->shape_string().c_str());
+		else
+			fprintf(stderr, "unknown blob name: %s\n", name.c_str());
+	}
+
+	// 29. bool has_layer(const string& layer_name)
+	const std::vector<std::string> has_layers{"innerproduct", "top_loss"};
+	for (auto name : has_layers) {
+		bool has_layer = net->has_layer(name);
+		fprintf(stderr, "has layer %s: %d\n", name.c_str(), has_layer);
+	}
+
+	// 30. const shared_ptr<Layer<Dtype> > layer_by_name
+	const std::vector<std::string> layer_by_names{ "data", "top_loss" };
+	for (auto name : layer_by_names) {
+		const boost::shared_ptr<caffe::Layer<float>> layer = net->layer_by_name(name);
+		if (layer != nullptr)
+			fprintf(stderr, "layer type: %s\n", layer->type());
+		else
+			fprintf(stderr, "unknown layer name: %s\n", name.c_str());
+	}
+
+	// 31. void set_debug_info(const bool value)
+	net->set_debug_info(true);
+
+	// 32. void ToHDF5(const string& filename, bool write_diff = false)
+	// std::string hdf5_name{"E:/GitCode/Caffe_Test/test_data/hdf5.h5"};
+	// net->ToHDF5(hdf5_name, false); // Note: some .prototxt will crash
+
+	// 33. void ToProto(NetParameter* param, bool write_diff = false)
+	caffe::NetParameter param2;
+	net->ToProto(&param2, false);
+	fprintf(stderr, "new net name: %s\n", param2.name().c_str());
+
+	return 0;
+}
 
 int test_caffe_layer_pooling()
 {

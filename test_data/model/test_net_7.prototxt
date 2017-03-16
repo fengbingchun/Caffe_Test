@@ -1,0 +1,57 @@
+name: "ReshapableNetwork" # 可以为双引号也可以为单引号
+input: "data" 
+input_dim: 1 
+input_dim: 3 
+input_dim: 100 
+input_dim: 100 
+layer { 
+  name: "conv1" 
+  type: "Convolution" 
+  bottom: "data" 
+  top: "conv1" 
+  convolution_param { 
+    num_output: 5 
+    kernel_size: 3 
+    stride: 2 
+    weight_filler { 
+      type: "gaussian" 
+      std: 0.01 
+    } 
+    bias_filler { 
+      type: "constant" 
+      value: 0.2 
+    } 
+  } 
+} 
+layer { 
+  name: "relu1" 
+  type: "ReLU" 
+  bottom: "conv1" 
+  top: "conv1" 
+} 
+layer { 
+  name: "pool1" 
+  type: "Pooling" 
+  bottom: "conv1" 
+  top: "pool1" 
+  pooling_param { 
+    pool: MAX 
+    kernel_size: 2 
+    stride: 2 
+  } 
+} 
+layer { 
+  name: "norm1" 
+  type: "LRN" 
+  bottom: "pool1" 
+  top: "norm1" 
+  lrn_param { 
+    local_size: 3 
+  } 
+} 
+layer { 
+  name: "softmax" 
+  type: "Softmax" 
+  bottom: "norm1" 
+  top: "softmax" 
+} 

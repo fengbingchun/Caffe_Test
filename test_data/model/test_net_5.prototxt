@@ -1,0 +1,57 @@
+name: "DiffDataUnsharedWeightsNetwork" # 可以为双引号也可以为单引号
+layer { 
+  name: "data" 
+  type: "DummyData" 
+  dummy_data_param { 
+    num: 10 
+    channels: 10 
+    height: 1 
+    width: 1 
+    num: 10 
+    channels: 10 
+    height: 1 
+    width: 1 
+    data_filler { 
+      type: "gaussian" 
+      std: 10 
+    } 
+  } 
+  top: "data1" 
+  top: "data2" 
+} 
+layer { 
+  name: "innerproduct1" 
+  type: "InnerProduct" 
+  inner_product_param { 
+    num_output: 10 
+    bias_term: false 
+    weight_filler { 
+      type: "constant" 
+      value: 0.5 
+    } 
+  } 
+  param { name: "unsharedweights1" } 
+  bottom: "data1" 
+  top: "innerproduct1" 
+} 
+layer { 
+  name: "innerproduct2" 
+  type: "InnerProduct" 
+  inner_product_param { 
+    num_output: 10 
+    bias_term: false 
+    weight_filler { 
+      type: "constant" 
+      value: 0.5 
+    } 
+  } 
+  param { name: "unsharedweights2" } 
+  bottom: "innerproduct1" 
+  top: "innerproduct2" 
+} 
+layer { 
+  name: "loss" 
+  type: "EuclideanLoss" 
+  bottom: "data2" 
+  bottom: "innerproduct2" 
+} 
