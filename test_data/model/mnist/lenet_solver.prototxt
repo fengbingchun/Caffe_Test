@@ -1,6 +1,8 @@
 # The train/test net protocol buffer definition
 # Proto filename for the train net, possibly combined with one or more test nets.
 net: "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test.prototxt"
+# Solver type
+solver_type: SGD
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of MNIST, we have test batch size 100 and 100 test iterations,
 # covering the full 10,000 testing images.

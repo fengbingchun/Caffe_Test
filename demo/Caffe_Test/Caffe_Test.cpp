@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_caffe_net1();
+	int ret = test_caffe_solver();
 
 	if (0 == ret) fprintf(stderr, "test success\n");
 	else fprintf(stderr, "test fail\n");
