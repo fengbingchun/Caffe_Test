@@ -4,19 +4,18 @@
 int mnist_train()
 {
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
-	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
 
+	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
 	caffe::SolverParameter solver_param;
 	if (!caffe::ReadProtoFromTextFile(filename.c_str(), &solver_param)) {
 		fprintf(stderr, "parse solver.prototxt fail\n");
 		return -1;
 	}
 
-	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
+	mnist_convert(); // convert MNIST to LMDB
 
-	fprintf(stderr, "Starting Optimization\n");
+	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
 	solver->Solve();
-	fprintf(stderr, "Optimization Done\n");
 
 	fprintf(stderr, "train finish\n");
 	return 0;
@@ -266,7 +265,7 @@ int mnist_convert()
 		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train" };
 
 	convert_dataset(argv_train[0].c_str(), argv_train[1].c_str(), argv_train[2].c_str(), "lmdb");
-	//convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");
+	convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");
 
 	fprintf(stderr, "mnist convert finish\n");
 	return 0;

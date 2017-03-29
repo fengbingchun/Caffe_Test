@@ -1,7 +1,7 @@
 name: "LeNet"
 layer {
   name: "data"
-  type: "MemoryData"
+  type: "MemoryData" # layer类型，Data enters Caffe through data layers，read data directly from memory
   top: "data"
   top: "label"
   memory_data_param {
