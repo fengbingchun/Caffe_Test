@@ -1,138 +1,144 @@
-name: "LeNet"
-layer {
-  name: "data"
+name: "LeNet" # net名
+layer { # memory required: (784+1)*4=3140
+  name: "data" # layer名字
   type: "MemoryData" # layer类型，Data enters Caffe through data layers，read data directly from memory
-  top: "data"
-  top: "label"
-  memory_data_param {
-    batch_size: 1
-    channels: 1
-    height: 28
-    width: 28
+  top: "data" # top名字, shape: 1 1 28 28 (784)
+  top: "label"  # top名字, shape: 1 (1) #感觉并无实质作用，仅用于增加一个top blob，不可去掉
+  memory_data_param { # 内存数据参数
+    batch_size: 1 # 指定待识别图像一次的数量
+    channels: 1 # 指定待识别图像的通道数
+    height: 28 # 指定待识别图像的高度
+    width: 28 # 指定待识别图像的宽度
   }
-  transform_param {
-    scale: 0.00390625
-  }
-}
-layer {
-  name: "conv1"
-  type: "Convolution"
-  bottom: "data"
-  top: "conv1"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 20
-    kernel_size: 5
-    stride: 1
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
-    }
+  transform_param { # 图像预处理参数
+    scale: 0.00390625 # 对图像像素值进行scale操作,范围[0, 1)
   }
 }
-layer {
-  name: "pool1"
-  type: "Pooling"
-  bottom: "conv1"
-  top: "pool1"
-  pooling_param {
-    pool: MAX
-    kernel_size: 2
-    stride: 2
+layer { # memory required: 11520*4=46080
+  name: "conv1" # layer名字
+  type: "Convolution" # layer类型，卷积层
+  bottom: "data" # bottom名字
+  top: "conv1" # top名字, shape: 1 20 24 24 (11520)
+  param { # Specifies training parameters
+    lr_mult: 1 # The multiplier on the global learning rate
   }
-}
-layer {
-  name: "conv2"
-  type: "Convolution"
-  bottom: "pool1"
-  top: "conv2"
-  param {
-    lr_mult: 1
+  param { # Specifies training parameters
+    lr_mult: 2 # The multiplier on the global learning rate
   }
-  param {
-    lr_mult: 2
-  }
-  convolution_param {
-    num_output: 50
-    kernel_size: 5
-    stride: 1
-    weight_filler {
-      type: "xavier"
+  convolution_param { # 卷积参数
+    num_output: 20 # 输出特征图(feature map)数量
+    kernel_size: 5 # 卷积核大小(卷积核其实就是权值)
+    stride: 1 # 滑动步长
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
     }
-    bias_filler {
-      type: "constant"
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
     }
   }
 }
-layer {
-  name: "pool2"
-  type: "Pooling"
-  bottom: "conv2"
-  top: "pool2"
-  pooling_param {
-    pool: MAX
-    kernel_size: 2
-    stride: 2
+layer { # memory required: 2880*4=11520
+  name: "pool1" # layer名字
+  type: "Pooling" # layer类型,Pooling层
+  bottom: "conv1" # bottom名字
+  top: "pool1" # top名字, shape: 1 20 12 12 (2880)
+  pooling_param { # pooling parameter，pooling层参数
+    pool: MAX # pooling方法：最大值采样
+    kernel_size: 2 # 滤波器大小
+    stride: 2 # 滑动步长
   }
 }
-layer {
-  name: "ip1"
-  type: "InnerProduct"
-  bottom: "pool2"
-  top: "ip1"
-  param {
-    lr_mult: 1
+layer { # memory required: 3200*4=12800
+  name: "conv2" # layer名字
+  type: "Convolution" # layer类型,卷积层
+  bottom: "pool1" # bottom名字
+  top: "conv2" # top名字, shape: 1 50 8 8 (3200)
+  param { # Specifies training parameters
+    lr_mult: 1 # The multiplier on the global learning rate
   }
-  param {
-    lr_mult: 2
+  param { # Specifies training parameters
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  convolution_param { # 卷积参数
+    num_output: 50 # 输出特征图(feature map)数量
+    kernel_size: 5 # 卷积核大小(卷积核其实就是权值)
+    stride: 1 # 滑动步长
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+layer { # memory required: 800*4=3200
+  name: "pool2" # layer名字
+  type: "Pooling" # layer类型,Pooling层
+  bottom: "conv2" # bottom名字
+  top: "pool2" # top名字, shape: 1 50 4 4 (800)
+  pooling_param { # pooling parameter，pooling层参数
+    pool: MAX # pooling方法：最大值采样
+    kernel_size: 2 # 滤波器大小
+    stride: 2 # 滑动步长
+  }
+}
+layer { # memory required: 500*4=2000
+  name: "ip1" # layer名字
+  type: "InnerProduct" # layer类型，全连接层
+  bottom: "pool2" # bottom名字
+  top: "ip1" # top名字, shape: 1 500 (500)
+  param { # Specifies training parameters
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # Specifies training parameters
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  inner_product_param { # 全连接层参数
+    num_output: 500 # 输出特征图(feature map)数量
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+# ReLU: Given an input value x, The ReLU layer computes the output as x if x > 0 and 
+# negative_slope * x if x <= 0. When the negative slope parameter is not set,
+# it is equivalent to the standard ReLU function of taking max(x, 0).
+# It also supports in-place computation, meaning that the bottom and
+# the top blob could be the same to preserve memory consumption
+layer { # memory required: 500*4=2000
+  name: "relu1" # layer名字
+  type: "ReLU" # layer类型
+  bottom: "ip1" # bottom名字
+  top: "ip1" # top名字 (in-place), shape: 1 500 (500)
+}
+layer { # memory required: 10*4=40
+  name: "ip2" # layer名字
+  type: "InnerProduct" # layer类型,全连接层
+  bottom: "ip1" # bottom名字
+  top: "ip2" # top名字, shape: 1 10 (10)
+  param { # Specifies training parameters
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # Specifies training parameters
+    lr_mult: 2 # The multiplier on the global learning rate
   }
   inner_product_param {
-    num_output: 500
-    weight_filler {
-      type: "xavier"
+    num_output: 10 # 输出特征图(feature map)数量
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
     }
-    bias_filler {
-      type: "constant"
-    }
-  }
-}
-layer {
-  name: "relu1"
-  type: "ReLU"
-  bottom: "ip1"
-  top: "ip1"
-}
-layer {
-  name: "ip2"
-  type: "InnerProduct"
-  bottom: "ip1"
-  top: "ip2"
-  param {
-    lr_mult: 1
-  }
-  param {
-    lr_mult: 2
-  }
-  inner_product_param {
-    num_output: 10
-    weight_filler {
-      type: "xavier"
-    }
-    bias_filler {
-      type: "constant"
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
     }
   }
 }
-layer {
-  name: "prob"
-  type: "Softmax"
-  bottom: "ip2"
-  top: "prob"
+layer { # memory required: 10*4=40
+  name: "prob" # layer名字
+  type: "Softmax" # layer类型
+  bottom: "ip2" # bottom名字
+  top: "prob" # top名字, shape: 1 10 (10)
 }
+# 占用总内存大小为：3140+46080+11520+12800+3200+2000+2000+40+40=80820

@@ -29,15 +29,42 @@ int mnist_predict()
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/" };
 
-	// Instantiate the caffe net.
+	// 有两种方法可以实例化net
+	// 1. 通过传入参数类型为std::string
 	caffe::Net<float> caffe_net(param_file, caffe::TEST);
 	caffe_net.CopyTrainedLayersFrom(trained_filename);
+	// 2. 通过传入参数类型为caffe::NetParameter
+	//caffe::NetParameter net_param1, net_param2;
+	//caffe::ReadNetParamsFromTextFileOrDie(param_file, &net_param1);
+	//net_param1.mutable_state()->set_phase(caffe::TEST);
+	//caffe::Net<float> caffe_net(net_param1);
+	//caffe::ReadNetParamsFromBinaryFileOrDie(trained_filename, &net_param2);
+	//caffe_net.CopyTrainedLayersFrom(net_param2);
+
+	int num_inputs = caffe_net.input_blobs().size(); // 0 ??
+	const boost::shared_ptr<caffe::Blob<float> > blob_by_name = caffe_net.blob_by_name("data");
+	int image_channel = blob_by_name->channels();
+	int image_height = blob_by_name->height();
+	int image_width = blob_by_name->width();
+
+	int num_outputs = caffe_net.num_outputs();
+	const std::vector<caffe::Blob<float>*> output_blobs = caffe_net.output_blobs();
+	int require_blob_index{ -1 };
+	const int digit_category_num{ 10 };
+	for (int i = 0; i < output_blobs.size(); ++i) {
+		if (output_blobs[i]->count() == digit_category_num)
+			require_blob_index = i;
+	}
+	if (require_blob_index == -1) {
+		fprintf(stderr, "ouput blob don't match\n");
+		return -1;
+	}
 
 	std::vector<int> target{ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 	std::vector<int> result;
 
-	for (int i = 0; i < target.size(); i++) {
-		std::string str = std::to_string(i);
+	for (auto num : target) {
+		std::string str = std::to_string(num);
 		str += ".png";
 		str = image_path + str;
 
@@ -47,31 +74,35 @@ int mnist_predict()
 			return -1;
 		}
 
-		cv::cvtColor(mat, mat, CV_BGR2GRAY);
-		cv::resize(mat, mat, cv::Size(28, 28));
+		if (image_channel == 1)
+			cv::cvtColor(mat, mat, CV_BGR2GRAY);
+		else if (image_channel == 4)
+			cv::cvtColor(mat, mat, CV_BGR2BGRA);
+
+		cv::resize(mat, mat, cv::Size(image_width, image_height));
 		cv::bitwise_not(mat, mat);
 
-		// set the patch for testing
-		std::vector<cv::Mat> patches;
-		patches.push_back(mat);
+		// 将图像数据载入Net网络，有2种方法
+		boost::shared_ptr<caffe::MemoryDataLayer<float> > memory_data_layer =
+			boost::static_pointer_cast<caffe::MemoryDataLayer<float>>(caffe_net.layer_by_name("data"));
+		// 1. 通过MemoryDataLayer类的Reset函数
+		mat.convertTo(mat, CV_32FC1, 0.00390625);
+		float dummy_label[1] {0};
+		memory_data_layer->Reset((float*)(mat.data), dummy_label, 1);
 
-		// push vector<Mat> to data layer
-		float loss = 0.0;
-		boost::shared_ptr<caffe::MemoryDataLayer<float> > memory_data_layer;
-		memory_data_layer = boost::static_pointer_cast<caffe::MemoryDataLayer<float>>(caffe_net.layer_by_name("data"));
+		// 2. 通过MemoryDataLayer类的AddMatVector函数
+		//std::vector<cv::Mat> patches{mat}; // set the patch for testing
+		//std::vector<int> labels(patches.size());
+		//memory_data_layer->AddMatVector(patches, labels); // push vector<Mat> to data layer
 
-		std::vector<int> labels(patches.size());
-		memory_data_layer->AddMatVector(patches, labels);
+		float loss{ 0.0 };
+		const std::vector<caffe::Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss); // Net forward
+		const float* output = results[require_blob_index]->cpu_data();
 
-		// Net forward
-		const std::vector<caffe::Blob<float>*>& results = caffe_net.ForwardPrefilled(&loss);
-		float* output = results[1]->mutable_cpu_data();
+		float tmp{ -1 };
+		int pos{ -1 };
 
-		float tmp = -1;
-		int pos = -1;
-
-		// Display the output
-		fprintf(stderr, "actual digit is: %d\n", target[i]);
+		fprintf(stderr, "actual digit is: %d\n", target[num]);
 		for (int j = 0; j < 10; j++) {
 			printf("Probability to be Number %d is: %.3f\n", j, output[j]);
 			if (tmp < output[j]) {
@@ -83,7 +114,7 @@ int mnist_predict()
 		result.push_back(pos);
 	}
 
-	for (int i = 0; i < 10; i++)
+	for (auto i = 0; i < 10; i++)
 		fprintf(stderr, "actual digit is: %d, result digit is: %d\n", target[i], result[i]);
 
 	fprintf(stderr, "predict finish\n");
