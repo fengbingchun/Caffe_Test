@@ -7,6 +7,9 @@
 #include "caffe/common.hpp"
 #include "caffe/proto/caffe.pb.h"
 
+#define CUDNN_VERSION_MIN(major, minor, patch) \
+    (CUDNN_VERSION >= (major * 1000 + minor * 100 + patch))
+
 #define CUDNN_CHECK(condition) \
   do { \
     cudnnStatus_t status = condition; \
@@ -14,6 +17,7 @@
       << cudnnGetErrorString(status); \
   } while (0)
 
+#if !defined (_MSC_VER)
 inline const char* cudnnGetErrorString(cudnnStatus_t status) {
   switch (status) {
     case CUDNN_STATUS_SUCCESS:
@@ -41,6 +45,7 @@ inline const char* cudnnGetErrorString(cudnnStatus_t status) {
   }
   return "Unknown cudnn status";
 }
+#endif
 
 namespace caffe {
 
@@ -88,8 +93,13 @@ template <typename Dtype>
 inline void createFilterDesc(cudnnFilterDescriptor_t* desc,
     int n, int c, int h, int w) {
   CUDNN_CHECK(cudnnCreateFilterDescriptor(desc));
+#if CUDNN_VERSION_MIN(5, 0, 0)
   CUDNN_CHECK(cudnnSetFilter4dDescriptor(*desc, dataType<Dtype>::type,
-      n, c, h, w));
+      CUDNN_TENSOR_NCHW, n, c, h, w));
+#else
+  CUDNN_CHECK(cudnnSetFilter4dDescriptor_v4(*desc, dataType<Dtype>::type,
+      CUDNN_TENSOR_NCHW, n, c, h, w));
+#endif
 }
 
 template <typename Dtype>
@@ -120,8 +130,21 @@ inline void createPoolingDesc(cudnnPoolingDescriptor_t* pool_desc,
     LOG(FATAL) << "Unknown pooling method.";
   }
   CUDNN_CHECK(cudnnCreatePoolingDescriptor(pool_desc));
-  CUDNN_CHECK(cudnnSetPooling2dDescriptor(*pool_desc, *mode, h, w,
-        pad_h, pad_w, stride_h, stride_w));
+#if CUDNN_VERSION_MIN(5, 0, 0)
+  CUDNN_CHECK(cudnnSetPooling2dDescriptor(*pool_desc, *mode,
+        CUDNN_PROPAGATE_NAN, h, w, pad_h, pad_w, stride_h, stride_w));
+#else
+  CUDNN_CHECK(cudnnSetPooling2dDescriptor_v4(*pool_desc, *mode,
+        CUDNN_PROPAGATE_NAN, h, w, pad_h, pad_w, stride_h, stride_w));
+#endif
+}
+
+template <typename Dtype>
+inline void createActivationDescriptor(cudnnActivationDescriptor_t* activ_desc,
+    cudnnActivationMode_t mode) {
+  CUDNN_CHECK(cudnnCreateActivationDescriptor(activ_desc));
+  CUDNN_CHECK(cudnnSetActivationDescriptor(*activ_desc, mode,
+                                           CUDNN_PROPAGATE_NAN, Dtype(0)));
 }
 
 }  // namespace cudnn

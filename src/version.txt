@@ -1,5 +1,11 @@
-1. caffe:
-	commit: 09868ac;
-	date: 2015.08.15;
+1. caffe: branch: windows
+	commit: 88ddc95;
+	date: 2017.03.29;
 	url: https://github.com/BVLC/caffe
-2. 
+2. boost: binary library
+	version: 1.58.0
+	date: 2015.04.17
+	url:
+		http://www.boost.org/
+		http://www.boost.org/users/history/version_1_58_0.html
+		https://sourceforge.net/projects/boost/files/boost-binaries/1.58.0/
