@@ -20,6 +20,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotoc", "..\libprotoc\l
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "protoc", "..\protoc\protoc.vcxproj", "{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThirdPartyLibrary_Test", "..\ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.vcxproj", "{75062F93-A9BB-4047-BCA4-FC67BA539D0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -42,6 +44,8 @@ Global
 		{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}.Release|x64.ActiveCfg = Release|x64
 		{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}.Debug|x64.ActiveCfg = Debug|x64
 		{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}.Release|x64.ActiveCfg = Release|x64
+		{75062F93-A9BB-4047-BCA4-FC67BA539D0C}.Debug|x64.ActiveCfg = Debug|x64
+		{75062F93-A9BB-4047-BCA4-FC67BA539D0C}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
