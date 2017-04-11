@@ -111,12 +111,16 @@ enum { STDIN_FILENO = 0, STDOUT_FILENO = 1, STDERR_FILENO = 2 };
  * because they don't always NUL-terminate. :-(  We also can't use the
  * name vsnprintf, since windows defines that (but not snprintf (!)).
  */
-extern int snprintf(char *str, size_t size,
+#ifndef HAVE_SNPRINTF
+extern int GOOGLE_GLOG_DLL_DECL snprintf(char *str, size_t size,
                                        const char *format, ...);
-extern int safe_vsnprintf(char *str, size_t size,
+#endif
+extern int GOOGLE_GLOG_DLL_DECL safe_vsnprintf(char *str, size_t size,
                           const char *format, va_list ap);
 #define vsnprintf(str, size, format, ap)  safe_vsnprintf(str, size, format, ap)
+#ifndef va_copy
 #define va_copy(dst, src)  (dst) = (src)
+#endif
 
 /* Windows doesn't support specifying the number of buckets as a
  * hash_map constructor arg, so we leave this blank.
@@ -132,6 +136,7 @@ typedef int pid_t;
 #endif  // _MSC_VER
 
 // ----------------------------------- THREADS
+#ifndef __MINGW32__
 typedef DWORD pthread_t;
 typedef DWORD pthread_key_t;
 typedef LONG pthread_once_t;
@@ -143,6 +148,7 @@ inline struct tm* localtime_r(const time_t* timep, struct tm* result) {
   localtime_s(result, timep);
   return result;
 }
+#endif
 
 inline char* strerror_r(int errnum, char* buf, size_t buflen) {
   strerror_s(buf, buflen, errnum);
