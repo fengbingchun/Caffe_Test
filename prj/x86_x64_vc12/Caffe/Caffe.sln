@@ -7,16 +7,18 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testThridLibrary", "..\test
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "caffe", "..\caffe_vs2013_lib\caffe_vs2013_lib.vcxproj", "{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tools_convert_mnist_data", "..\tools_convert_mnist_data\tools_convert_mnist_data.vcxproj", "{B6A6ABE5-DF27-45C7-A93F-6CD579B6C93F}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "train_mnist", "..\train_mnist\train_mnist.vcxproj", "{DD98CB92-95A8-474E-B446-98F7C5A5E1F2}"
-EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_mnist", "..\test_mnist\test_mnist.vcxproj", "{2838C153-FF8A-4F54-B807-912952FA6657}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Caffe_Test", "..\Caffe_Test\Caffe_Test.vcxproj", "{ECD8F81D-1A91-4B1F-88A8-CB319D8D1455}"
 	ProjectSection(ProjectDependencies) = postProject
 		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3} = {D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "..\libprotobuf\libprotobuf.vcxproj", "{2DA5FEB0-5138-4F68-9EC3-81D91D355EA1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf-lite", "..\libprotobuf-lite\libprotobuf-lite.vcxproj", "{0BA03446-514C-4B2A-81C2-B646E6B9D4CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotoc", "..\libprotoc\libprotoc.vcxproj", "{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "protoc", "..\protoc\protoc.vcxproj", "{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,20 +32,16 @@ Global
 		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Debug|x64.Build.0 = Debug|x64
 		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Release|x64.ActiveCfg = Release|x64
 		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}.Release|x64.Build.0 = Release|x64
-		{B6A6ABE5-DF27-45C7-A93F-6CD579B6C93F}.Debug|x64.ActiveCfg = Debug|x64
-		{B6A6ABE5-DF27-45C7-A93F-6CD579B6C93F}.Debug|x64.Build.0 = Debug|x64
-		{B6A6ABE5-DF27-45C7-A93F-6CD579B6C93F}.Release|x64.ActiveCfg = Release|x64
-		{B6A6ABE5-DF27-45C7-A93F-6CD579B6C93F}.Release|x64.Build.0 = Release|x64
-		{DD98CB92-95A8-474E-B446-98F7C5A5E1F2}.Debug|x64.ActiveCfg = Debug|x64
-		{DD98CB92-95A8-474E-B446-98F7C5A5E1F2}.Debug|x64.Build.0 = Debug|x64
-		{DD98CB92-95A8-474E-B446-98F7C5A5E1F2}.Release|x64.ActiveCfg = Release|x64
-		{DD98CB92-95A8-474E-B446-98F7C5A5E1F2}.Release|x64.Build.0 = Release|x64
-		{2838C153-FF8A-4F54-B807-912952FA6657}.Debug|x64.ActiveCfg = Debug|x64
-		{2838C153-FF8A-4F54-B807-912952FA6657}.Debug|x64.Build.0 = Debug|x64
-		{2838C153-FF8A-4F54-B807-912952FA6657}.Release|x64.ActiveCfg = Release|x64
-		{2838C153-FF8A-4F54-B807-912952FA6657}.Release|x64.Build.0 = Release|x64
 		{ECD8F81D-1A91-4B1F-88A8-CB319D8D1455}.Debug|x64.ActiveCfg = Debug|x64
 		{ECD8F81D-1A91-4B1F-88A8-CB319D8D1455}.Release|x64.ActiveCfg = Release|x64
+		{2DA5FEB0-5138-4F68-9EC3-81D91D355EA1}.Debug|x64.ActiveCfg = Debug|x64
+		{2DA5FEB0-5138-4F68-9EC3-81D91D355EA1}.Release|x64.ActiveCfg = Release|x64
+		{0BA03446-514C-4B2A-81C2-B646E6B9D4CD}.Debug|x64.ActiveCfg = Debug|x64
+		{0BA03446-514C-4B2A-81C2-B646E6B9D4CD}.Release|x64.ActiveCfg = Release|x64
+		{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}.Debug|x64.ActiveCfg = Debug|x64
+		{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}.Release|x64.ActiveCfg = Release|x64
+		{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}.Debug|x64.ActiveCfg = Debug|x64
+		{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

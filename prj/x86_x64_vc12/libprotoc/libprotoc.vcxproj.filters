@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_enum.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_extension.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_file.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_helpers.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_map_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_message.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_service.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\cpp\cpp_string_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_enum.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_extension.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_file.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_helpers.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_map_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_message.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_oneof.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\objectivec\objectivec_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\js\js_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\js\well_known_types_embed.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_extension.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_file.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_helpers.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_map_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_message.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_context.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_doc_comment.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_enum.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_enum_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_enum_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_extension.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_extension_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_file.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_generator_factory.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_helpers.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_lazy_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_lazy_message_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_map_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_map_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message_builder.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message_builder_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_message_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_name_resolver.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_primitive_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_service.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_shared_code_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_string_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\java\java_string_field_lite.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_doc_comment.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_enum.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_field_base.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_helpers.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_map_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_message.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_reflection_class.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_repeated_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_repeated_message_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_repeated_primitive_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_source_generator_base.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\csharp\csharp_wrapper_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\zip_writer.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\subprocess.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\plugin.pb.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\plugin.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\command_line_interface.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\code_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_enum_field.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\javanano\javanano_enum.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\php\php_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\python\python_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\protobuf\src\google\protobuf\compiler\ruby\ruby_generator.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
