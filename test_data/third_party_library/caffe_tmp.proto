@@ -1,0 +1,126 @@
+// syntax关键字，以指明proto文件的Protobuf协议版本，不指明则是v2
+// syntax = "proto3"; //v3 
+syntax = "proto2"; 
+package caffe_tmp;
+
+// Specifies the shape (dimensions) of a Blob.
+message BlobShape {
+  repeated int64 dim = 1 [packed = true];
+}
+
+message BlobProto {
+  optional BlobShape shape = 7;
+  repeated float data = 5 [packed = true];
+  repeated float diff = 6 [packed = true];
+
+  // 4D dimensions -- deprecated.  Use "shape" instead.
+  optional int32 num = 1 [default = 0];
+  optional int32 channels = 2 [default = 0];
+  optional int32 height = 3 [default = 0];
+  optional int32 width = 4 [default = 0];
+}
+
+message Datum {
+  optional int32 channels = 1;
+  optional int32 height = 2;
+  optional int32 width = 3;
+  // the actual image data, in bytes
+  optional bytes data = 4;
+  optional int32 label = 5;
+  // Optionally, the datum could also hold float data.
+  repeated float float_data = 6;
+  // If true data contains an encoded image that need to be decoded
+  optional bool encoded = 7 [default = false];
+}
+
+enum Phase {
+   TRAIN = 0;
+   TEST = 1;
+}
+
+message NetState {
+  optional Phase phase = 1 [default = TEST];
+  optional int32 level = 2 [default = 0];
+  repeated string stage = 3;
+}
+
+// Update the next available ID when you add a new LayerParameter field.
+// LayerParameter next available layer-specific
+message LayerParameter {
+  optional string name = 1; // the layer name
+  optional string type = 2; // the layer type
+  repeated string bottom = 3; // the name of each bottom blob
+  repeated string top = 4; // the name of each top blob
+
+  // The train / test phase for computation.
+  optional Phase phase = 10;
+
+  // The blobs containing the numeric parameters of the layer.
+  repeated BlobProto blobs = 7;
+ }
+
+ // Message that stores parameters shared by loss layers
+message LossParameter {
+  // If specified, ignore instances with the given label.
+  optional int32 ignore_label = 1;
+  // If true, normalize each batch across all instances (including spatial
+  // dimesions, but not ignored instances); else, divide by batch size only.
+  optional bool normalize = 2 [default = true];
+}
+
+message ConvolutionParameter {
+  optional uint32 num_output = 1; // The number of outputs for the layer
+  optional bool bias_term = 2 [default = true]; // whether to have bias terms
+  // Pad, kernel size, and stride are all given as a single value for equal
+  // dimensions in height and width or as Y, X pairs.
+  optional uint32 pad = 3 [default = 0]; // The padding size (equal in Y, X)
+  optional uint32 pad_h = 6 [default = 0]; // The padding height
+  optional uint32 pad_w = 7 [default = 0]; // The padding width
+  optional uint32 kernel_size = 4; // The kernel size (square)
+  optional uint32 kernel_h = 8; // The kernel height
+  optional uint32 kernel_w = 9; // The kernel width
+  optional uint32 group = 5 [default = 1]; // The group size for group conv
+
+  enum Engine {
+    DEFAULT = 0;
+    CAFFE = 1;
+    CUDNN = 2;
+  }
+  optional Engine engine = 15 [default = DEFAULT];
+}
+
+message MemoryDataParameter {
+  optional uint32 batch_size = 1;
+  optional uint32 channels = 2;
+  optional uint32 height = 3;
+  optional uint32 width = 4;
+}
+
+message PoolingParameter {
+  enum PoolMethod {
+    MAX = 0;
+    AVE = 1;
+    STOCHASTIC = 2;
+  }
+  optional PoolMethod pool = 1 [default = MAX]; // The pooling method
+  // Pad, kernel size, and stride are all given as a single value for equal
+  // dimensions in height and width or as Y, X pairs.
+  optional uint32 pad = 4 [default = 0]; // The padding size (equal in Y, X)
+  optional uint32 pad_h = 9 [default = 0]; // The padding height
+  optional uint32 pad_w = 10 [default = 0]; // The padding width
+  optional uint32 kernel_size = 2; // The kernel size (square)
+  optional uint32 kernel_h = 5; // The kernel height
+  optional uint32 kernel_w = 6; // The kernel width
+  optional uint32 stride = 3 [default = 1]; // The stride (equal in Y, X)
+  optional uint32 stride_h = 7; // The stride height
+  optional uint32 stride_w = 8; // The stride width
+  enum Engine {
+    DEFAULT = 0;
+    CAFFE = 1;
+    CUDNN = 2;
+  }
+  optional Engine engine = 11 [default = DEFAULT];
+  // If global_pooling then it will pool over the size of the bottom by doing
+  // kernel_h = bottom->height and kernel_w = bottom->width
+  optional bool global_pooling = 12 [default = false];
+}
