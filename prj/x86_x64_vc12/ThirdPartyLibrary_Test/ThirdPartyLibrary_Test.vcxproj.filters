@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\caffe_tmp.pb.cc">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\glog_test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\boost_test.hpp">
@@ -42,6 +45,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\caffe_tmp.pb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\glog_test.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
