@@ -29,12 +29,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\src\gflags\src\util.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\gflags\src\mutex.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\src\gflags\include\gflags\config.h">
       <Filter>头文件</Filter>
     </ClInclude>
@@ -48,6 +42,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_gflags.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\gflags\src\mutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\gflags\src\util.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

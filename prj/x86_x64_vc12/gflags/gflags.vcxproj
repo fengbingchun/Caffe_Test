@@ -18,6 +18,21 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\gflags\src\gflags.cc" />
+    <ClCompile Include="..\..\..\src\gflags\src\gflags_completions.cc" />
+    <ClCompile Include="..\..\..\src\gflags\src\gflags_reporting.cc" />
+    <ClCompile Include="..\..\..\src\gflags\src\windows_port.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\gflags\include\gflags\config.h" />
+    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags.h" />
+    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_completions.h" />
+    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_declare.h" />
+    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_gflags.h" />
+    <ClInclude Include="..\..\..\src\gflags\src\mutex.h" />
+    <ClInclude Include="..\..\..\src\gflags\src\util.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CB9EBE73-71B6-412D-B8CE-F285834BEE3A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -31,7 +46,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -44,7 +59,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -101,7 +116,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;GFLAGS_IS_A_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\gflags\include\gflags;E:\GitCode\Caffe_Test\src\gflags\src;E:\GitCode\Caffe_Test\src\gflags\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/gflags\gflags.pch</PrecompiledHeaderOutputFile>
@@ -112,6 +127,9 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/dbg/x64_vc12/gflags.dll</OutputFile>
+      <AdditionalDependencies>shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../lib/dbg/x64_vc12/gflags.lib</ImportLibrary>
     </Link>
     <Lib>
       <OutputFile>../../../lib/dbg/x64_vc12/gflags.lib</OutputFile>
@@ -145,7 +163,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;GFLAGS_IS_A_DLL=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\gflags\src;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\gflags\include\gflags;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/gflags\gflags.pch</PrecompiledHeaderOutputFile>
@@ -158,6 +176,9 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../lib/rel/x64_vc12/gflags.dll</OutputFile>
+      <ImportLibrary>../../../lib/rel/x64_vc12/gflags.lib</ImportLibrary>
     </Link>
     <Lib>
       <OutputFile>../../../lib/rel/x64_vc12/gflags.lib</OutputFile>
@@ -166,21 +187,6 @@
       <OutputFile>.\../../../obj/rel/x64_vc12/gflags\gflags.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\..\src\gflags\src\gflags.cc" />
-    <ClCompile Include="..\..\..\src\gflags\src\gflags_completions.cc" />
-    <ClCompile Include="..\..\..\src\gflags\src\gflags_reporting.cc" />
-    <ClCompile Include="..\..\..\src\gflags\src\windows_port.cc" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\src\gflags\include\gflags\config.h" />
-    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags.h" />
-    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_completions.h" />
-    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_declare.h" />
-    <ClInclude Include="..\..\..\src\gflags\include\gflags\gflags_gflags.h" />
-    <ClInclude Include="..\..\..\src\gflags\src\mutex.h" />
-    <ClInclude Include="..\..\..\src\gflags\src\util.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
