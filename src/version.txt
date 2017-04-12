@@ -19,3 +19,8 @@
 	version: master
 	date: 2017.03.07
 	url: https://github.com/google/glog
+5. gflags:
+	commit: f8a0efe
+	version: 2.2.0
+	date: 2016.11.26
+	url: https://github.com/gflags/gflags/releases
