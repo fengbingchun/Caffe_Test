@@ -15,7 +15,7 @@
 	date: 2017.01.28
 	url: https://github.com/google/protobuf/releases
 4. glog: 
-	commit: d8cb47f
-	version: v0.3.4
-	date: 2015.03.11
-	url: https://github.com/google/glog/releases
+	commit: da816ea
+	version: master
+	date: 2017.03.07
+	url: https://github.com/google/glog
