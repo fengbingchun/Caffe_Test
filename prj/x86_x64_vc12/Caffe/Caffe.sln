@@ -26,6 +26,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libglog", "..\libglog\libgl
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gflags", "..\gflags\gflags.vcxproj", "{CB9EBE73-71B6-412D-B8CE-F285834BEE3A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "leveldb", "..\leveldb\leveldb.vcxproj", "{4FED95E0-3A62-4F86-98E3-E7174E863F35}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -54,6 +56,8 @@ Global
 		{994FBF93-A0DF-45BD-9EEB-00DB3708B7F6}.Release|x64.ActiveCfg = Release|x64
 		{CB9EBE73-71B6-412D-B8CE-F285834BEE3A}.Debug|x64.ActiveCfg = Debug|x64
 		{CB9EBE73-71B6-412D-B8CE-F285834BEE3A}.Release|x64.ActiveCfg = Release|x64
+		{4FED95E0-3A62-4F86-98E3-E7174E863F35}.Debug|x64.ActiveCfg = Debug|x64
+		{4FED95E0-3A62-4F86-98E3-E7174E863F35}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
