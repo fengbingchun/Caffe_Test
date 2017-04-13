@@ -24,3 +24,8 @@
 	version: 2.2.0
 	date: 2016.11.26
 	url: https://github.com/gflags/gflags/releases
+6. leveldb:
+	commit: 915d663
+	version: 1.18
+	date: 2015.07.29
+	url: https://github.com/bureau14/leveldb

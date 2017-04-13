@@ -5,6 +5,7 @@
 	- ProtoBuf version: 3.2
 	- GLog version: mater, commit: da816ea, date: 2017.03.07
 	- GFlags version: 2.2.0
+	- LevelDB version: 1.18
 - MNIST convert to LMDB/LevelDB
 - MNIST train and predict
 - Caffe main header files's usage, include:
