@@ -29,3 +29,8 @@
 	version: 1.18
 	date: 2015.07.29
 	url: https://github.com/bureau14/leveldb
+7. lmdb
+	commit: 14cff07
+	version: 0.9.19
+	date: 2016.12.29
+	url: https://github.com/LMDB/lmdb/releases
