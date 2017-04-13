@@ -7,6 +7,7 @@
 	- GFlags version: 2.2.0
 	- LevelDB version: 1.18
 	- LMDB version: 0.9.19
+	- HDF5 version: 1.10.0-patch1
 - MNIST convert to LMDB/LevelDB
 - MNIST train and predict
 - Caffe main header files's usage, include:
