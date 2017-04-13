@@ -3,10 +3,11 @@
 #include "protobuf_test.hpp"
 #include "glog_test.hpp"
 #include "gflags_test.hpp"
+#include "leveldb_test.hpp"
 
 int main()
 {
-	int ret = test_gflags_1();
+	int ret = test_leveldb_1();
 
 	if (ret == 0) fprintf(stderr, "=====  test success  =====\n");
 	else fprintf(stderr, "*****  test fail  *****\n");
