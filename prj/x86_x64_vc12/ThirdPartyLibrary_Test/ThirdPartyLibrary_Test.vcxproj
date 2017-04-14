@@ -101,9 +101,9 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_HDF5USEDLL_;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/ThirdPartyLibrary_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64_vc12/ThirdPartyLibrary_Test\</ObjectFileName>
@@ -113,7 +113,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>.\../../../lib/dbg/x64_vc12/ThirdPartyLibrary_Test.exe</OutputFile>
-      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;hdf5.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0;E:\GitCode\Caffe_Test\lib\dbg\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Bscmake>
@@ -147,7 +147,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.pch</PrecompiledHeaderOutputFile>
       <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/ThirdPartyLibrary_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/rel/x64_vc12/ThirdPartyLibrary_Test\</ObjectFileName>
@@ -160,7 +160,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>.\../../../lib/rel/x64_vc12/ThirdPartyLibrary_Test.exe</OutputFile>
       <AdditionalLibraryDirectories>D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0;E:\GitCode\Caffe_Test\lib\rel\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;hdf5.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/rel/x64_vc12/ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.bsc</OutputFile>
@@ -171,6 +171,7 @@
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\caffe_tmp.pb.cc" />
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\gflags_test.cpp" />
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\glog_test.cpp" />
+    <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\hdf5_test.cpp" />
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\leveldb_test.cpp" />
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\lmdb_test.cpp" />
     <ClCompile Include="..\..\..\demo\ThirdPartyLibrary_Test\ml.helloworld.pb.cc" />
@@ -182,6 +183,7 @@
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\caffe_tmp.pb.h" />
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\gflags_test.hpp" />
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\glog_test.hpp" />
+    <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\hdf5_test.hpp" />
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\leveldb_test.hpp" />
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\lmdb_test.hpp" />
     <ClInclude Include="..\..\..\demo\ThirdPartyLibrary_Test\ml.helloworld.pb.h" />

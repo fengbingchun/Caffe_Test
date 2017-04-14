@@ -1,0 +1,6 @@
+#ifndef FBC_CAFFE_TEST_HDF5_TEST_HPP_
+#define FBC_CAFFE_TEST_HDF5_TEST_HPP_
+
+int test_hdf5_1();
+
+#endif // FBC_CAFFE_TEST_HDF5_TEST_HPP_
