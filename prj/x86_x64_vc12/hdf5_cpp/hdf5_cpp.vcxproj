@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B431624D-BC8C-4413-B45F-BDC6BE899A23}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hdf5_cpp</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64_vc12/hdf5_cpp\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/hdf5_cpp\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64_vc12/hdf5_cpp\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/hdf5_cpp\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;H5_BUILT_AS_DYNAMIC_LIB;hdf5_cpp_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\hdf5\c++\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/hdf5_cpp\hdf5_cpp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/hdf5_cpp\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/hdf5_cpp\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/hdf5_cpp\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/dbg/x64_vc12/hdf5_cpp.dll</OutputFile>
+      <AdditionalLibraryDirectories>E:\GitCode\Caffe_Test\lib\dbg\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>hdf5.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../lib/dbg/x64_vc12/hdf5_cpp.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/hdf5_cpp\hdf5_cpp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;H5_BUILT_AS_DYNAMIC_LIB;hdf5_cpp_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\hdf5\c++\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/hdf5_cpp\hdf5_cpp.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/hdf5_cpp\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/hdf5_cpp\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/hdf5_cpp\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>../../../lib/rel/x64_vc12/hdf5_cpp.dll</OutputFile>
+      <AdditionalLibraryDirectories>E:\GitCode\Caffe_Test\lib\rel\x64_vc12;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>hdf5.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>../../../lib/rel/x64_vc12/hdf5_cpp.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64_vc12/hdf5_cpp\hdf5_cpp.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5AbstractDs.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Alltypes.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5ArrayType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5AtomType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Attribute.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Classes.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5CommonFG.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5CompType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Cpp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5CppDoc.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5DataSet.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5DataSpace.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5DataType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5DcreatProp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5DxferProp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5EnumType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Exception.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5FaccProp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5FcreatProp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5File.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5FloatType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Group.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5IdComponent.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Include.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5IntType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Library.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Location.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5Object.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5OcreatProp.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5PredType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5PropList.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5StrType.h" />
+    <ClInclude Include="..\..\..\src\hdf5\c++\src\H5VarLenType.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5AbstractDs.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5ArrayType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5AtomType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Attribute.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5CommonFG.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5CompType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5DataSet.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5DataSpace.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5DataType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5DcreatProp.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5DxferProp.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5EnumType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Exception.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5FaccProp.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5FcreatProp.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5File.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5FloatType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Group.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5IdComponent.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5IntType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Library.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Location.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5Object.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5OcreatProp.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5PredType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5PropList.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5StrType.cpp" />
+    <ClCompile Include="..\..\..\src\hdf5\c++\src\H5VarLenType.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

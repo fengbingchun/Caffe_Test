@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CF76B210-027B-4C0A-BCA5-ED0D580FEF23}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>hdf5</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>.\../../../obj/dbg/x64_vc12/hdf5\</OutDir>
+    <IntDir>.\../../../obj/dbg/x64_vc12/hdf5\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>.\../../../obj/rel/x64_vc12/hdf5\</OutDir>
+    <IntDir>.\../../../obj/rel/x64_vc12/hdf5\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;H5_BUILT_AS_DYNAMIC_LIB;hdf5_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/dbg/x64_vc12/hdf5\hdf5.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/hdf5\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/dbg/x64_vc12/hdf5\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/hdf5\</ProgramDataBaseFileName>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling />
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OutputFile>../../../lib/dbg/x64_vc12/hdf5.dll</OutputFile>
+      <ImportLibrary>../../../lib/dbg/x64_vc12/hdf5.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/dbg/x64_vc12/hdf5\hdf5.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;H5_BUILT_AS_DYNAMIC_LIB;hdf5_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>
+      </SDLCheck>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderOutputFile>.\../../../obj/rel/x64_vc12/hdf5\hdf5.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\../../../obj/rel/x64_vc12/hdf5\</AssemblerListingLocation>
+      <ObjectFileName>.\../../../obj/rel/x64_vc12/hdf5\</ObjectFileName>
+      <ProgramDataBaseFileName>.\../../../obj/rel/x64_vc12/hdf5\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>../../../lib/rel/x64_vc12/hdf5.dll</OutputFile>
+      <ImportLibrary>../../../lib/rel/x64_vc12/hdf5.lib</ImportLibrary>
+    </Link>
+    <Bscmake>
+      <OutputFile>.\../../../obj/rel/x64_vc12/hdf5\hdf5.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\hdf5\src\H5ACmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5ACpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5ACprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5ACpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Amodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5api_adpt.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Apkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Aprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Apublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5B2module.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5B2pkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5B2private.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5B2public.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Bmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Bpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Bprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Bpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Cmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Cpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Cprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Cpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5CSprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Dmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Dpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Dprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Dpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5EAmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5EApkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5EAprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Edefin.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Einit.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Emodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Epkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Eprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Epubgen.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Epublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Eterm.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FAmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FApkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FAprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDcore.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDdirect.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDdrvr_module.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDfamily.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDlog.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDmpi.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDmpio.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDmulti.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDsec2.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDstdio.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FDwindows.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FLmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FLprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Fmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FOprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Fpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Fprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Fpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FSmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FSpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FSprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5FSpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Gmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Gpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Gprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Gpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HFmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HFpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HFprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HFpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HGmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HGpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HGprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HGpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HLmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HLpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HLprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HLpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5HPprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Imodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Ipkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Iprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Ipublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Lmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Lpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Lprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Lpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MFmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MFpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MFprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MMprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MMpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MPmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MPpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5MPprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Omodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Opkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Oprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Opublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Oshared.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5overflow.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5PLextern.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5PLmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5PLprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5PLpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Pmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Ppkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Pprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Ppublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5private.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5public.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Rmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Rpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Rprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Rpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5RSprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5SLmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5SLprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5SMmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Smodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5SMpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5SMprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Spkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Sprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Spublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5STprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Tmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Tpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Tprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Tpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5TSprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5UCprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5version.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5VMprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5WBprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5win32defs.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Zmodule.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Zpkg.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Zprivate.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\H5Zpublic.h" />
+    <ClInclude Include="..\..\..\src\hdf5\src\hdf5.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\hdf5\shared\H5lib_settings.c" />
+    <ClCompile Include="..\..\..\src\hdf5\shared\H5Tinit.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5A.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Abtree2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5AC.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5AClog.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5ACmpio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Adense.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Adeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Aint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Atest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2cache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2dbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2hdr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2int.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2stat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5B2test.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Bcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Bdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5C.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5checksum.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Cmpio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5CS.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5D.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5dbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dbtree.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dbtree2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dchunk.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dcompact.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dcontig.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ddbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ddeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dearray.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Defl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dfarray.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dfill.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dlayout.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dmpio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dnone.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Doh.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dscatgath.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dselect.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dsingle.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Dvirtual.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5E.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EA.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAdblkpage.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAdblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAhdr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAiblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAsblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAstat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5EAtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Edeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Eint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5F.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FA.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Faccum.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAdblkpage.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAdblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAhdr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAstat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FAtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fcwfs.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FD.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDcore.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDdirect.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fdeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDfamily.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDlog.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDmpi.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDmpio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDmulti.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDsec2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDspace.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDstdio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FDwindows.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fefc.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ffake.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FL.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fmount.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fmpi.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FO.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fquery.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FS.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FScache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FSdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fsfile.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FSint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FSsection.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FSstat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5FStest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fsuper.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Fsuper_cache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ftest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5G.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gbtree2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gcompact.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gdense.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gdeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gent.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Glink.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gloc.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gname.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gnode.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gobj.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Goh.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Groot.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gstab.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Gtraverse.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HF.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFbtree2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFdblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFdtable.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFhdr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFhuge.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFiblock.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFiter.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFman.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFsection.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFspace.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFstat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HFtiny.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HG.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HGcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HGdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HGquery.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HL.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HLcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HLdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HLdblk.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HLint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HLprfx.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5HP.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5I.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Itest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5L.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Lexternal.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MF.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MFaggr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MFdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MFsection.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MM.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MP.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5MPtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5O.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oainfo.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oalloc.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oattr.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oattribute.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Obogus.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Obtreek.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ocache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ochunk.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ocont.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ocopy.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Odbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Odrvinfo.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Odtype.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oefl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ofill.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oflush.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ofsinfo.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oginfo.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Olayout.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Olinfo.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Olink.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Omessage.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Omtime.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oname.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Onull.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Opline.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oproxy.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Orefcount.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Osdspace.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oshared.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Oshmesg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ostab.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Otest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ounknown.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5P.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pacpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pdapl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pdcpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pdeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pdxpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pencdec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pfapl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pfcpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pfmpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pgcpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5PL.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Plapl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Plcpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pocpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pocpypl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Pstrcpl.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ptest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5R.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Rdeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5RS.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5S.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Sall.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Sdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Shyper.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SL.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SM.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SMbtree2.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SMcache.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SMmessage.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Smpio.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5SMtest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Snone.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Spoint.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Sselect.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5ST.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Stest.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5system.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5T.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tarray.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tbit.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tcommit.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tcompound.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tconv.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tcset.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tdbg.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tdeprec.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tenum.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tfields.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tfixed.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tfloat.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5timer.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tnative.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Toffset.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Toh.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Topaque.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Torder.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tpad.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tprecis.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5trace.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5TS.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tstrpad.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tvisit.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Tvlen.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5UC.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5VM.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5WB.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Z.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Zdeflate.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Zfletcher32.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Znbit.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Zscaleoffset.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Zshuffle.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Zszip.c" />
+    <ClCompile Include="..\..\..\src\hdf5\src\H5Ztrans.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

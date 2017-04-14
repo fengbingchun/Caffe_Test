@@ -19,6 +19,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotoc", "..\libprotoc\libprotoc.vcxproj", "{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "protoc", "..\protoc\protoc.vcxproj", "{269BD6C4-02C8-4331-AB1E-D634C4C0AB50}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA} = {9C4CA49B-8F5B-4A85-AC39-5104A32CD0CA}
+		{2DA5FEB0-5138-4F68-9EC3-81D91D355EA1} = {2DA5FEB0-5138-4F68-9EC3-81D91D355EA1}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ThirdPartyLibrary_Test", "..\ThirdPartyLibrary_Test\ThirdPartyLibrary_Test.vcxproj", "{75062F93-A9BB-4047-BCA4-FC67BA539D0C}"
 EndProject
@@ -29,6 +33,24 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "leveldb", "..\leveldb\leveldb.vcxproj", "{4FED95E0-3A62-4F86-98E3-E7174E863F35}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lmdb", "..\lmdb\lmdb.vcxproj", "{14C7EAFC-23D6-4BF7-80E2-67F9A8F24D5B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5", "..\hdf5\hdf5.vcxproj", "{CF76B210-027B-4C0A-BCA5-ED0D580FEF23}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5_cpp", "..\hdf5_cpp\hdf5_cpp.vcxproj", "{B431624D-BC8C-4413-B45F-BDC6BE899A23}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF76B210-027B-4C0A-BCA5-ED0D580FEF23} = {CF76B210-027B-4C0A-BCA5-ED0D580FEF23}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5_hl", "..\hdf5_hl\hdf5_hl.vcxproj", "{D0847750-0DC3-4BC7-AC24-2371FB322975}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF76B210-027B-4C0A-BCA5-ED0D580FEF23} = {CF76B210-027B-4C0A-BCA5-ED0D580FEF23}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5_hl_cpp", "..\hdf5_hl_cpp\hdf5_hl_cpp.vcxproj", "{C419B944-ADC2-45BA-9F6D-E4F324012AA3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CF76B210-027B-4C0A-BCA5-ED0D580FEF23} = {CF76B210-027B-4C0A-BCA5-ED0D580FEF23}
+		{D0847750-0DC3-4BC7-AC24-2371FB322975} = {D0847750-0DC3-4BC7-AC24-2371FB322975}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +84,14 @@ Global
 		{4FED95E0-3A62-4F86-98E3-E7174E863F35}.Release|x64.ActiveCfg = Release|x64
 		{14C7EAFC-23D6-4BF7-80E2-67F9A8F24D5B}.Debug|x64.ActiveCfg = Debug|x64
 		{14C7EAFC-23D6-4BF7-80E2-67F9A8F24D5B}.Release|x64.ActiveCfg = Release|x64
+		{CF76B210-027B-4C0A-BCA5-ED0D580FEF23}.Debug|x64.ActiveCfg = Debug|x64
+		{CF76B210-027B-4C0A-BCA5-ED0D580FEF23}.Release|x64.ActiveCfg = Release|x64
+		{B431624D-BC8C-4413-B45F-BDC6BE899A23}.Debug|x64.ActiveCfg = Debug|x64
+		{B431624D-BC8C-4413-B45F-BDC6BE899A23}.Release|x64.ActiveCfg = Release|x64
+		{D0847750-0DC3-4BC7-AC24-2371FB322975}.Debug|x64.ActiveCfg = Debug|x64
+		{D0847750-0DC3-4BC7-AC24-2371FB322975}.Release|x64.ActiveCfg = Release|x64
+		{C419B944-ADC2-45BA-9F6D-E4F324012AA3}.Debug|x64.ActiveCfg = Debug|x64
+		{C419B944-ADC2-45BA-9F6D-E4F324012AA3}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
