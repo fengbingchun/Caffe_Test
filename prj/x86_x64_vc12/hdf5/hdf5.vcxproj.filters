@@ -1286,10 +1286,10 @@
     <ClCompile Include="..\..\..\src\hdf5\src\H5.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\hdf5\shared\H5lib_settings.c">
+    <ClCompile Include="..\..\..\src\hdf5\H5lib_settings.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\hdf5\shared\H5Tinit.c">
+    <ClCompile Include="..\..\..\src\hdf5\H5Tinit.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

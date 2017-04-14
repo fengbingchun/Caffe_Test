@@ -31,7 +31,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -44,7 +44,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -101,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;H5_BUILT_AS_DYNAMIC_LIB;hdf5_hl_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
       <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\hdf5\hl\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -121,6 +121,9 @@
     <Bscmake>
       <OutputFile>.\../../../obj/dbg/x64_vc12/hdf5_hl\hdf5_hl.bsc</OutputFile>
     </Bscmake>
+    <Lib>
+      <OutputFile>../../../lib/dbg/x64_vc12/hdf5_hl.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -147,7 +150,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;H5_BUILT_AS_DYNAMIC_LIB;hdf5_hl_shared_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>
       </SDLCheck>
       <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\hdf5\hl\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -169,6 +172,9 @@
     <Bscmake>
       <OutputFile>.\../../../obj/rel/x64_vc12/hdf5_hl\hdf5_hl.bsc</OutputFile>
     </Bscmake>
+    <Lib>
+      <OutputFile>../../../lib/rel/x64_vc12/hdf5_hl.lib</OutputFile>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\hdf5\hl\src\H5DOpublic.h" />
