@@ -1,6 +1,6 @@
 # Caffe_Test
 **The main role of the project: Caffe's usage**
-- Caffe's third library usage: Boost、GFlags、GLog、LevelDB、LMDB、ProtoBuf、HDF5、OpenBLAS
+- Caffe's third library usage: Boost、GFlags、GLog、LevelDB、LMDB、ProtoBuf、HDF5、OpenBLAS、Snappy
 	- Boost version: 1.58.0
 	- ProtoBuf version: 3.2
 	- GLog version: mater, commit: da816ea, date: 2017.03.07
@@ -8,6 +8,7 @@
 	- LevelDB version: 1.18
 	- LMDB version: 0.9.19
 	- HDF5 version: 1.10.0-patch1
+	- Snappy version: 1.1.4
 - MNIST convert to LMDB/LevelDB
 - MNIST train and predict
 - Caffe main header files's usage, include:
