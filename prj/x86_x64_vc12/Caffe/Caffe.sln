@@ -52,6 +52,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5_hl_cpp", "..\hdf5_hl_c
 		{D0847750-0DC3-4BC7-AC24-2371FB322975} = {D0847750-0DC3-4BC7-AC24-2371FB322975}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snappy", "..\snappy\snappy.vcxproj", "{42895CFF-AD17-4ACF-9006-E662843FD33A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -92,6 +94,8 @@ Global
 		{D0847750-0DC3-4BC7-AC24-2371FB322975}.Release|x64.ActiveCfg = Release|x64
 		{C419B944-ADC2-45BA-9F6D-E4F324012AA3}.Debug|x64.ActiveCfg = Debug|x64
 		{C419B944-ADC2-45BA-9F6D-E4F324012AA3}.Release|x64.ActiveCfg = Release|x64
+		{42895CFF-AD17-4ACF-9006-E662843FD33A}.Debug|x64.ActiveCfg = Debug|x64
+		{42895CFF-AD17-4ACF-9006-E662843FD33A}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
