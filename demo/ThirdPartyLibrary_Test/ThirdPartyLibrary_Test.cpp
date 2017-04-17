@@ -6,10 +6,11 @@
 #include "leveldb_test.hpp"
 #include "lmdb_test.hpp"
 #include "hdf5_test.hpp"
+#include "snappy_test.hpp"
 
 int main()
 {
-	int ret = test_hdf5_1();
+	int ret = test_snappy_1();
 
 	if (ret == 0) fprintf(stderr, "=====  test success  =====\n");
 	else fprintf(stderr, "*****  test fail  *****\n");
