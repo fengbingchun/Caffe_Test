@@ -54,6 +54,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdf5_hl_cpp", "..\hdf5_hl_c
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snappy", "..\snappy\snappy.vcxproj", "{42895CFF-AD17-4ACF-9006-E662843FD33A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libopenblas", "..\libopenblas\libopenblas.vcxproj", "{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -96,6 +98,8 @@ Global
 		{C419B944-ADC2-45BA-9F6D-E4F324012AA3}.Release|x64.ActiveCfg = Release|x64
 		{42895CFF-AD17-4ACF-9006-E662843FD33A}.Debug|x64.ActiveCfg = Debug|x64
 		{42895CFF-AD17-4ACF-9006-E662843FD33A}.Release|x64.ActiveCfg = Release|x64
+		{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}.Debug|x64.ActiveCfg = Debug|x64
+		{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
