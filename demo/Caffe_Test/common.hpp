@@ -10,6 +10,10 @@
 #include <sys/stat.h>
 #include <fstream>
 
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
 #include <gflags/gflags.h>
 #include <glog/logging.h>
 #include <google/protobuf/text_format.h>
@@ -27,13 +31,8 @@
 #include <caffe/proto/caffe.pb.h>
 #include <caffe/util/math_functions.hpp>
 #include <caffe/syncedmem.hpp>
-#include <caffe/vision_layers.hpp>
 #include <caffe/util/upgrade_proto.hpp>
 #include <caffe/net.hpp>
 #include <caffe/solver.hpp>
-
-#include <opencv2/core/core.hpp>
-#include <opencv2/highgui/highgui.hpp>
-#include <opencv2/imgproc/imgproc.hpp>
 
 #endif // FBC_CAFFE_TEST_COMMON_HPP_
