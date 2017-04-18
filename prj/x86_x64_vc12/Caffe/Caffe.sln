@@ -9,7 +9,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "caffe", "..\caffe_vs2013_li
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Caffe_Test", "..\Caffe_Test\Caffe_Test.vcxproj", "{ECD8F81D-1A91-4B1F-88A8-CB319D8D1455}"
 	ProjectSection(ProjectDependencies) = postProject
-		{D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3} = {D8428B2F-0687-47C1-8ADB-C72ADE9AE4A3}
+		{54817ACF-1305-4FB3-955B-558B426BACB2} = {54817ACF-1305-4FB3-955B-558B426BACB2}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libprotobuf", "..\libprotobuf\libprotobuf.vcxproj", "{2DA5FEB0-5138-4F68-9EC3-81D91D355EA1}"
@@ -56,6 +56,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "snappy", "..\snappy\snappy.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libopenblas", "..\libopenblas\libopenblas.vcxproj", "{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcaffe", "..\libcaffe\libcaffe.vcxproj", "{54817ACF-1305-4FB3-955B-558B426BACB2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -100,6 +102,8 @@ Global
 		{42895CFF-AD17-4ACF-9006-E662843FD33A}.Release|x64.ActiveCfg = Release|x64
 		{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}.Debug|x64.ActiveCfg = Debug|x64
 		{EA2C70E5-E05A-4E0A-AD4B-9FD16E6CBFF0}.Release|x64.ActiveCfg = Release|x64
+		{54817ACF-1305-4FB3-955B-558B426BACB2}.Debug|x64.ActiveCfg = Debug|x64
+		{54817ACF-1305-4FB3-955B-558B426BACB2}.Release|x64.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
