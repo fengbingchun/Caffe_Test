@@ -35,5 +35,6 @@
 #include <caffe/layers/pooling_layer.hpp>
 #include <caffe/net.hpp>
 #include <caffe/solver.hpp>
+#include <caffe/sgd_solvers.hpp>
 
 #endif // FBC_CAFFE_TEST_COMMON_HPP_

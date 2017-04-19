@@ -4,139 +4,138 @@
 #include <map>
 #include "common.hpp"
 
-//int test_caffe_solver()
-//{
-//	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
-//
-//	const std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
-//
-//	caffe::SolverParameter solver_param;
-//	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
-//		fprintf(stderr, "parse solver.prototxt fail\n");
-//		return -1;
-//	}
-//
-//	boost::shared_ptr<caffe::Solver<float> > solver(caffe::GetSolver<float>(solver_param));
-//
-//	caffe::SolverParameter param = solver->param();
-//
-//	if (param.has_net())
-//		fprintf(stderr, "net: %s\n", param.net().c_str());
-//	if (param.has_net_param()) {
-//		fprintf(stderr, "has net param\n");
-//		caffe::NetParameter net_param = param.net_param();
-//		if (net_param.has_name())
-//			fprintf(stderr, "net param name: %s\n", net_param.name().c_str());
-//	}
-//	if (param.has_train_net())
-//		fprintf(stderr, "train_net: %s\n", param.train_net());
-//	if (param.test_net().size() > 0) {
-//		for (auto test_net : param.test_net())
-//			fprintf(stderr, "test_net: %s\n", test_net);
-//	}
-//	if (param.has_train_net_param()) {
-//		fprintf(stderr, "has train net param\n");
-//		caffe::NetParameter train_net_param = param.train_net_param();
-//	}
-//	if (param.test_net_param().size() > 0) {
-//		fprintf(stderr, "has test net param\n");
-//		std::vector<caffe::NetParameter> test_net_param;
-//		for (auto net_param : param.test_net_param())
-//			test_net_param.push_back(net_param);
-//	}
-//
-//	if (param.has_train_state()) {
-//		fprintf(stderr, "has train state\n");
-//		caffe::NetState state = param.train_state();
-//	}
-//	if (param.test_state().size()) {
-//		fprintf(stderr, "has test state\n");
-//	}
-//
-//	if (param.test_iter_size() > 0) {
-//		fprintf(stderr, "has test iter\n");
-//		for (auto iter : param.test_iter())
-//			fprintf(stderr, "  %d  ", iter);
-//		fprintf(stderr, "\n");
-//	}
-//
-//	if (param.has_test_interval())
-//		fprintf(stderr, "test interval: %d\n", param.test_interval());
-//	bool test_compute_loss = param.test_compute_loss();
-//	fprintf(stderr, "test compute loss: %d\n", test_compute_loss);
-//	bool test_initialization = param.test_initialization();
-//	fprintf(stderr, "test initializtion: %d\n", test_initialization);
-//	if (param.has_base_lr()) {
-//		float base_lr = param.base_lr();
-//		fprintf(stderr, "base lr: %f\n", base_lr);
-//	}
-//	if (param.has_display()) {
-//		int display = param.display();
-//		fprintf(stderr, "display: %d\n", display);
-//	}
-//	int average_loss = param.average_loss();
-//	fprintf(stderr, "average loss: %d\n", average_loss);
-//	if (param.has_max_iter()) {
-//		int max_iter = param.max_iter();
-//		fprintf(stderr, "max iter: %d\n", max_iter);
-//	}
-//	int iter_size = param.iter_size();
-//	fprintf(stderr, "iter size: %d\n", iter_size);
-//
-//	if (param.has_lr_policy())
-//		fprintf(stderr, "lr policy: %s\n", param.lr_policy().c_str());
-//	if (param.has_gamma())
-//		fprintf(stderr, "gamma: %f\n", param.gamma());
-//	if (param.has_power())
-//		fprintf(stderr, "power: %f\n", param.power());
-//	if (param.has_momentum())
-//		fprintf(stderr, "momentum: %f\n", param.momentum());
-//	if (param.has_weight_decay())
-//		fprintf(stderr, "weight decay: %f\n", param.weight_decay());
-//	std::string regularization_type = param.regularization_type();
-//	fprintf(stderr, "regularization type: %s\n", param.regularization_type().c_str());
-//	if (param.has_stepsize())
-//		fprintf(stderr, "stepsize: %d\n", param.stepsize());
-//	if (param.stepvalue_size() > 0) {
-//		fprintf(stderr, "has stepvalue\n");
-//		for (auto value : param.stepvalue())
-//			fprintf(stderr, "  %d  ", value);
-//		fprintf(stderr, "\n");
-//	}
-//
-//	fprintf(stderr, "clip gradients: %f\n", param.clip_gradients());
-//
-//	fprintf(stderr, "snapshot: %d\n", param.snapshot());
-//	if (param.has_snapshot_prefix())
-//		fprintf(stderr, "snapshot prefix: %s\n", param.snapshot_prefix().c_str());
-//	fprintf(stderr, "snapshot diff: %d\n", param.snapshot_diff());
-//	caffe::SolverParameter_SnapshotFormat snapshot_format = param.snapshot_format();
-//	fprintf(stderr, "snapshot format: %s\n", snapshot_format == 0 ? "HDF5" : "BINARYPROTO");
-//	caffe::SolverParameter_SolverMode solver_mode = param.solver_mode();
-//	fprintf(stderr, "solver mode: %s\n", solver_mode == 0 ? "CPU" : "GPU");
-//	if (param.has_device_id())
-//		fprintf(stderr, "device id: %d\n", param.device_id());
-//	fprintf(stderr, "random seed: %d\n", param.random_seed());
-//
-//	caffe::SolverParameter_SolverType solver_type = param.solver_type();
-//	std::string solver_method[] {"SGD", "NESTEROV", "ADAGRAD", "RMSPROP", "ADADELTA", "ADAM"};
-//	fprintf(stderr, "solver type: %s\n", solver_method[solver_type].c_str());
-//	fprintf(stderr, "delta: %f\n", param.delta());
-//	fprintf(stderr, "momentum2: %f\n", param.momentum2());
-//
-//	if (param.has_rms_decay())
-//		fprintf(stderr, "rms decy: %f\n", param.rms_decay());
-//
-//	fprintf(stderr, "debug info: %d\n", param.debug_info());
-//	fprintf(stderr, "snapshot after train: %d\n", param.snapshot_after_train());
-//
-//	boost::shared_ptr<caffe::Net<float>> net = solver->net();
-//	std::vector<boost::shared_ptr<caffe::Net<float>>> test_nets = solver->test_nets();
-//	fprintf(stderr, "test nets size: %d\n", test_nets.size());
-//	fprintf(stderr, "iter: %d\n", solver->iter());
-//
-//	return 0;
-//}
+int test_caffe_solver()
+{
+	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+
+	const std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+
+	caffe::SolverParameter solver_param;
+	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
+		fprintf(stderr, "parse solver.prototxt fail\n");
+		return -1;
+	}
+
+	caffe::SGDSolver<float> solver(solver_param);
+	caffe::SolverParameter param = solver.param();
+
+	if (param.has_net())
+		fprintf(stderr, "net: %s\n", param.net().c_str());
+	if (param.has_net_param()) {
+		fprintf(stderr, "has net param\n");
+		caffe::NetParameter net_param = param.net_param();
+		if (net_param.has_name())
+			fprintf(stderr, "net param name: %s\n", net_param.name().c_str());
+	}
+	if (param.has_train_net())
+		fprintf(stderr, "train_net: %s\n", param.train_net());
+	if (param.test_net().size() > 0) {
+		for (auto test_net : param.test_net())
+			fprintf(stderr, "test_net: %s\n", test_net);
+	}
+	if (param.has_train_net_param()) {
+		fprintf(stderr, "has train net param\n");
+		caffe::NetParameter train_net_param = param.train_net_param();
+	}
+	if (param.test_net_param().size() > 0) {
+		fprintf(stderr, "has test net param\n");
+		std::vector<caffe::NetParameter> test_net_param;
+		for (auto net_param : param.test_net_param())
+			test_net_param.push_back(net_param);
+	}
+
+	if (param.has_train_state()) {
+		fprintf(stderr, "has train state\n");
+		caffe::NetState state = param.train_state();
+	}
+	if (param.test_state().size()) {
+		fprintf(stderr, "has test state\n");
+	}
+
+	if (param.test_iter_size() > 0) {
+		fprintf(stderr, "has test iter\n");
+		for (auto iter : param.test_iter())
+			fprintf(stderr, "  %d  ", iter);
+		fprintf(stderr, "\n");
+	}
+
+	if (param.has_test_interval())
+		fprintf(stderr, "test interval: %d\n", param.test_interval());
+	bool test_compute_loss = param.test_compute_loss();
+	fprintf(stderr, "test compute loss: %d\n", test_compute_loss);
+	bool test_initialization = param.test_initialization();
+	fprintf(stderr, "test initializtion: %d\n", test_initialization);
+	if (param.has_base_lr()) {
+		float base_lr = param.base_lr();
+		fprintf(stderr, "base lr: %f\n", base_lr);
+	}
+	if (param.has_display()) {
+		int display = param.display();
+		fprintf(stderr, "display: %d\n", display);
+	}
+	int average_loss = param.average_loss();
+	fprintf(stderr, "average loss: %d\n", average_loss);
+	if (param.has_max_iter()) {
+		int max_iter = param.max_iter();
+		fprintf(stderr, "max iter: %d\n", max_iter);
+	}
+	int iter_size = param.iter_size();
+	fprintf(stderr, "iter size: %d\n", iter_size);
+
+	if (param.has_lr_policy())
+		fprintf(stderr, "lr policy: %s\n", param.lr_policy().c_str());
+	if (param.has_gamma())
+		fprintf(stderr, "gamma: %f\n", param.gamma());
+	if (param.has_power())
+		fprintf(stderr, "power: %f\n", param.power());
+	if (param.has_momentum())
+		fprintf(stderr, "momentum: %f\n", param.momentum());
+	if (param.has_weight_decay())
+		fprintf(stderr, "weight decay: %f\n", param.weight_decay());
+	std::string regularization_type = param.regularization_type();
+	fprintf(stderr, "regularization type: %s\n", param.regularization_type().c_str());
+	if (param.has_stepsize())
+		fprintf(stderr, "stepsize: %d\n", param.stepsize());
+	if (param.stepvalue_size() > 0) {
+		fprintf(stderr, "has stepvalue\n");
+		for (auto value : param.stepvalue())
+			fprintf(stderr, "  %d  ", value);
+		fprintf(stderr, "\n");
+	}
+
+	fprintf(stderr, "clip gradients: %f\n", param.clip_gradients());
+
+	fprintf(stderr, "snapshot: %d\n", param.snapshot());
+	if (param.has_snapshot_prefix())
+		fprintf(stderr, "snapshot prefix: %s\n", param.snapshot_prefix().c_str());
+	fprintf(stderr, "snapshot diff: %d\n", param.snapshot_diff());
+	caffe::SolverParameter_SnapshotFormat snapshot_format = param.snapshot_format();
+	fprintf(stderr, "snapshot format: %s\n", snapshot_format == 0 ? "HDF5" : "BINARYPROTO");
+	caffe::SolverParameter_SolverMode solver_mode = param.solver_mode();
+	fprintf(stderr, "solver mode: %s\n", solver_mode == 0 ? "CPU" : "GPU");
+	if (param.has_device_id())
+		fprintf(stderr, "device id: %d\n", param.device_id());
+	fprintf(stderr, "random seed: %d\n", param.random_seed());
+
+	caffe::SolverParameter_SolverType solver_type = param.solver_type();
+	std::string solver_method[] {"SGD", "NESTEROV", "ADAGRAD", "RMSPROP", "ADADELTA", "ADAM"};
+	fprintf(stderr, "solver type: %s\n", solver_method[solver_type].c_str());
+	fprintf(stderr, "delta: %f\n", param.delta());
+	fprintf(stderr, "momentum2: %f\n", param.momentum2());
+
+	if (param.has_rms_decay())
+		fprintf(stderr, "rms decy: %f\n", param.rms_decay());
+
+	fprintf(stderr, "debug info: %d\n", param.debug_info());
+	fprintf(stderr, "snapshot after train: %d\n", param.snapshot_after_train());
+
+	boost::shared_ptr<caffe::Net<float>> net = solver.net();
+	std::vector<boost::shared_ptr<caffe::Net<float>>> test_nets = solver.test_nets();
+	fprintf(stderr, "test nets size: %d\n", test_nets.size());
+	fprintf(stderr, "iter: %d\n", solver.iter());
+
+	return 0;
+}
 
 int test_caffe_net2()
 {
