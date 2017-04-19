@@ -3,10 +3,10 @@
 
 int main()
 {
-	int ret = test_caffe_util_math_functions();
+	int ret = test_caffe_util_io();
 
-	if (0 == ret) fprintf(stderr, "test success\n");
-	else fprintf(stderr, "test fail\n");
+	if (0 == ret) fprintf(stderr, "===== test success =====\n");
+	else fprintf(stderr, "***** test fail *****\n");
 
 	return 0;
 }

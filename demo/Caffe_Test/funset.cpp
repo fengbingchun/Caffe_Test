@@ -575,361 +575,370 @@
 //	delete[] data;
 //	return 0;
 //}
-//
-//static bool ReadImageToDatumReference(const std::string& filename, const int label,
-//	const int height, const int width, const bool is_color, caffe::Datum* datum)
-//{
-//	cv::Mat cv_img;
-//	int cv_read_flag = (is_color ? CV_LOAD_IMAGE_COLOR : CV_LOAD_IMAGE_GRAYSCALE);
-//
-//	cv::Mat cv_img_origin = cv::imread(filename, cv_read_flag);
-//	if (!cv_img_origin.data) {
-//		fprintf(stderr, "Could not open or find file: %s\n", filename.c_str());
-//		return false;
-//	}
-//	if (height > 0 && width > 0)
-//		cv::resize(cv_img_origin, cv_img, cv::Size(width, height));
-//	else
-//		cv_img = cv_img_origin;
-//
-//
-//	int num_channels = (is_color ? 3 : 1);
-//	datum->set_channels(num_channels);
-//	datum->set_height(cv_img.rows);
-//	datum->set_width(cv_img.cols);
-//	datum->set_label(label);
-//	datum->clear_data();
-//	datum->clear_float_data();
-//	std::string* datum_string = datum->mutable_data();
-//
-//	if (is_color) {
-//		for (int c = 0; c < num_channels; ++c) {
-//			for (int h = 0; h < cv_img.rows; ++h) {
-//				for (int w = 0; w < cv_img.cols; ++w) {
-//					datum_string->push_back(static_cast<char>(cv_img.at<cv::Vec3b>(h, w)[c]));
-//				}
-//			}
-//		}
-//	} else {  // Faster than repeatedly testing is_color for each pixel w/i loop
-//		for (int h = 0; h < cv_img.rows; ++h) {
-//			for (int w = 0; w < cv_img.cols; ++w) {
-//				datum_string->push_back(static_cast<char>(cv_img.at<uchar>(h, w)));
-//			}
-//		}
-//	}
-//
-//	return true;
-//}
-//
-//static int CompareDatumMat(const caffe::Datum& datum1, const caffe::Datum& datum2)
-//{
-//	if (datum1.channels() != datum2.channels() || datum1.height() != datum2.height() ||
-//		datum1.width() != datum2.width() || datum1.data().size() != datum2.data().size()) {
-//		fprintf(stderr, "these values should be equal\n");
-//		return -1;
-//	}
-//
-//	const std::string& data1 = datum1.data();
-//	const std::string& data2 = datum2.data();
-//	for (int i = 0; i < datum1.data().size(); ++i) {
-//		if (data1[i] != data2[i]) {
-//			fprintf(stderr, "their data should be equal\n");
-//			return -1;
-//		}
-//	}
-//
-//	return 0;
-//}
-//
-//static int CompareDatumMat(const caffe::Datum& datum, const cv::Mat& mat)
-//{
-//	if (datum.channels() != mat.channels() || datum.height() != mat.rows || datum.width() != mat.cols) {
-//		fprintf(stderr, "these values should be equal\n");
-//		return -1;
-//	}
-//
-//	const std::string& datum_data = datum.data();
-//	int index = 0;
-//	for (int c = 0; c < mat.channels(); ++c) {
-//		for (int h = 0; h < mat.rows; ++h) {
-//			for (int w = 0; w < mat.cols; ++w) {
-//				if (datum_data[index++] != static_cast<char>(mat.at<cv::Vec3b>(h, w)[c])) {
-//					fprintf(stderr, "their data should be equal\n");
-//					return -1;
-//				}
-//			}
-//		}
-//	}
-//
-//	return 0;
-//}
-//
-//static int CompareDatumMat(const cv::Mat& mat1, const cv::Mat& mat2)
-//{
-//	if (mat1.channels() != mat2.channels() || mat1.rows != mat2.rows || mat1.cols != mat2.cols) {
-//		fprintf(stderr, "these values should be equal\n");
-//		return -1;
-//	}
-//
-//	for (int c = 0; c < mat1.channels(); ++c) {
-//		for (int h = 0; h < mat1.rows; ++h) {
-//			for (int w = 0; w < mat1.cols; ++w) {
-//				if (mat1.at<cv::Vec3b>(h, w)[c] != mat2.at<cv::Vec3b>(h, w)[c]) {
-//					fprintf(stderr, "their data should be equal\n");
-//					return -1;
-//				}
-//			}
-//		}
-//	}
-//
-//	return 0;
-//}
-//
-//int test_caffe_util_io()
-//{
-//	std::string filename{ "E:/GitCode/Caffe_Test/test_data/images/a.jpg" };
-//
-//	// 1. caffe::ReadImageToDatum
-//	caffe::Datum datum1;
-//	caffe::ReadImageToDatum(filename, 0, &datum1);
-//	fprintf(stderr, "datum1: channels: %d, height: %d, width: %d\n",
-//		datum1.channels(), datum1.height(), datum1.width());
-//
-//	// 2. test ReadImageToDatumReference
-//	caffe::Datum datum2, datum_ref2;
-//	caffe::ReadImageToDatum(filename, 0, 0, 0, true, &datum2);
-//	ReadImageToDatumReference(filename, 0, 0, 0, true, &datum_ref2);
-//	if(CompareDatumMat(datum2, datum_ref2) != 0) return -1;
-//
-//	// 3. test ReadImageToDatumReferenceResized
-//	caffe::Datum datum3, datum_ref3;
-//	caffe::ReadImageToDatum(filename, 0, 100, 200, true, &datum3);
-//	ReadImageToDatumReference(filename, 0, 100, 200, true, &datum_ref3);
-//	if (CompareDatumMat(datum3, datum_ref3) != 0) return -1;
-//
-//	// 4. test ReadImageToDatumContent
-//	caffe::Datum datum4;
-//	caffe::ReadImageToDatum(filename, 0, &datum4);
-//	cv::Mat cv_img = caffe::ReadImageToCVMat(filename);
-//	if (CompareDatumMat(datum4, cv_img) != 0) return -1;
-//
-//	// 5. test CVMatToDatumContent
-//	cv_img = caffe::ReadImageToCVMat(filename);
-//	caffe::Datum datum5;
-//	caffe::CVMatToDatum(cv_img, &datum5);
-//	caffe::Datum datum_ref5;
-//	caffe::ReadImageToDatum(filename, 0, &datum_ref5);
-//	if (CompareDatumMat(datum5, datum_ref5) != 0) return -1;
-//
-//	// 6. test ReadFileToDatum
-//	caffe::Datum datum6;
-//	if (!caffe::ReadFileToDatum(filename, &datum6)) {
-//		fprintf(stderr, "read file to datum fail\n");
-//		return -1;
-//	}
-//	fprintf(stderr, "datum encoded: %d; datum label: %d, datum size: %d\n",
-//		datum6.encoded(), datum6.label(), datum6.data().size());
-//
-//	// 7. test DecodeDatum
-//	caffe::Datum datum7;
-//	caffe::ReadFileToDatum(filename, &datum7);
-//	if (!caffe::DecodeDatum(&datum7, true)) return -1;
-//	if(caffe::DecodeDatum(&datum7, true)) return -1;
-//
-//	caffe::Datum datum_ref7;
-//	ReadImageToDatumReference(filename, 0, 0, 0, true, &datum_ref7);
-//	if (CompareDatumMat(datum7, datum_ref7) != 0) return -1;
-//
-//	// 8. test DecodeDatumToCVMatContent
-//	caffe::Datum datum8;
-//	if (!caffe::ReadImageToDatum(filename, 0, std::string("jpg"), &datum8)) return -1;
-//	cv::Mat cv_img8 = caffe::DecodeDatumToCVMat(datum8, true);
-//	cv::Mat cv_img_ref = caffe::ReadImageToCVMat(filename);
-//	// if (CompareDatumMat(cv_img8, cv_img_ref) != 0) return -1; // Note: some values are not equal
-//
-//	// 9. read prototxt and parse
-//	std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
-//
-//	caffe::SolverParameter solver_param;
-//	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
-//		fprintf(stderr, "parse solver.prototxt fail\n");
-//		return -1;
-//	}
-//
-//	// 10. write prototxt to text file
-//	std::string save_prototxt{"E:/GitCode/Caffe_Test/test_data/test.prototxt"};
-//	caffe::WriteProtoToTextFile(solver_param, save_prototxt);
-//
-//	return 0;
-//}
-//
-//int test_caffe_blob()
-//{
-//	caffe::Blob<float> blob1;
-//
-//	std::vector<int> shape{ 2, 3, 4, 5 };
-//	caffe::Blob<float> blob2(shape);
-//
-//	std::vector<int> blob_shape = blob2.shape();
-//	fprintf(stderr, "blob shape: ");
-//	for (auto index : blob_shape) {
-//		fprintf(stderr, "%d    ", index);
-//	}
-//	std::vector<int> shape_{ 6, 7, 8, 9 };
-//	blob2.Reshape(shape_);
-//	std::vector<int> blob_shape_ = blob2.shape();
-//	fprintf(stderr, "\nnew blob shape: ");
-//	for (auto index : blob_shape_) {
-//		fprintf(stderr, "%d    ", index);
-//	}
-//	fprintf(stderr, "\n");
-//
-//	int value = blob2.shape(-1);
-//	fprintf(stdout, "blob index -1: %d\n", value);
-//	int num_axes = blob2.num_axes();
-//	fprintf(stderr, "blob num axes(dimension): %d\n", num_axes);
-//	int count = blob2.count();
-//	fprintf(stderr, "blob count sum: %d\n", count);
-//	count = blob2.count(2, 4);
-//	fprintf(stderr, "blob count(start_axis(2), end_axis(4)): %d\n", count);
-//	count = blob2.count(1);
-//	fprintf(stderr, "blob count(start_axis(1)): %d\n", count);
-//	int canonical_axis_index = blob2.CanonicalAxisIndex(-2);
-//	fprintf(stderr, "blob canonical axis index: %d\n", canonical_axis_index);
-//
-//	int num = blob2.num();
-//	int channels = blob2.channels();
-//	int height = blob2.height();
-//	int width = blob2.width();
-//	int legacy_shape = blob2.LegacyShape(-2);
-//	fprintf(stderr, "blob num: %d, channels: %d, height: %d, width: %d, legacy shape(-2): %d\n",
-//		num, channels, height, width, legacy_shape);
-//
-//	std::vector<int> indices{ 2, 3, 7, 6 };
-//	int offset1 = blob2.offset(indices);
-//	int offset2 = blob2.offset(indices[0], indices[1], indices[2], indices[3]);
-//	fprintf(stderr, "blob offset1: %d, offset2: %d\n", offset1, offset2);
-//
-//	std::string shape_string = blob2.shape_string();
-//	fprintf(stderr, "shape string: %s\n", shape_string.c_str());
-//
-//	caffe::BlobProto blob_proto;
-//	blob_proto.set_num(6);
-//	blob_proto.set_channels(7);
-//	blob_proto.set_height(8);
-//	blob_proto.set_width(9);
-//
-//	bool flag = blob2.ShapeEquals(blob_proto);
-//	fprintf(stderr, "blob2's shape and blob_proto's shape are equal: %d\n", flag);
-//	int blob_proto_data_size_float = blob_proto.data_size();
-//	int blob_proto_data_size_double = blob_proto.double_data_size();
-//	int blob_proto_diff_size_float = blob_proto.diff_size();
-//	int blob_proto_diff_size_double = blob_proto.double_diff_size();
-//	fprintf(stderr, "blob_proto data/diff size: %d, %d, %d, %d\n", blob_proto_data_size_float,
-//		blob_proto_data_size_double, blob_proto_diff_size_float, blob_proto_diff_size_double);
-//
-//	caffe::BlobShape blob_proto_shape;
-//	for (int i = 0; i < 4; ++i) {
-//		blob_proto_shape.add_dim(i + 10);
-//	}
-//	blob2.Reshape(blob_proto_shape);
-//	blob_shape_ = blob2.shape();
-//	fprintf(stderr, "new blob shape: ");
-//	for (auto index : blob_shape_) {
-//		fprintf(stderr, "%d    ", index);
-//	}
-//	fprintf(stderr, "\n");
-//
-//	fprintf(stderr, "blob proto shape: ");
-//	for (int i = 0; i < blob_proto_shape.dim_size(); ++i) {
-//		fprintf(stderr, "%d    ", blob_proto_shape.dim(i));
-//	}
-//	fprintf(stderr, "\n");
-//
-//	// 注：以上进行的所有操作均不会申请分配任何内存
-//
-//	// cv::Mat -> Blob
-//	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
-//	cv::Mat mat = cv::imread(image_name, 1);
-//	if (!mat.data) {
-//		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
-//		return -1;
-//	}
-//	cv::Mat mat2;
-//	mat.convertTo(mat2, CV_32FC3);
-//	std::vector<int> mat_reshape{ 1, mat2.channels(), mat2.rows, mat2.cols };
-//	blob2.Reshape(mat_reshape);
-//	float sum1 = blob2.asum_data();
-//	blob2.set_cpu_data((float*)mat2.data);
-//	float sum2 = blob2.asum_data();
-//	blob2.scale_data(0.5);
-//	float sum3 = blob2.asum_data();
-//	float sum4 = blob2.sumsq_data();
-//	fprintf(stderr, "sum1: %f, sum2: %f, sum3: %f, sum4: %f\n", sum1, sum2, sum3, sum4);
-//
-//	float value2 = blob2.data_at(0, 2, 100, 200);
-//	fprintf(stderr, "data at value: %f\n", value2);
-//	const float* data = blob2.cpu_data();
-//	fprintf(stderr, "data at 0: %f\n", data[0]);
-//
-//	cv::Mat mat3;
-//	mat2.convertTo(mat3, CV_8UC3);
-//	image_name = "E:/GitCode/Caffe_Test/test_data/images/a_ret.jpg";
-//	cv::imwrite(image_name, mat3);
-//
-//	return 0;
-//}
-//
-//int test_caffe_syncedmem()
-//{
-//	caffe::SyncedMemory mem(10);
-//	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
-//
-//	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
-//		mem.size() != 10 ||
-//		p_mem->size() != 10 * sizeof(float) ||
-//		mem.cpu_data() == nullptr ||
-//		mem.mutable_cpu_data() == nullptr ||
-//		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
-//		fprintf(stderr, "Error\n");
-//		return -1;
-//	}
-//
-//	fprintf(stderr, "p_mem size: %d\n", p_mem->size());
-//	fprintf(stderr, "mem size: %d\n", mem.size());
-//
-//	void* cpu_data = mem.mutable_cpu_data();
-//	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
-//		fprintf(stderr, "Error\n");
-//		return -1;
-//	}
-//
-//	caffe::caffe_memset(mem.size(), 1, cpu_data);
-//	for (int i = 0; i < mem.size(); ++i) {
-//		if ((static_cast<char*>(cpu_data))[i] != 1) {
-//			fprintf(stderr, "Error\n");
-//			return -1;
-//		}
-//	}
-//
-//	cpu_data = mem.mutable_cpu_data();
-//	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
-//		fprintf(stderr, "Error\n");
-//		return -1;
-//	}
-//
-//	caffe::caffe_memset(mem.size(), 2, cpu_data);
-//	for (int i = 0; i < mem.size(); ++i) {
-//		if ((static_cast<char*>(cpu_data))[i] != 2) {
-//			fprintf(stderr, "Error\n");
-//			return -1;
-//		}
-//	}
-//
-//	delete p_mem;
-//
-//	return 0;
-//}
+
+static bool ReadImageToDatumReference(const std::string& filename, const int label,
+	const int height, const int width, const bool is_color, caffe::Datum* datum)
+{
+	cv::Mat cv_img;
+	int cv_read_flag = (is_color ? CV_LOAD_IMAGE_COLOR : CV_LOAD_IMAGE_GRAYSCALE);
+
+	cv::Mat cv_img_origin = cv::imread(filename, cv_read_flag);
+	if (!cv_img_origin.data) {
+		fprintf(stderr, "Could not open or find file: %s\n", filename.c_str());
+		return false;
+	}
+	if (height > 0 && width > 0)
+		cv::resize(cv_img_origin, cv_img, cv::Size(width, height));
+	else
+		cv_img = cv_img_origin;
+
+
+	int num_channels = (is_color ? 3 : 1);
+	datum->set_channels(num_channels);
+	datum->set_height(cv_img.rows);
+	datum->set_width(cv_img.cols);
+	datum->set_label(label);
+	datum->clear_data();
+	datum->clear_float_data();
+	std::string* datum_string = datum->mutable_data();
+
+	if (is_color) {
+		for (int c = 0; c < num_channels; ++c) {
+			for (int h = 0; h < cv_img.rows; ++h) {
+				for (int w = 0; w < cv_img.cols; ++w) {
+					datum_string->push_back(static_cast<char>(cv_img.at<cv::Vec3b>(h, w)[c]));
+				}
+			}
+		}
+	} else {  // Faster than repeatedly testing is_color for each pixel w/i loop
+		for (int h = 0; h < cv_img.rows; ++h) {
+			for (int w = 0; w < cv_img.cols; ++w) {
+				datum_string->push_back(static_cast<char>(cv_img.at<uchar>(h, w)));
+			}
+		}
+	}
+
+	return true;
+}
+
+static int CompareDatumMat(const caffe::Datum& datum1, const caffe::Datum& datum2)
+{
+	if (datum1.channels() != datum2.channels() || datum1.height() != datum2.height() ||
+		datum1.width() != datum2.width() || datum1.data().size() != datum2.data().size()) {
+		fprintf(stderr, "these values should be equal\n");
+		return -1;
+	}
+
+	const std::string& data1 = datum1.data();
+	const std::string& data2 = datum2.data();
+	for (int i = 0; i < datum1.data().size(); ++i) {
+		if (data1[i] != data2[i]) {
+			fprintf(stderr, "their data should be equal\n");
+			return -1;
+		}
+	}
+
+	return 0;
+}
+
+static int CompareDatumMat(const caffe::Datum& datum, const cv::Mat& mat)
+{
+	if (datum.channels() != mat.channels() || datum.height() != mat.rows || datum.width() != mat.cols) {
+		fprintf(stderr, "these values should be equal\n");
+		return -1;
+	}
+
+	const std::string& datum_data = datum.data();
+	int index = 0;
+	for (int c = 0; c < mat.channels(); ++c) {
+		for (int h = 0; h < mat.rows; ++h) {
+			for (int w = 0; w < mat.cols; ++w) {
+				if (datum_data[index++] != static_cast<char>(mat.at<cv::Vec3b>(h, w)[c])) {
+					fprintf(stderr, "their data should be equal\n");
+					return -1;
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+
+static int CompareDatumMat(const cv::Mat& mat1, const cv::Mat& mat2)
+{
+	if (mat1.channels() != mat2.channels() || mat1.rows != mat2.rows || mat1.cols != mat2.cols) {
+		fprintf(stderr, "these values should be equal\n");
+		return -1;
+	}
+
+	for (int c = 0; c < mat1.channels(); ++c) {
+		for (int h = 0; h < mat1.rows; ++h) {
+			for (int w = 0; w < mat1.cols; ++w) {
+				if (mat1.at<cv::Vec3b>(h, w)[c] != mat2.at<cv::Vec3b>(h, w)[c]) {
+					fprintf(stderr, "their data should be equal\n");
+					return -1;
+				}
+			}
+		}
+	}
+
+	return 0;
+}
+
+int test_caffe_util_io()
+{
+	std::string filename{ "E:/GitCode/Caffe_Test/test_data/images/a.jpg" };
+
+	// 1. caffe::ReadImageToDatum
+	caffe::Datum datum1;
+	caffe::ReadImageToDatum(filename, 0, &datum1);
+	fprintf(stderr, "datum1: channels: %d, height: %d, width: %d\n",
+		datum1.channels(), datum1.height(), datum1.width());
+
+	// 2. test ReadImageToDatumReference
+	caffe::Datum datum2, datum_ref2;
+	caffe::ReadImageToDatum(filename, 0, 0, 0, true, &datum2);
+	ReadImageToDatumReference(filename, 0, 0, 0, true, &datum_ref2);
+	if (CompareDatumMat(datum2, datum_ref2) != 0) return -1;
+
+	// 3. test ReadImageToDatumReferenceResized
+	caffe::Datum datum3, datum_ref3;
+	caffe::ReadImageToDatum(filename, 0, 100, 200, true, &datum3);
+	ReadImageToDatumReference(filename, 0, 100, 200, true, &datum_ref3);
+	if (CompareDatumMat(datum3, datum_ref3) != 0) return -1;
+
+	// 4. test ReadImageToDatumContent
+	caffe::Datum datum4;
+	caffe::ReadImageToDatum(filename, 0, &datum4);
+	cv::Mat cv_img = caffe::ReadImageToCVMat(filename);
+	if (CompareDatumMat(datum4, cv_img) != 0) return -1;
+
+	// 5. test CVMatToDatumContent
+	cv_img = caffe::ReadImageToCVMat(filename);
+	caffe::Datum datum5;
+	caffe::CVMatToDatum(cv_img, &datum5);
+	caffe::Datum datum_ref5;
+	caffe::ReadImageToDatum(filename, 0, &datum_ref5);
+	if (CompareDatumMat(datum5, datum_ref5) != 0) return -1;
+
+	// 6. test ReadFileToDatum
+	caffe::Datum datum6;
+	if (!caffe::ReadFileToDatum(filename, &datum6)) {
+		fprintf(stderr, "read file to datum fail\n");
+		return -1;
+	}
+	fprintf(stderr, "datum encoded: %d; datum label: %d, datum size: %d\n",
+		datum6.encoded(), datum6.label(), datum6.data().size());
+
+	// 7. test DecodeDatum
+	caffe::Datum datum7;
+	caffe::ReadFileToDatum(filename, &datum7);
+	if (!caffe::DecodeDatum(&datum7, true)) return -1;
+	if (caffe::DecodeDatum(&datum7, true)) return -1;
+
+	caffe::Datum datum_ref7;
+	ReadImageToDatumReference(filename, 0, 0, 0, true, &datum_ref7);
+	if (CompareDatumMat(datum7, datum_ref7) != 0) return -1;
+
+	// 8. test DecodeDatumToCVMatContent
+	caffe::Datum datum8;
+	if (!caffe::ReadImageToDatum(filename, 0, std::string("jpg"), &datum8)) return -1;
+	cv::Mat cv_img8 = caffe::DecodeDatumToCVMat(datum8, true);
+	cv::Mat cv_img_ref = caffe::ReadImageToCVMat(filename);
+	// if (CompareDatumMat(cv_img8, cv_img_ref) != 0) return -1; // Note: some values are not equal
+
+	// 9. read prototxt and parse
+	std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+
+	caffe::SolverParameter solver_param;
+	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
+		fprintf(stderr, "parse solver.prototxt fail\n");
+		return -1;
+	}
+
+	// 10. write prototxt to text file
+	std::string save_prototxt{ "E:/GitCode/Caffe_Test/test_data/test.prototxt" };
+	caffe::WriteProtoToTextFile(solver_param, save_prototxt);
+
+	// 11. make temp dir/filename
+	std::string temp_dirname{ " " };
+	caffe::MakeTempDir(&temp_dirname);
+	fprintf(stderr, "temp dir name: %s\n", temp_dirname.c_str());
+	std::string temp_filename{ " " };
+	caffe::MakeTempFilename(&temp_filename);
+	fprintf(stderr, "temp file name: %s\n", temp_filename.c_str());
+	caffe::RemoveCaffeTempDir();
+
+	return 0;
+}
+
+int test_caffe_blob()
+{
+	caffe::Blob<float> blob1;
+
+	std::vector<int> shape{ 2, 3, 4, 5 };
+	caffe::Blob<float> blob2(shape);
+
+	std::vector<int> blob_shape = blob2.shape();
+	fprintf(stderr, "blob shape: ");
+	for (auto index : blob_shape) {
+		fprintf(stderr, "%d    ", index);
+	}
+	std::vector<int> shape_{ 6, 7, 8, 9 };
+	blob2.Reshape(shape_);
+	std::vector<int> blob_shape_ = blob2.shape();
+	fprintf(stderr, "\nnew blob shape: ");
+	for (auto index : blob_shape_) {
+		fprintf(stderr, "%d    ", index);
+	}
+	fprintf(stderr, "\n");
+
+	int value = blob2.shape(-1);
+	fprintf(stdout, "blob index -1: %d\n", value);
+	int num_axes = blob2.num_axes();
+	fprintf(stderr, "blob num axes(dimension): %d\n", num_axes);
+	int count = blob2.count();
+	fprintf(stderr, "blob count sum: %d\n", count);
+	count = blob2.count(2, 4);
+	fprintf(stderr, "blob count(start_axis(2), end_axis(4)): %d\n", count);
+	count = blob2.count(1);
+	fprintf(stderr, "blob count(start_axis(1)): %d\n", count);
+	int canonical_axis_index = blob2.CanonicalAxisIndex(-2);
+	fprintf(stderr, "blob canonical axis index: %d\n", canonical_axis_index);
+
+	int num = blob2.num();
+	int channels = blob2.channels();
+	int height = blob2.height();
+	int width = blob2.width();
+	int legacy_shape = blob2.LegacyShape(-2);
+	fprintf(stderr, "blob num: %d, channels: %d, height: %d, width: %d, legacy shape(-2): %d\n",
+		num, channels, height, width, legacy_shape);
+
+	std::vector<int> indices{ 2, 3, 7, 6 };
+	int offset1 = blob2.offset(indices);
+	int offset2 = blob2.offset(indices[0], indices[1], indices[2], indices[3]);
+	fprintf(stderr, "blob offset1: %d, offset2: %d\n", offset1, offset2);
+
+	std::string shape_string = blob2.shape_string();
+	fprintf(stderr, "shape string: %s\n", shape_string.c_str());
+
+	caffe::BlobProto blob_proto;
+	blob_proto.set_num(6);
+	blob_proto.set_channels(7);
+	blob_proto.set_height(8);
+	blob_proto.set_width(9);
+
+	bool flag = blob2.ShapeEquals(blob_proto);
+	fprintf(stderr, "blob2's shape and blob_proto's shape are equal: %d\n", flag);
+	int blob_proto_data_size_float = blob_proto.data_size();
+	int blob_proto_data_size_double = blob_proto.double_data_size();
+	int blob_proto_diff_size_float = blob_proto.diff_size();
+	int blob_proto_diff_size_double = blob_proto.double_diff_size();
+	fprintf(stderr, "blob_proto data/diff size: %d, %d, %d, %d\n", blob_proto_data_size_float,
+		blob_proto_data_size_double, blob_proto_diff_size_float, blob_proto_diff_size_double);
+
+	caffe::BlobShape blob_proto_shape;
+	for (int i = 0; i < 4; ++i) {
+		blob_proto_shape.add_dim(i + 10);
+	}
+	blob2.Reshape(blob_proto_shape);
+	blob_shape_ = blob2.shape();
+	fprintf(stderr, "new blob shape: ");
+	for (auto index : blob_shape_) {
+		fprintf(stderr, "%d    ", index);
+	}
+	fprintf(stderr, "\n");
+
+	fprintf(stderr, "blob proto shape: ");
+	for (int i = 0; i < blob_proto_shape.dim_size(); ++i) {
+		fprintf(stderr, "%d    ", blob_proto_shape.dim(i));
+	}
+	fprintf(stderr, "\n");
+
+	// 注：以上进行的所有操作均不会申请分配任何内存
+
+	// cv::Mat -> Blob
+	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
+	cv::Mat mat = cv::imread(image_name, 1);
+	if (!mat.data) {
+		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
+		return -1;
+	}
+	cv::Mat mat2;
+	mat.convertTo(mat2, CV_32FC3);
+	std::vector<int> mat_reshape{ 1, mat2.channels(), mat2.rows, mat2.cols };
+	blob2.Reshape(mat_reshape);
+	float sum1 = blob2.asum_data();
+	blob2.set_cpu_data((float*)mat2.data);
+	float sum2 = blob2.asum_data();
+	blob2.scale_data(0.5);
+	float sum3 = blob2.asum_data();
+	float sum4 = blob2.sumsq_data();
+	fprintf(stderr, "sum1: %f, sum2: %f, sum3: %f, sum4: %f\n", sum1, sum2, sum3, sum4);
+
+	float value2 = blob2.data_at(0, 2, 100, 200);
+	fprintf(stderr, "data at value: %f\n", value2);
+	const float* data = blob2.cpu_data();
+	fprintf(stderr, "data at 0: %f\n", data[0]);
+
+	cv::Mat mat3;
+	mat2.convertTo(mat3, CV_8UC3);
+	image_name = "E:/GitCode/Caffe_Test/test_data/images/a_ret.jpg";
+	cv::imwrite(image_name, mat3);
+
+	return 0;
+}
+
+int test_caffe_syncedmem()
+{
+	caffe::SyncedMemory mem(10);
+	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
+
+	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
+		mem.size() != 10 ||
+		p_mem->size() != 10 * sizeof(float) ||
+		mem.cpu_data() == nullptr ||
+		mem.mutable_cpu_data() == nullptr ||
+		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	fprintf(stderr, "p_mem size: %d\n", p_mem->size());
+	fprintf(stderr, "mem size: %d\n", mem.size());
+
+	void* cpu_data = mem.mutable_cpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	caffe::caffe_memset(mem.size(), 1, cpu_data);
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(cpu_data))[i] != 1) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}
+
+	cpu_data = mem.mutable_cpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	caffe::caffe_memset(mem.size(), 2, cpu_data);
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(cpu_data))[i] != 2) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}
+
+	delete p_mem;
+
+	return 0;
+}
 
 int test_caffe_util_math_functions()
 {
