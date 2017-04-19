@@ -6,8 +6,8 @@
 //int mnist_convert();
 int get_layer_type_list();
 int test_caffe_common();
-//int test_caffe_util_mkl_alternate();
-//int test_caffe_util_math_functions();
+int test_caffe_util_mkl_alternate();
+int test_caffe_util_math_functions();
 //int test_caffe_syncedmem();
 //int test_caffe_blob();
 //int test_caffe_util_io();
