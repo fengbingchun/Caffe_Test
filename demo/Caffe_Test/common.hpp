@@ -36,5 +36,6 @@
 #include <caffe/net.hpp>
 #include <caffe/solver.hpp>
 #include <caffe/sgd_solvers.hpp>
+#include <caffe/layers/memory_data_layer.hpp>
 
 #endif // FBC_CAFFE_TEST_COMMON_HPP_
