@@ -11,7 +11,7 @@ int test_caffe_util_math_functions();
 int test_caffe_syncedmem();
 int test_caffe_blob();
 int test_caffe_util_io();
-//int test_caffe_layer_pooling();
+int test_caffe_layer_pooling();
 //int test_caffe_net1();
 //int test_caffe_net2();
 //int test_caffe_solver();

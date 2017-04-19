@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = test_caffe_util_io();
+	int ret = test_caffe_layer_pooling();
 
 	if (0 == ret) fprintf(stderr, "===== test success =====\n");
 	else fprintf(stderr, "***** test fail *****\n");

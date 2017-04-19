@@ -32,6 +32,7 @@
 #include <caffe/util/math_functions.hpp>
 #include <caffe/syncedmem.hpp>
 #include <caffe/util/upgrade_proto.hpp>
+#include <caffe/layers/pooling_layer.hpp>
 #include <caffe/net.hpp>
 #include <caffe/solver.hpp>
 
