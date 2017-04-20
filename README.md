@@ -29,6 +29,6 @@
 3. clone or download Caffe_Test to E:\GitCode, open Caffe.sln, first build dependent libraries, next build libcaffe.
 
 **Screenshot:**
-![]("prj/x86_x64_vc12/Screenshot.png")
+![](https://github.com/fengbingchun/Caffe_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)
 
 **Blog:** [fengbingchun](http://blog.csdn.net/fengbingchun/article/category/3185663)
