@@ -126,7 +126,7 @@
       <AssemblerListingLocation>.\../../../obj/dbg/x64_vc12/Caffe_Test\</AssemblerListingLocation>
       <ObjectFileName>.\../../../obj/dbg/x64_vc12/Caffe_Test\</ObjectFileName>
       <ProgramDataBaseFileName>.\../../../obj/dbg/x64_vc12/Caffe_Test\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\hl\src;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;E:\GitCode\Caffe_Test\src\openblas;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\snappy;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\caffe\include\caffe\proto;E:\GitCode\Caffe_Test\src\caffe\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\soft\OpenCV2.4.13\opencv\build\include;E:\GitCode\Caffe_Test\src\gflags\include;E:\GitCode\Caffe_Test\src\glog\src\windows;E:\GitCode\Caffe_Test\src\hdf5;E:\GitCode\Caffe_Test\src\hdf5\hl\src;E:\GitCode\Caffe_Test\src\hdf5\src;E:\GitCode\Caffe_Test\src\leveldb\include;E:\GitCode\Caffe_Test\src\lmdb;E:\GitCode\Caffe_Test\src\protobuf\src;E:\GitCode\Caffe_Test\src\snappy;D:\ProgramFiles\local\boost_1_58_0;E:\GitCode\Caffe_Test\src\caffe\include\caffe\proto;E:\GitCode\Caffe_Test\src\caffe\include;E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

@@ -12,7 +12,7 @@ int mnist_train()
 		return -1;
 	}
 
-	//mnist_convert(); // convert MNIST to LMDB
+	mnist_convert(); // convert MNIST to LMDB
 
 	caffe::SGDSolver<float> solver(solver_param);
 	solver.Solve();
