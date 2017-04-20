@@ -1,6 +1,0 @@
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/libprotoc.dir
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/ALL_BUILD.dir
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/libprotobuf.dir
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/libprotobuf-lite.dir
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/ZERO_CHECK.dir
-E:/GitCode/Caffe_Test/src/thirdparty/ProtoBuf/vs2013/CMakeFiles/protoc.dir
