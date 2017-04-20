@@ -1,0 +1,1198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\lsame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\scabs1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dcabs1.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\samax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\samin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\smax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\smin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\isamax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\isamin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ismax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ismin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sasum_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\saxpy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\scopy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\snrm2_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\srot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sscal_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sswap_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\saxpby_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sdot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\damax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\damin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dmax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dmin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\idamax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\idamin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\idmax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\idmin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dasum_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\daxpy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dcopy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dnrm2_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\drot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dscal_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dswap_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\daxpby_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ddot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\camax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\camin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\icamax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\icamin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\casum_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\caxpy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ccopy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cnrm2_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\crot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cscal_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cswap_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\caxpby_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\caxpyc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cdotu_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cdotc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csrot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zamax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zamin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\izamax_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\izamin_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zasum_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zaxpy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zcopy_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\znrm2_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zrot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zscal_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zswap_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zaxpby_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zaxpyc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zdotu_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zdotc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zdrot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsdot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sdsdot_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sger_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dger_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cger_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zger_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemv_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemv_t.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemv_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemv_t.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgeru_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgerc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgerv_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgerd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_t.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_r.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_o.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemv_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemv_V.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemv_M.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgeru_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgerc_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgerv_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgerd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_t.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_r.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_c.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_o.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_u.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_s.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemv_d.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemv_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemv_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemv_V.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemv_M.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemm_kernel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemm_oncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemm_otcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgemm_beta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ssymm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strmm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\strsm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\somatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\somatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\somatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\somatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\simatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\simatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\simatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\simatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\sgeadd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemm_kernel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemm_oncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemm_otcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgemm_beta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dsymm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrmm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dtrsm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\domatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\domatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\domatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\domatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dimatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dimatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dimatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dimatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\dgeadd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_kernel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_oncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_otcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_beta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_kernel_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_kernel_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_kernel_r.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgemm_kernel_b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_LR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_RR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_kernel_RC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_LR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_RR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_RC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\chemm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\csymm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrmm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ctrsm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_cnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_rnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_ctc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\comatcopy_k_rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_cnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_rnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_ctc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cimatcopy_k_rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\cgeadd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_kernel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_oncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_otcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_beta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_kernel_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_kernel_l.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_kernel_r.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgemm_kernel_b.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_LR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_RR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_kernel_RC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_LR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_RR.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_RC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zhemm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymm_outcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymm_iutcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymm_oltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zsymm_iltcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrmm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iunucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iunncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_ounucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_ounncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_ilnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_ilnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_olnucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_olnncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iutucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iutncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_outucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_outncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_iltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_oltucopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_oltncopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_RN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\ztrsm_kernel_RT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_cnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_rnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_ctc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zomatcopy_k_rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_cnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_rnc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_ctc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zimatcopy_k_rtc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeFiles\zgeadd_k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\openblas\kernel\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5BE7FC7A-40E0-3D15-AD07-819430CFEE93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

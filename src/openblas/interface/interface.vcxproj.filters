@@ -1,0 +1,1309 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\scopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\snrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ccopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\znrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\srotm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\srotmg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\srot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\drotm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\drotmg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\drot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\saxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\srotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\saxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\daxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ddot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\drotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\daxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\caxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\crotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\caxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zaxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zrotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zaxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\strsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\strmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\stbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\stbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\stpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\stpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cher2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chpr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chpr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zher2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhpr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhpr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\strsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ssyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zsyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\somatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\simatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\domatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\comatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zomatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\sdsdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dsdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\strmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dtrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ctrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ztrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\smax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\samax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\damax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\camax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\samin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\damin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\camin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\smin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ismax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\idmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\icmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\izmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\isamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\idamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\icamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\izamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\isamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\idamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\icamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\izamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\ismin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\idmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\icmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\izmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgeru.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cgerc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cdotc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cdotu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\chemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cherk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cher2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\scnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\csrot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\scamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\scamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\scasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgeru.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zgerc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zdotc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zdotu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zhemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zherk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zher2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zdscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dznrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\zdrot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dzamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dzamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\dzasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_scopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_snrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ccopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_znrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_srotm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_srotmg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_srot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_drotm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_drotmg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_drot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_saxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_srotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_saxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_daxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ddot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_drotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_daxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_caxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_crotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_caxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zaxpy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zswap.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zrotg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zaxpby.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_strsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_strmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_stbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_stbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_stpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_stpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zger.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztrsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztrmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsymv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsyr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsyr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zspmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zspr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zspr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztbsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztpsv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cher2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chpr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chpr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhemv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhbmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zher.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zher2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhpmv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhpr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhpr2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_strsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ssyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsymm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztrsm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsyrk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zsyr2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_somatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_simatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_domatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_comatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zomatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zimatcopy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgeadd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_sdsdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dsdot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_strmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dtrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ctrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ztrmm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_smax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_samax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_damax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_camax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_samin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_damin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_camin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_smin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ismax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_idmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_icmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_izmax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_isamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_idamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_icamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_izamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_isamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_idamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_icamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_izamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_ismin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_idmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_icmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_izmin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgeru.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cgerc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cdotc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cdotu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_chemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cherk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cher2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_scnrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_csrot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_scamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_scamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_scasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgeru.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zgerc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdotc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdotu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zhemm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zherk.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zher2k.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdscal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dznrm2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdrot.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dzamin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dzamax.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_dzasum.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cdotu_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_cdotc_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdotu_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeFiles\cblas_zdotc_sub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\openblas\interface\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5BE7FC7A-40E0-3D15-AD07-819430CFEE93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

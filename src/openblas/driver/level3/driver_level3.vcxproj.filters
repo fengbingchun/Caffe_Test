@@ -1,0 +1,1300 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_thread_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_thread_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_nn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_thread_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_thread_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_nt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_thread_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_thread_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_tn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\sgemm_thread_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dgemm_thread_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_tt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strmm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrmm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RNLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RNUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RNLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RNUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RTLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RTUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RTLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\strsm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dtrsm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RTUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_kernel_U.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyr2k_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyr2k_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyr2k_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyr2k_kernel_L.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\gemm_thread_m.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\gemm_thread_n.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\gemm_thread_mn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\gemm_thread_variable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\syrk_thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_thread_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_thread_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_thread_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_thread_UT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssyrk_thread_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsyrk_thread_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csyrk_thread_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsyrk_thread_LT.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ssymm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\dsymm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\csymm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zsymm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_kernel_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_kernel_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_LCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrmm_RCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_LCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ctrsm_RCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_kernel_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_kernel_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cher2k_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_thread_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cherk_thread_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\chemm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_nr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_nr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_tr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_tr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_rr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_rr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_cr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_cr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_nc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_nc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_tc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_tc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_rc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_rc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_cc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\cgemm_thread_cc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_kernel_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_kernel_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_LCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrmm_RCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_LCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RRLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RRUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RRLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RRUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RCLN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RCUN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RCLU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\ztrsm_RCUU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_kernel_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_kernel_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_kernel_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_kernel_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zher2k_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_thread_UN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_thread_LN.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_thread_UC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zherk_thread_LC.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_thread_LU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_thread_LL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_thread_RU.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zhemm_thread_RL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_rn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_cn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_rt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_ct.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_nr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_nr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_tr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_tr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_rr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_rr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_cr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_cr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_nc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_nc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_tc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_tc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_rc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_rc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_cc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeFiles\zgemm_thread_cc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\openblas\driver\level3\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5BE7FC7A-40E0-3D15-AD07-819430CFEE93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

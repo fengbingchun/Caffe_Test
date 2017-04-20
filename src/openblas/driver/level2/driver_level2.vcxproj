@@ -1,0 +1,983 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{C38BF413-BD21-38DB-B030-CA3A1047C832}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>driver_level2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+    <PropertyGroup>
+      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">driver_level2.dir\Debug\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">driver_level2.dir\Debug\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">driver_level2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">driver_level2.dir\Release\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">driver_level2.dir\Release\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">driver_level2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">driver_level2.dir\MinSizeRel\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">driver_level2.dir\MinSizeRel\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">driver_level2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
+      <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">driver_level2.dir\RelWithDebInfo\</OutDir>
+      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">driver_level2.dir\RelWithDebInfo\</IntDir>
+      <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">driver_level2</TargetName>
+      <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
+    </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;_DEBUG;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;_DEBUG;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>MinSizeRel/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MinSpace</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR="MinSizeRel";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat></DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>RelWithDebInfo/</AssemblerListingLocation>
+      <CompileAs>CompileAsC</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>
+      </ExceptionHandling>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR="RelWithDebInfo";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;F_INTERFACE_GFORT;NO_LAPACK;NO_LAPACKE;SMP_SERVER;MAX_CPU_NUMBER=4;NO_AFFINITY;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\GitCode\Caffe_Test\src\openblas;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <Lib>
+      <AdditionalOptions> /machine:x64 %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\soft\CMake\cmake-3.7.1-win64-x64\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/openblas -BE:/GitCode/Caffe_Test/src/openblas --check-stamp-file E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\soft\CMake\cmake-3.7.1-win64-x64\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/openblas -BE:/GitCode/Caffe_Test/src/openblas --check-stamp-file E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\soft\CMake\cmake-3.7.1-win64-x64\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/openblas -BE:/GitCode/Caffe_Test/src/openblas --check-stamp-file E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\soft\CMake\cmake-3.7.1-win64-x64\bin\cmake.exe -HE:/GitCode/Caffe_Test/src/openblas -BE:/GitCode/Caffe_Test/src/openblas --check-stamp-file E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:/GitCode/Caffe_Test/src/openblas/driver/level2/CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgbmv_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgbmv_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgbmv_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgbmv_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgemv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgemv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgbmv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sgbmv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sger_thread.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\strmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stpmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\stbmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgemv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgemv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgbmv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dgbmv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dger_thread.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtrmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtpmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dtbmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgemv_thread_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cgbmv_thread_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cger_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cger_thread_C.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cger_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cger_thread_D.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chbmv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpmv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chpr2_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chemv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chemv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chemv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\chemv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cher2_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctrmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctpmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ctbmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_n.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_t.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrsv_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgemv_thread_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_r.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_c.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_o.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_u.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_s.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zgbmv_thread_d.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zger_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zger_thread_C.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zger_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zger_thread_D.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhbmv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpmv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhpr2_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhemv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhemv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhemv_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zhemv_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_thread_V.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zher2_thread_M.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztrmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztpmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_NUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_NLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_NUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_NLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_TUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_TLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_TUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_TLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_RUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_RLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_RUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_RLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_CUN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_CLN.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_CUU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ztbmv_thread_CLU.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssymv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsymv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csymv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsymv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr2_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsbmv_thread_U.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssymv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsymv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csymv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsymv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssyr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsyr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csyr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsyr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspr2_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\sspmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dspmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\cspmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zspmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\ssbmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\dsbmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\csbmv_thread_L.c"  />
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\level2\CMakeFiles\zsbmv_thread_L.c"  />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="E:/GitCode/Caffe_Test/src/openblas/ZERO_CHECK.vcxproj">
+      <Project>FFA99E43-2C6F-3FCB-A19A-4C4A29A53BF7</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

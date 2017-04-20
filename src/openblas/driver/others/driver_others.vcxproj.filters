@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\CMakeFiles\c_abs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\CMakeFiles\z_abs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\CMakeFiles\openblas_get_config.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\CMakeFiles\openblas_get_parallel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\memory.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\blas_server_win32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\divtable.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\blas_l1_thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\xerbla.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\openblas_set_num_threads.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\openblas_error_handle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\openblas_env.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\openblas_get_num_procs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\openblas_get_num_threads.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\parameter.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\GitCode\Caffe_Test\src\openblas\driver\others\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5BE7FC7A-40E0-3D15-AD07-819430CFEE93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
