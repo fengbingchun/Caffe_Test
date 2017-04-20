@@ -28,7 +28,7 @@
 2. from http://www.boost.org/users/history/version_1_58_0.html download boost1.58.0, install to D:\ProgramFiles, add D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0 to Path
 3. clone or download Caffe_Test to E:\GitCode, open Caffe.sln, first build dependent libraries, next build libcaffe.
 
-***Screenshot:**
+**Screenshot:**
 ![]("prj/x86_x64_vc12/Screenshot.png")
 
 **Blog:** [fengbingchun](http://blog.csdn.net/fengbingchun/article/category/3185663)
