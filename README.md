@@ -23,6 +23,12 @@
 	- caffe/net.hpp
 	- caffe/solver.hpp
 
-**The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits.**
+**The project support platform: windows7/10 64 bits. It can be directly build with VS2013 in windows7/10 64bits, compile step:**
+1. from https://github.com/opencv/opencv/releases download opencv2.4.13, unzip to D:\soft\OpenCV2.4.13, add D:\soft\OpenCV2.4.13\opencv\build\x64\vc12\bin to Path
+2. from http://www.boost.org/users/history/version_1_58_0.html download boost1.58.0, install to D:\ProgramFiles, add D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0 to Path
+3. clone or download Caffe_Test to E:\GitCode, open Caffe.sln, first build dependent libraries, next build libcaffe.
+
+***Screenshot:**
+![]("prj/x86_x64_vc12/Screenshot.png")
 
 **Blog:** [fengbingchun](http://blog.csdn.net/fengbingchun/article/category/3185663)
