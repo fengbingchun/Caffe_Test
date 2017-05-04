@@ -6,7 +6,11 @@
 
 int test_caffe_solver()
 {
-	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	const std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
 
@@ -139,7 +143,11 @@ int test_caffe_solver()
 
 int test_caffe_net2()
 {
-	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	// reference: caffe/src/caffe/test/test_net.cpp
 	std::string prototxt{ "E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt" };
@@ -250,7 +258,11 @@ int test_caffe_net2()
 
 int test_caffe_net1()
 {
-	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	// reference: caffe/src/caffe/test/test_net.cpp
 	std::string prototxt{"E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt"}; // 1~8
@@ -488,7 +500,11 @@ int test_caffe_net1()
 
 int test_caffe_layer_pooling()
 {
-	caffe::Caffe::set_mode(caffe::Caffe::CPU); // set run caffe mode
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	// set layer parameter
 	caffe::LayerParameter layer_param;
@@ -513,7 +529,11 @@ int test_caffe_layer_pooling()
 	memcpy(data, mat2[0].data, size * sizeof(float));
 	memcpy(data + size, mat2[1].data, size * sizeof(float));
 	memcpy(data + 2 * size, mat2[2].data, size * sizeof(float));
+#ifdef CPU_ONLY
 	blob.set_cpu_data(data);
+#else
+	blob.set_gpu_data(data); // Note: GPU will crash
+#endif
 
 	for (int method = 0; method < 2; ++method) {
 		// set pooling parameter
@@ -533,11 +553,14 @@ int test_caffe_layer_pooling()
 		fprintf(stderr, "top blob info: channels: %d, height: %d, width: %d\n",
 			top_blob[0]->channels(), top_blob[0]->height(), top_blob[0]->width());
 
+#ifdef CPU_ONLY
 		pooling_layer.Forward(bottom_blob, top_blob);
 
 		int height = top_blob[0]->height();
 		int width = top_blob[0]->width();
+
 		const float* p = top_blob[0]->cpu_data();
+
 		std::vector<cv::Mat> mat3{ cv::Mat(height, width, CV_32FC1, (float*)p),
 			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
 			cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
@@ -550,6 +573,7 @@ int test_caffe_layer_pooling()
 
 		for (int i = 0; i < bottom_blob[0]->count(); ++i)
 			bottom_blob[0]->mutable_cpu_diff()[i] = bottom_blob[0]->cpu_data()[i];
+
 		for (int i = 0; i < top_blob[0]->count(); ++i)
 			top_blob[0]->mutable_cpu_diff()[i] = top_blob[0]->cpu_data()[i];
 
@@ -569,6 +593,46 @@ int test_caffe_layer_pooling()
 		else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
 		cv::imwrite(image_name, mat6);
 	}
+#else
+		//pooling_layer.Forward(bottom_blob, top_blob);
+
+		//int height = top_blob[0]->height();
+		//int width = top_blob[0]->width();
+		//const float* p = top_blob[0]->gpu_data(); // Note: GPU will crash
+
+		//std::vector<cv::Mat> mat3{ cv::Mat(height, width, CV_32FC1, (float*)p),
+		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
+		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
+		//cv::Mat mat4;
+		//cv::merge(mat3, mat4);
+		//mat4.convertTo(mat4, CV_8UC3);
+		//if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/forward0.jpg";
+		//else image_name = "E:/GitCode/Caffe_Test/test_data/images/forward1.jpg";
+		//cv::imwrite(image_name, mat4);
+
+		//for (int i = 0; i < bottom_blob[0]->count(); ++i)
+		//	bottom_blob[0]->mutable_gpu_diff()[i] = bottom_blob[0]->gpu_data()[i];
+
+		//for (int i = 0; i < top_blob[0]->count(); ++i)
+		//	top_blob[0]->mutable_gpu_diff()[i] = top_blob[0]->gpu_data()[i];
+
+		//std::vector<bool> propagate_down{ true };
+		//pooling_layer.Backward(top_blob, propagate_down, bottom_blob);
+
+		//height = bottom_blob[0]->height();
+		//width = bottom_blob[0]->width();
+		//p = bottom_blob[0]->gpu_diff();
+		//std::vector<cv::Mat> mat5{ cv::Mat(height, width, CV_32FC1, (float*)p),
+		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
+		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
+		//cv::Mat mat6;
+		//cv::merge(mat5, mat6);
+		//mat6.convertTo(mat6, CV_8UC3);
+		//if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/backward0.jpg";
+		//else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
+		//cv::imwrite(image_name, mat6);
+	}
+#endif
 
 	delete[] data;
 	return 0;
@@ -685,6 +749,11 @@ static int CompareDatumMat(const cv::Mat& mat1, const cv::Mat& mat2)
 
 int test_caffe_util_io()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 	std::string filename{ "E:/GitCode/Caffe_Test/test_data/images/a.jpg" };
 
 	// 1. caffe::ReadImageToDatum
@@ -772,6 +841,11 @@ int test_caffe_util_io()
 
 int test_caffe_blob()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 	caffe::Blob<float> blob1;
 
 	std::vector<int> shape{ 2, 3, 4, 5 };
@@ -874,10 +948,16 @@ int test_caffe_blob()
 	float sum4 = blob2.sumsq_data();
 	fprintf(stderr, "sum1: %f, sum2: %f, sum3: %f, sum4: %f\n", sum1, sum2, sum3, sum4);
 
+#ifdef CPU_ONLY
 	float value2 = blob2.data_at(0, 2, 100, 200);
 	fprintf(stderr, "data at value: %f\n", value2);
+
 	const float* data = blob2.cpu_data();
 	fprintf(stderr, "data at 0: %f\n", data[0]);
+#else
+	//const float* data = blob2.gpu_data();
+	//fprintf(stderr, "data at 0: %f\n", data[0]); // Note: GPU will crash
+#endif
 
 	cv::Mat mat3;
 	mat2.convertTo(mat3, CV_8UC3);
@@ -889,6 +969,9 @@ int test_caffe_blob()
 
 int test_caffe_syncedmem()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+
 	caffe::SyncedMemory mem(10);
 	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
 
@@ -897,7 +980,7 @@ int test_caffe_syncedmem()
 		p_mem->size() != 10 * sizeof(float) ||
 		mem.cpu_data() == nullptr ||
 		mem.mutable_cpu_data() == nullptr ||
-		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
+		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU ) {
 		fprintf(stderr, "Error\n");
 		return -1;
 	}
@@ -934,12 +1017,66 @@ int test_caffe_syncedmem()
 	}
 
 	delete p_mem;
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+
+	caffe::SyncedMemory mem(10);
+	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
+
+	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
+		mem.size() != 10 ||
+		p_mem->size() != 10 * sizeof(float) ||
+		mem.gpu_data() == nullptr ||
+		mem.mutable_gpu_data() == nullptr ||
+		mem.head() != caffe::SyncedMemory::HEAD_AT_GPU ) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	fprintf(stderr, "p_mem size: %d\n", p_mem->size());
+	fprintf(stderr, "mem size: %d\n", mem.size());
+
+	void* gpu_data = mem.mutable_gpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_GPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	/*caffe::caffe_gpu_memset(mem.size(), 1, gpu_data); // Note: GPU will crash
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(gpu_data))[i] != 1) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}
+
+	gpu_data = mem.mutable_gpu_data();
+	if (mem.head() != caffe::SyncedMemory::HEAD_AT_GPU) {
+		fprintf(stderr, "Error\n");
+		return -1;
+	}
+
+	caffe::caffe_gpu_memset(mem.size(), 2, gpu_data);
+	for (int i = 0; i < mem.size(); ++i) {
+		if ((static_cast<char*>(gpu_data))[i] != 2) {
+			fprintf(stderr, "Error\n");
+			return -1;
+		}
+	}*/
+
+	delete p_mem;
+#endif
 
 	return 0;
 }
 
 int test_caffe_util_math_functions()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 	float alpha{ 0.5f }, beta{ 0.1f };
 	// h*w: A: 2*3; B: 3*4; C: 2*4
 	float A[2 * 3] {1, 2, 3, 4, 5, 6}, B[3 * 4] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
@@ -947,12 +1084,16 @@ int test_caffe_util_math_functions()
 		y3[6] {1, 2, 3, 4, 5, 6}, y4[6] {1, 2, 3, 4, 5, 6},
 		y7[6]{1, 2, 3, 4, 5, 6}, y10[6] {1, 2, 3, 4, 5, 6},
 		y11[6] {1, 2, 3, 4, 5, 6}, C[6] {-2, -1, 0, 1, 2, 3}, y19[6] {-10, -10, -10, -10, -10, -10};
-	float  y5[6], y6[6], y20[6], y21[6], y22[6];
+	float  y5[6] {0.f, 0.f, 0.f, 0.f, 0.f, 0.f}, y6[6], y20[6], y21[6], y22[6];
 	int y12[6] {1, 2, 3, 4, 5, 6};
 
 	fprintf(stderr, "test math function: caffe_cpu_gemm(C=alpha*A*B+beta*C)\n");
 	// A¡¢B¡¢y1: matrix
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_gemm(CblasNoTrans, CblasNoTrans, 2, 4, 3, alpha, A, B, beta, y1);
+#else
+	caffe::caffe_gpu_gemm(CblasNoTrans, CblasNoTrans, 2, 4, 3, alpha, A, B, beta, y1);
+#endif
 	for (auto ret : y1) {
 		fprintf(stderr, "%f    ", ret);
 	}
@@ -960,7 +1101,11 @@ int test_caffe_util_math_functions()
 
 	fprintf(stderr, "test math function: caffe_cpu_gemv(y=alpha*A*x+beta*y)\n");
 	// A: matrix; x¡¢y2: vector
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_gemv(CblasNoTrans, 2, 3, alpha, A, x, beta, y2);
+#else
+	caffe::caffe_gpu_gemv(CblasNoTrans, 2, 3, alpha, A, x, beta, y2);
+#endif
 	for (auto ret : y2) {
 		fprintf(stderr, "%f    ", ret);
 	}
@@ -974,14 +1119,20 @@ int test_caffe_util_math_functions()
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_axpby(Y= alpha*X+beta*Y)\n");
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_axpby(6, alpha, A, beta, y4);
+#else
+	caffe::caffe_gpu_axpby(6, alpha, A, beta, y4);
+#endif
 	for (auto ret : y4) {
 		fprintf(stderr, "%f    ", ret);
 	}
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_copy\n");
-	caffe::caffe_copy(3, A, y5);
+#ifdef CPU_ONLY
+	caffe::caffe_copy(3, A, y5); // Note: GPU will crash
+#endif
 	for (auto ret : y5) {
 		fprintf(stderr, "%f    ", ret);
 	}
@@ -1031,15 +1182,27 @@ int test_caffe_util_math_functions()
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_dot\n");
+#ifdef CPU_ONLY
 	float y13 = caffe::caffe_cpu_dot(3, A, B);
+#else
+	float y13{ 0.f };
+	// caffe::caffe_gpu_dot(3, A, B, &y13); // Note: GPU will crash
+#endif
 	fprintf(stderr, "caffe cpu dot: %f\n", y13);
 
 	fprintf(stderr, "test math function: caffe_cpu_strided_dot\n");
+#ifdef CPU_ONLY
 	float y14 = caffe::caffe_cpu_strided_dot(2, A, 2, B, 2);
 	fprintf(stderr, "caffe cpu strided dot: %f\n", y14);
+#endif
 
 	fprintf(stderr, "test math function: caffe_cpu_asum\n");
+#ifdef CPU_ONLY
 	float y16 = caffe::caffe_cpu_asum(5, C);
+#else
+	float y16{ 0.f };
+	//caffe::caffe_gpu_asum(5, C, &y16); // Note: GPU will crash
+#endif
 	fprintf(stderr, "caffe cpu asum: %f\n", y16);
 
 	fprintf(stderr, "test math function: caffe_sign\n");
@@ -1048,28 +1211,44 @@ int test_caffe_util_math_functions()
 	fprintf(stderr, "caffe sign: -10.0f: %d, 10.0f: %d\n", y17, y18);
 
 	fprintf(stderr, "test math function: caffe_cpu_scale\n");
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_scale(5, alpha, C, y19);
+#else
+	caffe::caffe_gpu_scale(5, alpha, C, y19);
+#endif
 	for (auto ret : y19) {
 		fprintf(stderr, "%f    ", ret);
 	}
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_sign\n");
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_sign(5, C, y20);
+#else
+	caffe::caffe_gpu_sign(5, C, y20);
+#endif
 	for (auto ret : y20) {
 		fprintf(stderr, "%f    ", ret);
 	}
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_sgnbit\n");
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_sgnbit(5, C, y21);
+#else
+	caffe::caffe_gpu_sgnbit(5, C, y21);
+#endif
 	for (auto ret : y21) {
 		fprintf(stderr, "%f    ", ret);
 	}
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_fabs\n");
+#ifdef CPU_ONLY
 	caffe::caffe_cpu_fabs(5, C, y22);
+#else
+	//caffe::caffe_gpu_fabs(5, C, y22); // no implement
+#endif
 	for (auto ret : y22) {
 		fprintf(stderr, "%f    ", ret);
 	}
@@ -1080,6 +1259,12 @@ int test_caffe_util_math_functions()
 
 int test_caffe_util_mkl_alternate()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
+
 	const int N{ 5 };
 	float a[N] {1, 2, 3, 4, 5}, b{ 2 }, alpha{ 0.2f }, beta{0.4f};
 	float y1[N], y2[N], y3[N], y4[N]{6, 7, 8, 9, 10};

@@ -3,7 +3,11 @@
 
 int mnist_train()
 {
+#ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
 	caffe::SolverParameter solver_param;
