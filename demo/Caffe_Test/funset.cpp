@@ -1141,10 +1141,18 @@ int test_caffe_common()
 	int argc = 2;
 	char** argv = nullptr;
 	argv = new char*[2];
+#ifdef CPU_ONLY
 #ifdef _DEBUG
 	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_Test.exe";
 #else
 	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_Test.exe";
+#endif
+#else
+#ifdef _DEBUG
+	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_GPU_Test.exe";
+#else
+	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_GPU_Test.exe";
+#endif
 #endif
 	argv[1] = "caffe_test";
 
@@ -1168,6 +1176,11 @@ int test_caffe_common()
 	}
 
 	// get run mode: CPU or GPU
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 	caffe::Caffe::Brew run_mode = caffe1.mode();
 	fprintf(stderr, "0: CPU, 1: GPU, run_mode: %d\n", run_mode);
 
@@ -1192,10 +1205,15 @@ int test_caffe_common()
 	// root solver
 	fprintf(stderr, "root solver: %d\n", caffe::Caffe::root_solver());
 
+#ifndef CPU_ONLY
+	// find device
+	int devide_id = caffe::Caffe::FindDevice(0);
+	fprintf(stderr, "the first available device: %d\n", devide_id);
 	// set device
-	// caffe::Caffe::SetDevice(2); // error, fatal log: Cannot use GPU in CPU-only Caffe: check mode.
+	caffe::Caffe::SetDevice(devide_id);
 	// device query
-	// caffe::Caffe::DeviceQuery(); // error, fatal log: Cannot use GPU in CPU-only Caffe: check mode.
+	caffe::Caffe::DeviceQuery();
+#endif
 
 	// RNG: generate random number
 	caffe::SyncedMemory data_a(10 * sizeof(int));
@@ -1218,7 +1236,11 @@ int test_caffe_common()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 	run_mode = caffe1.mode();
 	fprintf(stderr, "0: CPU, 1: GPU, run_mode: %d\n", run_mode);
+#ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	return 0;
 }

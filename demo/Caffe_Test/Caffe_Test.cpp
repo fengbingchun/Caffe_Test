@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = mnist_predict();
+	int ret = test_caffe_common();
 
 	if (0 == ret) fprintf(stderr, "===== test success =====\n");
 	else fprintf(stderr, "***** test fail *****\n");
