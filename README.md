@@ -27,6 +27,7 @@
 1. from https://github.com/opencv/opencv/releases download opencv2.4.13, unzip to D:\soft\OpenCV2.4.13, add D:\soft\OpenCV2.4.13\opencv\build\x64\vc12\bin to Path
 2. from http://www.boost.org/users/history/version_1_58_0.html download boost1.58.0, install to D:\ProgramFiles, add D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0 to Path
 3. clone or download Caffe_Test to E:\GitCode, open Caffe.sln, first build dependent libraries, next build libcaffe.
+4. if you have already installed and configured cuda8.0 in your PC, then you can build libcaffe_gpu too.
 
 **Screenshot:**  
 ![](https://github.com/fengbingchun/Caffe_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)
