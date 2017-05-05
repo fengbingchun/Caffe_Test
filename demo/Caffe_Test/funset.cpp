@@ -529,11 +529,7 @@ int test_caffe_layer_pooling()
 	memcpy(data, mat2[0].data, size * sizeof(float));
 	memcpy(data + size, mat2[1].data, size * sizeof(float));
 	memcpy(data + 2 * size, mat2[2].data, size * sizeof(float));
-#ifdef CPU_ONLY
 	blob.set_cpu_data(data);
-#else
-	blob.set_gpu_data(data); // Note: GPU will crash
-#endif
 
 	for (int method = 0; method < 2; ++method) {
 		// set pooling parameter
@@ -553,7 +549,6 @@ int test_caffe_layer_pooling()
 		fprintf(stderr, "top blob info: channels: %d, height: %d, width: %d\n",
 			top_blob[0]->channels(), top_blob[0]->height(), top_blob[0]->width());
 
-#ifdef CPU_ONLY
 		pooling_layer.Forward(bottom_blob, top_blob);
 
 		int height = top_blob[0]->height();
@@ -593,46 +588,6 @@ int test_caffe_layer_pooling()
 		else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
 		cv::imwrite(image_name, mat6);
 	}
-#else
-		//pooling_layer.Forward(bottom_blob, top_blob);
-
-		//int height = top_blob[0]->height();
-		//int width = top_blob[0]->width();
-		//const float* p = top_blob[0]->gpu_data(); // Note: GPU will crash
-
-		//std::vector<cv::Mat> mat3{ cv::Mat(height, width, CV_32FC1, (float*)p),
-		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
-		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
-		//cv::Mat mat4;
-		//cv::merge(mat3, mat4);
-		//mat4.convertTo(mat4, CV_8UC3);
-		//if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/forward0.jpg";
-		//else image_name = "E:/GitCode/Caffe_Test/test_data/images/forward1.jpg";
-		//cv::imwrite(image_name, mat4);
-
-		//for (int i = 0; i < bottom_blob[0]->count(); ++i)
-		//	bottom_blob[0]->mutable_gpu_diff()[i] = bottom_blob[0]->gpu_data()[i];
-
-		//for (int i = 0; i < top_blob[0]->count(); ++i)
-		//	top_blob[0]->mutable_gpu_diff()[i] = top_blob[0]->gpu_data()[i];
-
-		//std::vector<bool> propagate_down{ true };
-		//pooling_layer.Backward(top_blob, propagate_down, bottom_blob);
-
-		//height = bottom_blob[0]->height();
-		//width = bottom_blob[0]->width();
-		//p = bottom_blob[0]->gpu_diff();
-		//std::vector<cv::Mat> mat5{ cv::Mat(height, width, CV_32FC1, (float*)p),
-		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width)),
-		//	cv::Mat(height, width, CV_32FC1, (float*)(p + height * width * 2)) };
-		//cv::Mat mat6;
-		//cv::merge(mat5, mat6);
-		//mat6.convertTo(mat6, CV_8UC3);
-		//if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/backward0.jpg";
-		//else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
-		//cv::imwrite(image_name, mat6);
-	}
-#endif
 
 	delete[] data;
 	return 0;
@@ -948,16 +903,11 @@ int test_caffe_blob()
 	float sum4 = blob2.sumsq_data();
 	fprintf(stderr, "sum1: %f, sum2: %f, sum3: %f, sum4: %f\n", sum1, sum2, sum3, sum4);
 
-#ifdef CPU_ONLY
 	float value2 = blob2.data_at(0, 2, 100, 200);
 	fprintf(stderr, "data at value: %f\n", value2);
 
 	const float* data = blob2.cpu_data();
 	fprintf(stderr, "data at 0: %f\n", data[0]);
-#else
-	//const float* data = blob2.gpu_data();
-	//fprintf(stderr, "data at 0: %f\n", data[0]); // Note: GPU will crash
-#endif
 
 	cv::Mat mat3;
 	mat2.convertTo(mat3, CV_8UC3);
@@ -971,6 +921,9 @@ int test_caffe_syncedmem()
 {
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
 	caffe::SyncedMemory mem(10);
 	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
@@ -978,10 +931,17 @@ int test_caffe_syncedmem()
 	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
 		mem.size() != 10 ||
 		p_mem->size() != 10 * sizeof(float) ||
+#ifdef CPU_ONLY
 		mem.cpu_data() == nullptr ||
 		mem.mutable_cpu_data() == nullptr ||
-		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU ) {
-		fprintf(stderr, "Error\n");
+		mem.head() != caffe::SyncedMemory::HEAD_AT_CPU
+#else
+		mem.gpu_data() == nullptr ||
+		mem.mutable_gpu_data() == nullptr ||
+		mem.head() != caffe::SyncedMemory::HEAD_AT_GPU
+#endif
+		) {
+		fprintf(stderr, "Error: Line: %d\n", __LINE__);
 		return -1;
 	}
 
@@ -990,82 +950,33 @@ int test_caffe_syncedmem()
 
 	void* cpu_data = mem.mutable_cpu_data();
 	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
-		fprintf(stderr, "Error\n");
+		fprintf(stderr, "Error: Line: %d\n", __LINE__);
 		return -1;
 	}
 
 	caffe::caffe_memset(mem.size(), 1, cpu_data);
 	for (int i = 0; i < mem.size(); ++i) {
 		if ((static_cast<char*>(cpu_data))[i] != 1) {
-			fprintf(stderr, "Error\n");
+			fprintf(stderr, "Error: Line: %d\n", __LINE__);
 			return -1;
 		}
 	}
 
 	cpu_data = mem.mutable_cpu_data();
 	if (mem.head() != caffe::SyncedMemory::HEAD_AT_CPU) {
-		fprintf(stderr, "Error\n");
+		fprintf(stderr, "Error: Line: %d\n", __LINE__);
 		return -1;
 	}
 
 	caffe::caffe_memset(mem.size(), 2, cpu_data);
 	for (int i = 0; i < mem.size(); ++i) {
 		if ((static_cast<char*>(cpu_data))[i] != 2) {
-			fprintf(stderr, "Error\n");
+			fprintf(stderr, "Error: Line: %d\n", __LINE__);
 			return -1;
 		}
 	}
 
 	delete p_mem;
-#else
-	caffe::Caffe::set_mode(caffe::Caffe::GPU);
-
-	caffe::SyncedMemory mem(10);
-	caffe::SyncedMemory* p_mem = new caffe::SyncedMemory(10 * sizeof(float));
-
-	if (mem.head() != caffe::SyncedMemory::UNINITIALIZED ||
-		mem.size() != 10 ||
-		p_mem->size() != 10 * sizeof(float) ||
-		mem.gpu_data() == nullptr ||
-		mem.mutable_gpu_data() == nullptr ||
-		mem.head() != caffe::SyncedMemory::HEAD_AT_GPU ) {
-		fprintf(stderr, "Error\n");
-		return -1;
-	}
-
-	fprintf(stderr, "p_mem size: %d\n", p_mem->size());
-	fprintf(stderr, "mem size: %d\n", mem.size());
-
-	void* gpu_data = mem.mutable_gpu_data();
-	if (mem.head() != caffe::SyncedMemory::HEAD_AT_GPU) {
-		fprintf(stderr, "Error\n");
-		return -1;
-	}
-
-	/*caffe::caffe_gpu_memset(mem.size(), 1, gpu_data); // Note: GPU will crash
-	for (int i = 0; i < mem.size(); ++i) {
-		if ((static_cast<char*>(gpu_data))[i] != 1) {
-			fprintf(stderr, "Error\n");
-			return -1;
-		}
-	}
-
-	gpu_data = mem.mutable_gpu_data();
-	if (mem.head() != caffe::SyncedMemory::HEAD_AT_GPU) {
-		fprintf(stderr, "Error\n");
-		return -1;
-	}
-
-	caffe::caffe_gpu_memset(mem.size(), 2, gpu_data);
-	for (int i = 0; i < mem.size(); ++i) {
-		if ((static_cast<char*>(gpu_data))[i] != 2) {
-			fprintf(stderr, "Error\n");
-			return -1;
-		}
-	}*/
-
-	delete p_mem;
-#endif
 
 	return 0;
 }
@@ -1186,7 +1097,7 @@ int test_caffe_util_math_functions()
 	float y13 = caffe::caffe_cpu_dot(3, A, B);
 #else
 	float y13{ 0.f };
-	// caffe::caffe_gpu_dot(3, A, B, &y13); // Note: GPU will crash
+	//caffe::caffe_gpu_dot(3, A, B, &y13); // Note: GPU will crash
 #endif
 	fprintf(stderr, "caffe cpu dot: %f\n", y13);
 
@@ -1302,6 +1213,12 @@ int test_caffe_util_mkl_alternate()
 
 int get_layer_type_list()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
+
 	caffe::LayerRegistry<double>::CreatorRegistry& registry = caffe::LayerRegistry<double>::Registry();
 
 	std::vector<std::string> layers_list;

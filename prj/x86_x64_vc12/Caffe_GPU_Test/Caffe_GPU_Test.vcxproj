@@ -114,7 +114,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <OutputFile>.\../../../lib/dbg/x64_vc12/Caffe_GPU_Test.exe</OutputFile>
       <AdditionalLibraryDirectories>D:\ProgramFiles\local\boost_1_58_0\lib64-msvc-12.0;D:\soft\OpenCV2.4.13\opencv\build\x64\vc12\lib;E:\GitCode\Caffe_Test\lib\dbg\x64_vc12;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;hdf5.lib;hdf5_hl.lib;snappy.lib;libopenblas.lib;opencv_core2413d.lib;opencv_highgui2413d.lib;opencv_imgproc2413d.lib;libcaffe_gpu.lib;cudart.lib;cublas.lib;curand.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>libprotobuf.lib;libprotoc.lib;libglog.lib;gflags.lib;leveldb.lib;lmdb.lib;hdf5.lib;hdf5_hl.lib;snappy.lib;libopenblas.lib;opencv_core2413d.lib;opencv_highgui2413d.lib;opencv_imgproc2413d.lib;libcaffe_gpu.lib;cudart.lib;cublas.lib;curand.lib;cublas_device.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Bscmake>
       <OutputFile>.\../../../obj/dbg/x64_vc12/Caffe_GPU_Test\Caffe_GPU_Test.bsc</OutputFile>
