@@ -22,6 +22,8 @@
 #include <lmdb.h>
 #include <boost/algorithm/string.hpp>
 #include <boost/smart_ptr/shared_ptr.hpp>
+#include <boost/smart_ptr/scoped_ptr.hpp>
+#include <boost/filesystem.hpp>
 
 #include <caffe/caffe.hpp>
 #include <caffe/util/io.hpp>
@@ -37,5 +39,6 @@
 #include <caffe/solver.hpp>
 #include <caffe/sgd_solvers.hpp>
 #include <caffe/layers/memory_data_layer.hpp>
+#include <caffe/util/db.hpp>
 
 #endif // FBC_CAFFE_TEST_COMMON_HPP_

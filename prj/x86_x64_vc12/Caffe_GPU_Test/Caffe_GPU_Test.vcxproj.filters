@@ -32,5 +32,8 @@
     <ClCompile Include="..\..\..\demo\Caffe_Test\mnist.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\demo\Caffe_Test\cifar10.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

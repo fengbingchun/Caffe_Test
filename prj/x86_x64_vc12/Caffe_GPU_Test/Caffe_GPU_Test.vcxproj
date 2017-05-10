@@ -172,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\demo\Caffe_Test\Caffe_Test.cpp" />
+    <ClCompile Include="..\..\..\demo\Caffe_Test\cifar10.cpp" />
     <ClCompile Include="..\..\..\demo\Caffe_Test\funset.cpp" />
     <ClCompile Include="..\..\..\demo\Caffe_Test\mnist.cpp" />
   </ItemGroup>
