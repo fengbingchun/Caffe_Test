@@ -12,6 +12,8 @@
 	- OpenBLAS version: 0.2.19
 - MNIST convert to LMDB/LevelDB
 - MNIST train and predict
+- cifar10 convert to LMDB/LevelDB
+- compute image mean
 - Caffe main header files's usage, include:
     - caffe/common.hpp
     - caffe/util/mkl_alternate.hpp

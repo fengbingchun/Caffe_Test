@@ -4,6 +4,117 @@
 #include <map>
 #include "common.hpp"
 
+int campute_image_mean(const std::string& db_type, const std::string& db_path, std::vector<float>& image_mean)
+{
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
+
+	// reference: caffe/tools/compute_image_mean.cpp
+	boost::scoped_ptr<caffe::db::DB> db(caffe::db::GetDB(db_type));
+	db->Open(db_path, caffe::db::READ);
+	boost::scoped_ptr<caffe::db::Cursor> cursor(db->NewCursor());
+
+	caffe::BlobProto sum_blob;
+	int count = 0;
+	// load first datum
+	caffe::Datum datum;
+	datum.ParseFromString(cursor->value());
+
+	caffe::DecodeDatumNative(&datum);
+
+	sum_blob.set_num(1);
+	sum_blob.set_channels(datum.channels());
+	sum_blob.set_height(datum.height());
+	sum_blob.set_width(datum.width());
+	const int data_size = datum.channels() * datum.height() * datum.width();
+	int size_in_datum = std::max<int>(datum.data().size(), datum.float_data_size());
+	for (int i = 0; i < size_in_datum; ++i) {
+		sum_blob.add_data(0.);
+	}
+
+	// Starting Iteration
+	while (cursor->valid()) {
+		caffe::Datum datum2;
+		datum2.ParseFromString(cursor->value());
+		caffe::DecodeDatumNative(&datum2);
+
+		const std::string& data = datum2.data();
+		size_in_datum = std::max<int>(datum2.data().size(), datum2.float_data_size());
+		if (size_in_datum != data_size) {
+			fprintf(stderr, "incorrect data field size: size_in_datum: %d, data_size: %d\n",
+				size_in_datum, data_size);
+			return -1;
+		}
+		if (data.size() != 0) {
+			if (data.size() != size_in_datum) {
+				fprintf(stderr, "data.size() != size_in_datum: data.size: %d, size_in_datum: %d\n",
+					data.size(), size_in_datum);
+				return -1;
+			}
+			for (int i = 0; i < size_in_datum; ++i) {
+				sum_blob.set_data(i, sum_blob.data(i) + (uint8_t)data[i]);
+			}
+		} else {
+			if (datum2.float_data_size() != size_in_datum) {
+				fprintf(stderr, "datum.float_data_size() != size_in_datum: datum.float_data_size: %d, size_in_datum: %d",
+					datum2.float_data_size(), size_in_datum);
+				return -1;
+			}
+			for (int i = 0; i < size_in_datum; ++i) {
+				sum_blob.set_data(i, sum_blob.data(i) + static_cast<float>(datum2.float_data(i)));
+			}
+		}
+		++count;
+		if (count % 10000 == 0) {
+			fprintf(stderr, "Processed: %d files\n", count);
+		}
+		cursor->Next();
+	}
+
+	if (count % 10000 != 0) {
+		fprintf(stderr, "Processed: %d files\n", count);
+	}
+	for (int i = 0; i < sum_blob.data_size(); ++i) {
+		sum_blob.set_data(i, sum_blob.data(i) / count);
+	}
+
+	const int channels = sum_blob.channels();
+	const int dim = sum_blob.height() * sum_blob.width();
+	image_mean.resize(channels, 0.0);
+	fprintf(stderr, "Number of channels: %d", channels);
+	for (int c = 0; c < channels; ++c) {
+		for (int i = 0; i < dim; ++i) {
+			image_mean[c] += sum_blob.data(dim * c + i);
+		}
+		image_mean[c] /= dim;
+	}
+	fprintf(stderr, "\n");
+
+	return 0;
+}
+
+int cifar10_compute_image_mean()
+{
+	const std::string db_type{ "lmdb" };
+	const std::string db_path{ "E:/GitCode/Caffe_Test/test_data/cifar10/cifar10_train_lmdb" };
+	std::vector<float> image_mean;
+	if (campute_image_mean(db_type, db_path, image_mean) != 0) {
+		fprintf(stderr, "compute image mean fail\n");
+		return -1;
+	}
+
+	fprintf(stderr, "image mean:");
+	for (const auto& value : image_mean) {
+		fprintf(stderr, "  %f  ", value);
+	}
+	fprintf(stderr, "\n");
+
+	return 0;
+}
+
 int test_caffe_solver()
 {
 #ifdef CPU_ONLY

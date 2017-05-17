@@ -1,7 +1,9 @@
 #ifndef FBC_CAFFE_TEST_FUNSET_HPP_
 #define FBC_CAFFE_TEST_FUNSET_HPP_
 
+int cifar10_train();
 int cifar10_convert();
+int cifar10_compute_image_mean();
 
 int mnist_train();
 int mnist_predict();

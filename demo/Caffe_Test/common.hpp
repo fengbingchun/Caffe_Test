@@ -41,4 +41,7 @@
 #include <caffe/layers/memory_data_layer.hpp>
 #include <caffe/util/db.hpp>
 
+// Compute the mean_image of a set of images given by a leveldb/lmdb
+int campute_image_mean(const std::string& db_type, const std::string& db, std::vector<float>& image_mean);
+
 #endif // FBC_CAFFE_TEST_COMMON_HPP_

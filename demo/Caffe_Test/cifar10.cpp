@@ -1,6 +1,12 @@
 #include "funset.hpp"
 #include "common.hpp"
 
+int cifar10_train()
+{
+
+	return 10;
+}
+
 const int CIFAR10_IMAGE_BTYES_SIZE = 3072; // 32 * 32 * 3
 const int CIFAR10_IMAGE_WIDTH = 32;
 const int CIFAR10_IMAGE_HEIGHT = 32;
@@ -18,6 +24,7 @@ static void read_image(std::ifstream* file, int* label, char* buffer)
 
 static void convert_dataset(const std::string& input_folder, const std::string& output_folder, const std::string& db_type)
 {
+	// prevent crash when multiple call convert_dataset function
 	std::vector<std::string> output_folder_name{ output_folder + "/cifar10_train_" + db_type,
 		output_folder + "/cifar10_test_" + db_type };
 	for (const auto& name : output_folder_name) {
