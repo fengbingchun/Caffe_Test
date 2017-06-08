@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = cifar10_compute_image_mean();
+	int ret = cifar10_train();
 
 	if (0 == ret) fprintf(stderr, "===== test success =====\n");
 	else fprintf(stderr, "***** test fail *****\n");

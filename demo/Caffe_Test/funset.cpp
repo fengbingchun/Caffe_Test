@@ -4,7 +4,7 @@
 #include <map>
 #include "common.hpp"
 
-int campute_image_mean(const std::string& db_type, const std::string& db_path, std::vector<float>& image_mean)
+int campute_image_mean(const std::string& db_type, const std::string& db_path, std::vector<float>& image_mean, const std::string& binaryproto)
 {
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
@@ -81,6 +81,11 @@ int campute_image_mean(const std::string& db_type, const std::string& db_path, s
 		sum_blob.set_data(i, sum_blob.data(i) / count);
 	}
 
+	// Write to disk
+	if (binaryproto != "") {
+		caffe::WriteProtoToBinaryFile(sum_blob, binaryproto);
+	}
+
 	const int channels = sum_blob.channels();
 	const int dim = sum_blob.height() * sum_blob.width();
 	image_mean.resize(channels, 0.0);
@@ -101,7 +106,8 @@ int cifar10_compute_image_mean()
 	const std::string db_type{ "lmdb" };
 	const std::string db_path{ "E:/GitCode/Caffe_Test/test_data/cifar10/cifar10_train_lmdb" };
 	std::vector<float> image_mean;
-	if (campute_image_mean(db_type, db_path, image_mean) != 0) {
+	std::string binaryproto{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/mean.binaryproto" };
+	if (campute_image_mean(db_type, db_path, image_mean, binaryproto) != 0) {
 		fprintf(stderr, "compute image mean fail\n");
 		return -1;
 	}

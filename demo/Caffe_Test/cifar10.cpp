@@ -3,8 +3,30 @@
 
 int cifar10_train()
 {
+#ifdef CPU_ONLY
+	caffe::Caffe::set_mode(caffe::Caffe::CPU);
+#else
+	caffe::Caffe::set_mode(caffe::Caffe::GPU);
+#endif
 
-	return 10;
+	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/cifar10_quick_solver.prototxt" };
+	caffe::SolverParameter solver_param;
+	if (!caffe::ReadProtoFromTextFile(filename.c_str(), &solver_param)) {
+		fprintf(stderr, "parse solver.prototxt fail\n");
+		return -1;
+	}
+
+	cifar10_convert(); // convert cifar10 to LMDB
+	if (cifar10_compute_image_mean() != 0) { // compute cifar10 image mean, generate mean.binaryproto
+		fprintf(stderr, "compute cifar10 image mean fail\n");
+		return -1;
+	}
+
+	caffe::SGDSolver<float> solver(solver_param);
+	solver.Solve();
+
+	fprintf(stderr, "cifar10 train finish\n");
+	return 0;
 }
 
 const int CIFAR10_IMAGE_BTYES_SIZE = 3072; // 32 * 32 * 3
