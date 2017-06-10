@@ -14,7 +14,7 @@
 - MNIST train and predict
 - cifar10 convert to LMDB/LevelDB
 - compute image mean
-- cifar10 train
+- cifar10 train and predict
 - Caffe main header files's usage, include:
     - caffe/common.hpp
     - caffe/util/mkl_alternate.hpp

@@ -4,10 +4,13 @@
 int cifar10_train();
 int cifar10_convert();
 int cifar10_compute_image_mean();
+int cifar10_predict();
 
 int mnist_train();
 int mnist_predict();
 int mnist_convert();
+
+int image_joint();
 
 int get_layer_type_list();
 int test_caffe_common();

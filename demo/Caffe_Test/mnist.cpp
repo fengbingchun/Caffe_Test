@@ -35,7 +35,7 @@ int mnist_predict()
 
 	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt" };
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
-	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/" };
+	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/handwritten_digits/" };
 
 	// 有两种方法可以实例化net
 	// 1. 通过传入参数类型为std::string

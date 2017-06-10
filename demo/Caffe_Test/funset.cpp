@@ -4,6 +4,33 @@
 #include <map>
 #include "common.hpp"
 
+int image_joint()
+{
+	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/object_recognition/" };
+	const int width{ 160 }, height{ 160 };
+
+	cv::Mat matDst(height * 2, width * 5, CV_8UC3);
+	for (int i = 0; i < 10; ++i) {
+		std::string str = std::to_string(i) + ".jpg";
+		cv::Mat matSrc = cv::imread(image_path + str);
+		if (!matSrc.data) {
+			fprintf(stderr, "image does not exist: %s\n", str.c_str());
+			return -1;
+		}
+
+		cv::resize(matSrc, matSrc, cv::Size(width, height), 0.f, 0.f, 3);
+		int x = (i * width) % (width * 5);
+		int y = (i / 5) * height;
+		cv::Mat part = matDst(cv::Rect(x, y, width, height));
+		matSrc.copyTo(part);
+	}
+
+	const std::string output_image = image_path + "result.jpg";
+	cv::imwrite(output_image, matDst);
+
+	return 0;
+}
+
 int campute_image_mean(const std::string& db_type, const std::string& db_path, std::vector<float>& image_mean, const std::string& binaryproto)
 {
 #ifdef CPU_ONLY
