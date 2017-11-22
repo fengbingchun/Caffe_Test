@@ -3,10 +3,10 @@
 
 int main()
 {
-	int ret = cifar10_predict();
+	int ret = mnist_tensorrt_predict();
 
-	if (0 == ret) fprintf(stderr, "===== test success =====\n");
-	else fprintf(stderr, "***** test fail *****\n");
+	if (0 == ret) fprintf(stdout, "========== test success ==========\n");
+	else fprintf(stderr, "********** test fail **********\n");
 
 	return 0;
 }
