@@ -4,6 +4,7 @@
 
 int test_openblas_1()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/55509764
 	int th_model = openblas_get_parallel();
 	switch (th_model) {
 	case OPENBLAS_SEQUENTIAL:

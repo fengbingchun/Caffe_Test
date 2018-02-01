@@ -130,6 +130,7 @@ int campute_image_mean(const std::string& db_type, const std::string& db_path, s
 
 int cifar10_compute_image_mean()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/72416951
 	const std::string db_type{ "lmdb" };
 	const std::string db_path{ "E:/GitCode/Caffe_Test/test_data/cifar10/cifar10_train_lmdb" };
 	std::vector<float> image_mean;
@@ -150,6 +151,7 @@ int cifar10_compute_image_mean()
 
 int test_caffe_solver()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/64444599
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -287,6 +289,7 @@ int test_caffe_solver()
 
 int test_caffe_net2()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/62423060
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -402,6 +405,7 @@ int test_caffe_net2()
 
 int test_caffe_net1()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/62423060
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -644,6 +648,7 @@ int test_caffe_net1()
 
 int test_caffe_layer_pooling()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/60962777
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -848,6 +853,7 @@ static int CompareDatumMat(const cv::Mat& mat1, const cv::Mat& mat2)
 
 int test_caffe_util_io()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/60140215
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -940,6 +946,7 @@ int test_caffe_util_io()
 
 int test_caffe_blob()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/59106613
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -1063,6 +1070,7 @@ int test_caffe_blob()
 
 int test_caffe_syncedmem()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/56665919
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -1127,6 +1135,7 @@ int test_caffe_syncedmem()
 
 int test_caffe_util_math_functions()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/56280708
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -1314,6 +1323,7 @@ int test_caffe_util_math_functions()
 
 int test_caffe_util_mkl_alternate()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/56280708
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -1357,6 +1367,7 @@ int test_caffe_util_mkl_alternate()
 
 int get_layer_type_list()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/54310956
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -1380,6 +1391,7 @@ int get_layer_type_list()
 
 int test_caffe_common()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/54955236
 	// 1. test macro NOT_IMPLEMENTED
 	//NOT_IMPLEMENTED; // error, fatal log
 

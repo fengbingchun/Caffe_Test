@@ -67,6 +67,7 @@ int test_protobuf_1()
 
 int test_protobuf_2()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/49977903
 	// 1. 首先编写一个caffe_tmp.proto文件，然后通过protoc.exe生成相应的pb.h、pb.cc文件
 	// protoc.exe caffe_tmp.proto --cpp_out=./
 	// caffe_tmp.proto文件存放在test_data/third_party_library目录下

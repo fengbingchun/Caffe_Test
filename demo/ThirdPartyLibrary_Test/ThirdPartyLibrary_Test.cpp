@@ -11,6 +11,7 @@
 
 int main()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/48768039
 	int ret = test_openblas_1();
 
 	if (ret == 0) fprintf(stderr, "=====  test success  =====\n");

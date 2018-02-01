@@ -6,6 +6,7 @@
 
 int mnist_tensorrt_predict()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/78606228
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -110,6 +111,8 @@ int mnist_tensorrt_predict()
 
 int mnist_train()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/49849225
+	//       http://blog.csdn.net/fengbingchun/article/details/68065338
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -134,6 +137,8 @@ int mnist_train()
 
 int mnist_predict()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/50987185
+	//       http://blog.csdn.net/fengbingchun/article/details/69001433
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -401,6 +406,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 // mnist convert to lmdb or leveldb
 int mnist_convert()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/49794453
 	//mnist test images
 	const std::string argv_test[] {"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte",
 		"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte",

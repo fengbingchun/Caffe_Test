@@ -3,6 +3,7 @@
 
 int cifar10_train()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/72953284
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -31,6 +32,7 @@ int cifar10_train()
 
 int cifar10_predict()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/72999346
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
@@ -218,6 +220,7 @@ static void convert_dataset(const std::string& input_folder, const std::string& 
 
 int cifar10_convert()
 {
+	// Blog: http://blog.csdn.net/fengbingchun/article/details/71540852
 	// reference: ./examples/cifar10/convert_CIFAR10_data.cpp
 	const std::vector<std::string> argv{
 		"*.exe",
