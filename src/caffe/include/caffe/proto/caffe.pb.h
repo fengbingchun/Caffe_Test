@@ -6907,15 +6907,25 @@ class InfogainLossParameter : public ::google::protobuf::Message /* @@protoc_ins
   ::std::string* release_source();
   void set_allocated_source(::std::string* source);
 
+  // optional int32 axis = 2 [default = 1];
+  bool has_axis() const;
+  void clear_axis();
+  static const int kAxisFieldNumber = 2;
+  ::google::protobuf::int32 axis() const;
+  void set_axis(::google::protobuf::int32 value);
+
   // @@protoc_insertion_point(class_scope:caffe.InfogainLossParameter)
  private:
   void set_has_source();
   void clear_has_source();
+  void set_has_axis();
+  void clear_has_axis();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::HasBits<1> _has_bits_;
   mutable int _cached_size_;
   ::google::protobuf::internal::ArenaStringPtr source_;
+  ::google::protobuf::int32 axis_;
   friend struct  protobuf_caffe_2eproto::TableStruct;
 };
 // -------------------------------------------------------------------
@@ -20034,6 +20044,30 @@ inline void InfogainLossParameter::set_allocated_source(::std::string* source) {
   }
   source_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), source);
   // @@protoc_insertion_point(field_set_allocated:caffe.InfogainLossParameter.source)
+}
+
+// optional int32 axis = 2 [default = 1];
+inline bool InfogainLossParameter::has_axis() const {
+  return (_has_bits_[0] & 0x00000002u) != 0;
+}
+inline void InfogainLossParameter::set_has_axis() {
+  _has_bits_[0] |= 0x00000002u;
+}
+inline void InfogainLossParameter::clear_has_axis() {
+  _has_bits_[0] &= ~0x00000002u;
+}
+inline void InfogainLossParameter::clear_axis() {
+  axis_ = 1;
+  clear_has_axis();
+}
+inline ::google::protobuf::int32 InfogainLossParameter::axis() const {
+  // @@protoc_insertion_point(field_get:caffe.InfogainLossParameter.axis)
+  return axis_;
+}
+inline void InfogainLossParameter::set_axis(::google::protobuf::int32 value) {
+  set_has_axis();
+  axis_ = value;
+  // @@protoc_insertion_point(field_set:caffe.InfogainLossParameter.axis)
 }
 
 // -------------------------------------------------------------------

@@ -1,6 +1,6 @@
 1. caffe: branch: windows
-	commit: 88ddc95;
-	date: 2017.03.29;
+	commit: 509dae0;
+	date: 2018.01.03;
 	url: https://github.com/BVLC/caffe
 2. boost: binary library, boost_1_58_0-msvc-12.0-64.exe
 	version: 1.58.0

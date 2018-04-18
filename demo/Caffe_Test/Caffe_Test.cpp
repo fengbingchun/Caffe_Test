@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = mnist_tensorrt_predict();
+	int ret = mnist_predict();
 
 	if (0 == ret) fprintf(stdout, "========== test success ==========\n");
 	else fprintf(stderr, "********** test fail **********\n");
