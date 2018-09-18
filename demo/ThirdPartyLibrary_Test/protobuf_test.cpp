@@ -19,7 +19,7 @@ int test_protobuf_1()
 		http://blog.163.com/jiang_tao_2010/blog/static/12112689020114305013458/
 		http://www.cnblogs.com/dkblog/archive/2012/03/27/2419010.html
 	*/
-	// 1-->Ê×ÏÈ±àĞ´Ò»¸öml.helloworld.protoÎÄ¼ş£¬ÄÚÈİÈçÏÂ£º
+	// 1-->é¦–å…ˆç¼–å†™ä¸€ä¸ªml.helloworld.protoæ–‡ä»¶ï¼Œå†…å®¹å¦‚ä¸‹ï¼š
 	/*
 	syntax = "proto2";
 	package lm;
@@ -32,10 +32,10 @@ int test_protobuf_1()
 	}
 	*/
 
-	// 2-->ÀûÓÃprotoc.exeÉú³Éml.helloworld.pb.hºÍml.hellowrold.pb.cc
+	// 2-->åˆ©ç”¨protoc.exeç”Ÿæˆml.helloworld.pb.hå’Œml.hellowrold.pb.cc
 	// protoc.exe ml.helloworld.proto --cpp_out=./
 
-	// 3-->Writer,½«°ÑÒ»¸ö½á¹¹»¯Êı¾İĞ´Èë´ÅÅÌ£¬ÒÔ±ãÆäËûÈËÀ´¶ÁÈ¡
+	// 3-->Writer,å°†æŠŠä¸€ä¸ªç»“æ„åŒ–æ•°æ®å†™å…¥ç£ç›˜ï¼Œä»¥ä¾¿å…¶ä»–äººæ¥è¯»å–
 	lm::helloworld msg1;
 	msg1.set_id(101);
 	msg1.set_str("hello");
@@ -50,7 +50,7 @@ int test_protobuf_1()
 	}
 	output.close();
 
-	// 4-->Reader,¶ÁÈ¡½á¹¹»¯Êı¾İ,logÎÄ¼ş
+	// 4-->Reader,è¯»å–ç»“æ„åŒ–æ•°æ®,logæ–‡ä»¶
 	lm::helloworld msg2;
 
 	std::fstream input(file_proto.c_str(), std::ios::in | std::ios::binary);
@@ -68,11 +68,11 @@ int test_protobuf_1()
 int test_protobuf_2()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/49977903
-	// 1. Ê×ÏÈ±àĞ´Ò»¸öcaffe_tmp.protoÎÄ¼ş£¬È»ºóÍ¨¹ıprotoc.exeÉú³ÉÏàÓ¦µÄpb.h¡¢pb.ccÎÄ¼ş
+	// 1. é¦–å…ˆç¼–å†™ä¸€ä¸ªcaffe_tmp.protoæ–‡ä»¶ï¼Œç„¶åé€šè¿‡protoc.exeç”Ÿæˆç›¸åº”çš„pb.hã€pb.ccæ–‡ä»¶
 	// protoc.exe caffe_tmp.proto --cpp_out=./
-	// caffe_tmp.protoÎÄ¼ş´æ·ÅÔÚtest_data/third_party_libraryÄ¿Â¼ÏÂ
+	// caffe_tmp.protoæ–‡ä»¶å­˜æ”¾åœ¨test_data/third_party_libraryç›®å½•ä¸‹
 
-	// 2. ĞòÁĞ»¯£¬½«Êı¾İ´æÈëÎÄ¼ş
+	// 2. åºåˆ—åŒ–ï¼Œå°†æ•°æ®å­˜å…¥æ–‡ä»¶
 	caffe_tmp::BlobShape blobShape;
 	blobShape.add_dim(4);
 	blobShape.add_dim(8);
@@ -136,7 +136,7 @@ int test_protobuf_2()
 	}
 	output.close();
 
-	// 3. ½âÎö(·´ĞòÁĞ»¯)
+	// 3. è§£æ(ååºåˆ—åŒ–)
 	std::fstream input;
 	std::string file_in = data_path + "caffe.bin";
 	input.open(file_in.c_str(), std::ios::in | std::ios::binary);

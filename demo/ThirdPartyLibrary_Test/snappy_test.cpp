@@ -7,7 +7,7 @@ int test_snappy_1()
 {
 	/* reference:
 		http://baike.baidu.com/item/snappy?fr=aladdin
-		exaples:./snappy_unittest.cc°¢snappy-test.cc
+		exaples:./snappy_unittest.cc„ÄÅsnappy-test.cc
 		https://snappy.angeloflogic.com/cpp-tutorial/
 	*/
 

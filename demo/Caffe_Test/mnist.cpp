@@ -149,11 +149,11 @@ int mnist_predict()
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/handwritten_digits/" };
 
-	// ÓĞÁ½ÖÖ·½·¨¿ÉÒÔÊµÀı»¯net
-	// 1. Í¨¹ı´«Èë²ÎÊıÀàĞÍÎªstd::string
+	// æœ‰ä¸¤ç§æ–¹æ³•å¯ä»¥å®ä¾‹åŒ–net
+	// 1. é€šè¿‡ä¼ å…¥å‚æ•°ç±»å‹ä¸ºstd::string
 	caffe::Net<float> caffe_net(param_file, caffe::TEST);
 	caffe_net.CopyTrainedLayersFrom(trained_filename);
-	// 2. Í¨¹ı´«Èë²ÎÊıÀàĞÍÎªcaffe::NetParameter
+	// 2. é€šè¿‡ä¼ å…¥å‚æ•°ç±»å‹ä¸ºcaffe::NetParameter
 	//caffe::NetParameter net_param1, net_param2;
 	//caffe::ReadNetParamsFromTextFileOrDie(param_file, &net_param1);
 	//net_param1.mutable_state()->set_phase(caffe::TEST);
@@ -202,15 +202,15 @@ int mnist_predict()
 		cv::resize(mat, mat, cv::Size(image_width, image_height));
 		cv::bitwise_not(mat, mat);
 
-		// ½«Í¼ÏñÊı¾İÔØÈëNetÍøÂç£¬ÓĞ2ÖÖ·½·¨
+		// å°†å›¾åƒæ•°æ®è½½å…¥Netç½‘ç»œï¼Œæœ‰2ç§æ–¹æ³•
 		boost::shared_ptr<caffe::MemoryDataLayer<float> > memory_data_layer =
 			boost::static_pointer_cast<caffe::MemoryDataLayer<float>>(caffe_net.layer_by_name("data"));
-		// 1. Í¨¹ıMemoryDataLayerÀàµÄResetº¯Êı
+		// 1. é€šè¿‡MemoryDataLayerç±»çš„Resetå‡½æ•°
 		mat.convertTo(mat, CV_32FC1, 0.00390625);
 		float dummy_label[1] {0};
 		memory_data_layer->Reset((float*)(mat.data), dummy_label, 1);
 
-		// 2. Í¨¹ıMemoryDataLayerÀàµÄAddMatVectorº¯Êı
+		// 2. é€šè¿‡MemoryDataLayerç±»çš„AddMatVectorå‡½æ•°
 		//std::vector<cv::Mat> patches{mat}; // set the patch for testing
 		//std::vector<int> labels(patches.size());
 		//memory_data_layer->AddMatVector(patches, labels); // push vector<Mat> to data layer
@@ -260,7 +260,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	uint32_t rows;
 	uint32_t cols;
 
-	// ¶ÁÈ¡ÎÄ¼şÇ°n¸ö×Ö½Ú£¬»ñÈ¡Í¼ÏñÊıÁ¿¡¢Í¼Ïñ¿í¡¢Í¼Ïñ¸ß
+	// è¯»å–æ–‡ä»¶å‰nä¸ªå­—èŠ‚ï¼Œè·å–å›¾åƒæ•°é‡ã€å›¾åƒå®½ã€å›¾åƒé«˜
 	image_file.read(reinterpret_cast<char*>(&magic), 4);
 	magic = swap_endian(magic);
 	CHECK_EQ(magic, 2051) << "Incorrect image file magic.";
@@ -302,7 +302,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	else if (db_backend == "lmdb") {  // lmdb
 		int rc;
 		LOG(INFO) << "Opening lmdb " << db_path;
-		// ´´½¨Ö¸¶¨µÄ´æ·ÅÄ¿Â¼
+		// åˆ›å»ºæŒ‡å®šçš„å­˜æ”¾ç›®å½•
 		//CHECK_EQ(mkdir(db_path, 0744), 0)
 		std::string strPath = std::string(db_path);
 		std::string delPath = "rmdir /s/q " + strPath;
@@ -311,7 +311,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 		system(strPath.c_str());
 		//CHECK_EQ(system(strPath.c_str()), 0) << "mkdir " << db_path << "failed";
 
-		// ´´½¨lmdbÊı¾İ¿â
+		// åˆ›å»ºlmdbæ•°æ®åº“
 		CHECK_EQ(mdb_env_create(&mdb_env), MDB_SUCCESS) << "mdb_env_create failed";
 		//CHECK_EQ(mdb_env_set_mapsize(mdb_env, 1099511627776), MDB_SUCCESS) << "mdb_env_set_mapsize failed";//1TB
 		CHECK_EQ(mdb_env_set_mapsize(mdb_env, 107374182), MDB_SUCCESS) << "mdb_env_set_mapsize failed";//100MB
@@ -331,13 +331,13 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	char key_cstr[kMaxKeyLength];
 	std::string value;
 
-	caffe::Datum datum; // CaffeÊı¾İÀà
+	caffe::Datum datum; // Caffeæ•°æ®ç±»
 	datum.set_channels(1);
 	datum.set_height(rows);
 	datum.set_width(cols);
 	LOG(INFO) << "A total of " << num_items << " items.";
 	LOG(INFO) << "Rows: " << rows << " Cols: " << cols;
-	// ½«Êı¾İĞ´Èëlmdb»òleveldbÊı¾İ¿â
+	// å°†æ•°æ®å†™å…¥lmdbæˆ–leveldbæ•°æ®åº“
 	for (int item_id = 0; item_id < num_items; ++item_id) {
 		image_file.read(pixels, rows * cols);
 		label_file.read(&label, 1);

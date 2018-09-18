@@ -376,7 +376,7 @@ int test_caffe_net2()
 	net->ToProto(&net_param, false);
 	net->CopyTrainedLayersFrom(net_param);
 
-	// º”‘ÿ“——µ¡∑∫√µƒƒ£–Õ
+	// Âä†ËΩΩÂ∑≤ËÆ≠ÁªÉÂ•ΩÁöÑÊ®°Âûã
 	// 18. void CopyTrainedLayersFrom(const string trained_filename)
 	std::string trained_filename{ " " };
 	//net->CopyTrainedLayersFrom(trained_filename);
@@ -1033,7 +1033,7 @@ int test_caffe_blob()
 	}
 	fprintf(stderr, "\n");
 
-	// ◊¢£∫“‘…œΩ¯––µƒÀ˘”–≤Ÿ◊˜æ˘≤ªª·…Í«Î∑÷≈‰»Œ∫Œƒ⁄¥Ê
+	// Ê≥®Ôºö‰ª•‰∏äËøõË°åÁöÑÊâÄÊúâÊìç‰ΩúÂùá‰∏ç‰ºöÁî≥ËØ∑ÂàÜÈÖç‰ªª‰ΩïÂÜÖÂ≠ò
 
 	// cv::Mat -> Blob
 	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
@@ -1152,7 +1152,7 @@ int test_caffe_util_math_functions()
 	int y12[6] {1, 2, 3, 4, 5, 6};
 
 	fprintf(stderr, "test math function: caffe_cpu_gemm(C=alpha*A*B+beta*C)\n");
-	// A°¢B°¢y1: matrix
+	// A„ÄÅB„ÄÅy1: matrix
 #ifdef CPU_ONLY
 	caffe::caffe_cpu_gemm(CblasNoTrans, CblasNoTrans, 2, 4, 3, alpha, A, B, beta, y1);
 #else
@@ -1164,7 +1164,7 @@ int test_caffe_util_math_functions()
 	fprintf(stderr, "\n");
 
 	fprintf(stderr, "test math function: caffe_cpu_gemv(y=alpha*A*x+beta*y)\n");
-	// A: matrix; x°¢y2: vector
+	// A: matrix; x„ÄÅy2: vector
 #ifdef CPU_ONLY
 	caffe::caffe_cpu_gemv(CblasNoTrans, 2, 3, alpha, A, x, beta, y2);
 #else

@@ -43,7 +43,7 @@ int test_glog_1()
 
 	const std::string data_path = "E:/GitCode/Caffe_Test/test_data/third_party_library/";
 
-	//Îª²»Í¬¼¶±ğµÄÈÕÖ¾ÉèÖÃ²»Í¬µÄÎÄ¼şbasename
+	//ä¸ºä¸åŒçº§åˆ«çš„æ—¥å¿—è®¾ç½®ä¸åŒçš„æ–‡ä»¶basename
 	std::string file_info = data_path + "loginfo";
 	std::string file_logwarn = data_path + "logwarn";
 	std::string file_logerror = data_path + "logerror";
@@ -51,13 +51,13 @@ int test_glog_1()
 	google::SetLogDestination(google::WARNING, file_logwarn.c_str());
 	google::SetLogDestination(google::GLOG_ERROR, file_logerror.c_str());
 
-	//»º´æµÄ×î´óÊ±³¤£¬³¬Ê±»áĞ´ÈëÎÄ¼ş
+	//ç¼“å­˜çš„æœ€å¤§æ—¶é•¿ï¼Œè¶…æ—¶ä¼šå†™å…¥æ–‡ä»¶
 	FLAGS_logbufsecs = 60;
 
-	//µ¥¸öÈÕÖ¾ÎÄ¼ş×î´ó£¬µ¥Î»M
+	//å•ä¸ªæ—¥å¿—æ–‡ä»¶æœ€å¤§ï¼Œå•ä½M
 	FLAGS_max_log_size = 10;
 
-	//ÉèÖÃÎªtrue£¬¾Í²»»áĞ´ÈÕÖ¾ÎÄ¼şÁË
+	//è®¾ç½®ä¸ºtrueï¼Œå°±ä¸ä¼šå†™æ—¥å¿—æ–‡ä»¶äº†
 	FLAGS_logtostderr = false;
 	boost::thread t1(boost::bind(&thread1_test));
 	boost::thread t2(boost::bind(&thread2_test));
