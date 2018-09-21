@@ -1,5 +1,6 @@
 #ifndef _UNISTD_H
 #define _UNISTD_H    1
+#ifdef _MSC_VER
 
 /* This file intended to serve as a drop-in replacement for 
  *  unistd.h on Windows
@@ -49,4 +50,5 @@ typedef unsigned __int16  uint16_t;
 typedef unsigned __int32  uint32_t;
 typedef unsigned __int64  uint64_t;*/
 
+#endif
 #endif /* unistd.h  */

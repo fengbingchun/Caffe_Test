@@ -1,6 +1,10 @@
 #include "lmdb_test.hpp"
 #include <time.h>
+#ifdef _MSC_VER
 #include <direct.h>
+#else
+#include <sys/stat.h>
+#endif
 #include <iostream>
 #include <lmdb.h>
 
@@ -36,9 +40,17 @@ int test_lmdb_1()
 		values[i] = rand() % 1024;
 	}
 
+#ifdef _MSC_VER
 	const std::string data_path = "E:/GitCode/Caffe_Test/test_data/third_party_library/";
+#else
+	const std::string data_path = "test_data/third_party_library/";
+#endif
 	std::string file_LMDB = data_path + "testLMDB";
+#ifdef _MSC_VER
 	_mkdir(file_LMDB.c_str());
+#else
+	mkdir(file_LMDB.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
+#endif
 	E(mdb_env_create(&env));
 	E(mdb_env_set_maxreaders(env, 1));
 	E(mdb_env_set_mapsize(env, 107374182));//100MB

@@ -40,7 +40,11 @@ int test_protobuf_1()
 	msg1.set_id(101);
 	msg1.set_str("hello");
 
+#ifdef _MSC_VER
 	const std::string data_path = "E:/GitCode/Caffe_Test/test_data/third_party_library/";
+#else
+	const std::string data_path = "test_data/third_party_library/";
+#endif
 	// Write the new address book back to disk. 
 	std::string file_proto = data_path + "log";
 	std::fstream output(file_proto.c_str(), std::ios::out | std::ios::trunc | std::ios::binary);
@@ -119,7 +123,11 @@ int test_protobuf_2()
 	poolingParameter.set_engine(caffe_tmp::PoolingParameter::Engine::PoolingParameter_Engine_CUDNN);
 	int size_poolingParameter = poolingParameter.ByteSize();
 
+#ifdef _MSC_VER
 	const std::string data_path = "E:/GitCode/Caffe_Test/test_data/third_party_library/";
+#else
+	const std::string data_path = "test_data/third_party_library/";
+#endif
 	std::fstream output;
 	std::string file_out = data_path + "caffe.bin";
 	output.open(file_out.c_str(), std::ios::out | std::ios::trunc | std::ios::binary);
@@ -215,6 +223,7 @@ int test_protobuf_2()
 	assert(poolMethod == caffe_tmp::PoolingParameter::PoolMethod::PoolingParameter_PoolMethod_AVE);
 	caffe_tmp::PoolingParameter_Engine pooling_engine_ = poolingParameter_.engine();
 	assert(pooling_engine_ == 2);
+	fprintf(stdout, "pooling_engine_: %d\n", pooling_engine_);
 
 	delete[] buf;
 	input.close();

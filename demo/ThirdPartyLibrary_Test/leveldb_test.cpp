@@ -1,6 +1,6 @@
 #include "leveldb_test.hpp"
 #include <iostream>
-#include <levelDB/db.h>
+#include <leveldb/db.h>
 
 int test_leveldb_1()
 {
@@ -9,7 +9,11 @@ int test_leveldb_1()
 		http://www.bubuko.com/infodetail-411090.html
 		http://qiuqiang1985.iteye.com/blog/1255365
 	*/
+#ifdef _MSC_VER
 	const std::string data_path = "E:/GitCode/Caffe_Test/test_data/third_party_library/";
+#else
+	const std::string data_path = "test_data/third_party_library/";
+#endif
 
 	leveldb::DB* db;
 	leveldb::Options options;

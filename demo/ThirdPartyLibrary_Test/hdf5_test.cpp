@@ -2,7 +2,11 @@
 #include <iostream>
 #include <hdf5.h>
 
+#ifdef _MSC_VER
 #define H5FILE_NAME		"E:/GitCode/Caffe_Test/test_data/third_party_library/SDS.h5"
+#else
+#define H5FILE_NAME		"test_data/third_party_library/SDS.h5"
+#endif
 #define DATASETNAME		"IntArray"
 #define NX			5 /* dataset dimensions */
 #define NY			6
