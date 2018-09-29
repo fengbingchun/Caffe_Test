@@ -1,0 +1,197 @@
+name: "LeNet" # net名
+layer { # memory required: (50175+64)*4=200960
+  name: "mnist" # layer名字
+  type: "Data" # layer类型,数据层，Data enters Caffe through data layers,read data from LEVELDB or LMDB
+  top: "data" # top名字, shape: 64 1 28 28 (50175)
+  top: "label" # top名字, shape: 64 (64)
+  include { # 指定何时将此layer mnist包含到网络中
+    phase: TRAIN # 训练阶段会将此layer mnist包含到网络中
+  }
+  transform_param { # 图像预处理
+    scale: 0.00390625 # 对图像像素值进行scale操作,范围[0, 1)
+  }
+  data_param { # data parameter
+    source: "test_data/MNIST/train" # 数据存放路径
+    batch_size: 64 # 指定一次处理图像的数量
+    backend: LMDB # 数据存储方式
+  }
+}
+layer { # memory required: (78400+100)*4=314000
+  name: "mnist" # layer名字
+  type: "Data" # layer类型,数据层，Data enters Caffe through data layers,read data from LEVELDB or LMDB
+  top: "data" # top名字, shape: 100 1 28 28 (78400)
+  top: "label" # top名字, shape: 100 (100)
+  include { # 指定何时将此layer mnist包含到网络中
+    phase: TEST # 测试阶段会将此layer mnist包含到此网络中
+  }
+  transform_param { # 图像预处理
+    scale: 0.00390625 # 对图像像素值进行scale操作,范围[0, 1)
+  }
+  data_param { # data parameter
+    source: "test_data/MNIST/test" # 数据存放路径
+    batch_size: 100 # 指定一次处理图像的数量
+    backend: LMDB # 数据存储方式
+  }
+}
+# test 阶段会创建一个layer: label_mnist_1_split，如下：
+# layer_factory.hpp:75] Creating layer label_mnist_1_split
+# net.cpp:110] Creating Layer label_mnist_1_split
+# net.cpp:476] label_mnist_1_split <- label
+# net.cpp:432] label_mnist_1_split -> label_mnist_1_split_0
+# net.cpp:432] label_mnist_1_split -> label_mnist_1_split_1
+# net.cpp:155] Setting up label_mnist_1_split
+# net.cpp:163] Top shape: 100 (100)
+# net.cpp:163] Top shape: 100 (100)
+layer { # memory required: 737280*4=2949120/1152000*4=4608000
+  name: "conv1" # layer名字
+  type: "Convolution" # layer类型，卷积层
+  bottom: "data" # bottom名字
+  top: "conv1" # top名字, shape: 64 20 24 24 (737280)/100 20 24 24 (1152000)
+  param { # 训练时用到的参数
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # 训练时用到的参数
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  convolution_param { # convolution parameter
+    num_output: 20 # 输出特征图(feature map)数量
+    kernel_size: 5 # 卷积核大小(卷积核其实就是权值)
+    stride: 1 # 滑动步长
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+layer { # memory required: 184320*4=737280/288000*4=1152000
+  name: "pool1" # layer名字
+  type: "Pooling" # layer类型,Pooling层
+  bottom: "conv1" # bottom名字
+  top: "pool1" # top名字, shape: 64 20 12 12 (184320)/ 100 20 12 12 (288000)
+  pooling_param { # pooling parameter，pooling层参数
+    pool: MAX # pooling方法：最大值采样
+    kernel_size: 2 # 滤波器大小
+    stride: 2 # 滑动步长
+  }
+}
+layer { # memory required: 204800*4=819200/320000*4=1280000
+  name: "conv2" # layer名字
+  type: "Convolution" # layer类型,卷积层
+  bottom: "pool1" # bottom名字
+  top: "conv2" # top名字, shape: 64 50 8 8 (204800)/ 100 50 8 8 (320000)
+  param { # 训练时用到的参数
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # 训练时用到的参数
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  convolution_param { # convolution parameter，卷基层参数
+    num_output: 50 # 输出特征图(feature map)数量
+    kernel_size: 5 # 卷积核大小(卷积核其实就是权值)
+    stride: 1 # 滑动步长
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+layer { # memory required: 51200*4=204800/80000*4=320000
+  name: "pool2" # layer名字
+  type: "Pooling" # layer类型,Pooling层
+  bottom: "conv2" # bottom名字
+  top: "pool2" # top名字, shape: 64 50 4 4 (51200)/ 100 50 4 4 (80000)
+  pooling_param { # pooling parameter，卷积层参数
+    pool: MAX # pooling方法：最大值采样
+    kernel_size: 2 # 滤波器大小
+    stride: 2 # 滑动步长
+  }
+}
+layer { # memory required: 32000*4=128000/50000*4=200000
+  name: "ip1" # layer名字
+  type: "InnerProduct" # layer类型，全连接层
+  bottom: "pool2" # bottom名字
+  top: "ip1" # top名字, shape: 64 500 (32000)/ 100 500 (50000)
+  param { # 训练时用到的参数
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # 训练时用到的参数
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  inner_product_param { # 全连接层参数
+    num_output: 500 # 输出特征图(feature map)数量
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+# ReLU: Given an input value x, The ReLU layer computes the output as x if x > 0 and 
+# negative_slope * x if x <= 0. When the negative slope parameter is not set,
+# it is equivalent to the standard ReLU function of taking max(x, 0).
+# It also supports in-place computation, meaning that the bottom and
+# the top blob could be the same to preserve memory consumption
+layer { # memory required: 32000*4=128000/50000*4=200000
+  name: "relu1" # layer名字
+  type: "ReLU" # layer类型
+  bottom: "ip1" # bottom名字
+  top: "ip1" # top名字 (in-place), shape: 64 500 (32000)/ 100 500 (50000)
+}
+layer { # memory required: 640*4=2560/1000*4=4000
+  name: "ip2" # layer名字
+  type: "InnerProduct" # layer类型，全连接层
+  bottom: "ip1" # bottom名字
+  top: "ip2" # top名字, shape: 64 10 (640)/ 100 10 (1000)
+  param { # 训练时用到的参数
+    lr_mult: 1 # The multiplier on the global learning rate
+  }
+  param { # 训练时用到的参数
+    lr_mult: 2 # The multiplier on the global learning rate
+  }
+  inner_product_param { # 全连接层参数
+    num_output: 10 # 输出特征图(feature map)数量
+    weight_filler { # The filler for the weight
+      type: "xavier" # 权值使用xavier滤波
+    }
+    bias_filler { # The filler for the bias
+      type: "constant" # 偏置使用常量滤波
+    }
+  }
+}
+# test阶段会创建一个layer: ip2_ip2_0_split,如下:
+# layer_factory.hpp:75] Creating layer ip2_ip2_0_split
+# net.cpp:110] Creating Layer ip2_ip2_0_split
+# net.cpp:476] ip2_ip2_0_split <- ip2
+# net.cpp:432] ip2_ip2_0_split -> ip2_ip2_0_split_0
+# net.cpp:432] ip2_ip2_0_split -> ip2_ip2_0_split_1
+# net.cpp:155] Setting up ip2_ip2_0_split
+# net.cpp:163] Top shape: 100 10 (1000)
+# net.cpp:163] Top shape: 100 10 (1000)
+layer { # memory required: 1*4=4
+  name: "accuracy" # layer名字
+  type: "Accuracy" # layer类型，计算输出准确率
+  bottom: "ip2" # bottom名字
+  bottom: "label" # bottom名字
+  top: "accuracy" # top名字, shape: (1)
+  include { # 指定何时将此layer accuracy包含到网络中
+    phase: TEST # 测试阶段会将此layer accuracy包含到此网络中
+  }
+}
+# SoftmaxWithLoss: Computes the multinomial logistic loss for a one-of-many
+# classification task, passing real-valued predictions through a
+# softmax to get a probability distribution over classes.
+layer { # memory required: 1*4=4/1*4=4
+  name: "loss" # layer名字
+  type: "SoftmaxWithLoss" # layer类型
+  bottom: "ip2" # bottom名字
+  bottom: "label" # bottom名字
+  top: "loss" # top名字, shape: (1)/ (1)
+}
+
+# 在训练网络中，占用总内存大小为：200960+2949120+737280+819200+204800+128000+128000+2560+4=5169924
+# 在测试网络中，占用总内存大小为：314000+(100+100)*4+4608000+1152000+1280000+320000+200000+200000+4000+(1000+1000)*4+4+4=8086808

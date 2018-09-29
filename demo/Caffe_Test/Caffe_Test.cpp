@@ -3,10 +3,10 @@
 
 int main()
 {
-	int ret = mnist_predict();
+	int ret = get_layer_type_list();
 
 	if (0 == ret) fprintf(stdout, "========== test success ==========\n");
-	else fprintf(stderr, "********** test fail **********\n");
+	else fprintf(stderr, "########## test fail ##########\n");
 
 	return 0;
 }

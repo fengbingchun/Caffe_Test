@@ -1,4 +1,4 @@
-PROJECT(ThirdPartyLibrary_Test)
+PROJECT(Caffe_Test)
 CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
 
 # support C++11
@@ -9,17 +9,29 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++1y")
 
 IF(NOT CMAKE_BUILD_TYPE)
 	SET(CMAKE_BUILD_TYPE "Release")
-	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wall -O2")
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O2")
+	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC -Wall -O2")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fPIC -Wall -O2")
 ELSE()
 	SET(CMAKE_BUILD_TYPE "Debug")
-	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -Wall -O2")
-	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -Wall -O2")
+	SET(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -fPIC -Wall -O2")
+	SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fPIC -Wall -O2")
 ENDIF()
 MESSAGE(STATUS "cmake build type: ${CMAKE_BUILD_TYPE}")
 
+IF(BUILD_GPU)
+	MESSAGE(STATUS "########## BUILD GPU ##########")
+ELSE()
+	MESSAGE(STATUS "########## BUILD CPU ##########")
+	ADD_DEFINITIONS(-DCPU_ONLY)
+ENDIF()
+
+ADD_DEFINITIONS(-DUSE_LMDB)
+ADD_DEFINITIONS(-DUSE_LEVELDB)
+ADD_DEFINITIONS(-DUSE_OPENCV)
+ADD_DEFINITIONS(-DCAFFE_BUILDING_STATIC_LIB)
+
 MESSAGE(STATUS "cmake current source dir: ${CMAKE_CURRENT_SOURCE_DIR}")
-SET(PATH_TEST_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../demo/ThirdPartyLibrary_Test)
+SET(PATH_TEST_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../demo/Caffe_Test)
 SET(PATH_SRC_GFLAGS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/gflags)
 SET(PATH_SRC_GLOG_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/glog)
 SET(PATH_SRC_HDF5_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/hdf5)
@@ -28,6 +40,7 @@ SET(PATH_SRC_LMDB_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/lmdb)
 SET(PATH_SRC_PROTOBUF_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/protobuf)
 SET(PATH_SRC_SNAPPY_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/snappy)
 SET(PATH_SRC_OPENBLAS_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/openblas)
+SET(PATH_SRC_CAFFE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/./../../src/caffe)
 MESSAGE(STATUS "path test files: ${PATH_TEST_FILES}")
 
 SET(PATH_OPENCV /opt/opencv3.4.2)
@@ -49,7 +62,63 @@ INCLUDE_DIRECTORIES(
 	${PATH_SRC_PROTOBUF_FILES}/src
 	${PATH_SRC_SNAPPY_FILES}
 	${PATH_SRC_OPENBLAS_FILES}
+	${PATH_SRC_CAFFE_FILES}/include
+	${PATH_SRC_CAFFE_FILES}/include/caffe/proto
 )
+
+# build caffe
+SET(CAFFE_SRC_LIST )
+LIST(APPEND CAFFE_SRC_LIST
+	${PATH_SRC_CAFFE_FILES}/src/caffe/blob.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/common.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/data_transformer.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/internal_thread.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/layer.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/layer_factory.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/net.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/parallel.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/solver.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/solver_factory.cpp
+	${PATH_SRC_CAFFE_FILES}/src/caffe/syncedmem.cpp
+)
+
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_CPU_LAYERS ${PATH_SRC_CAFFE_FILES}/src/caffe/layers/*.cpp)
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_CPU_PROTO ${PATH_SRC_CAFFE_FILES}/src/caffe/proto/*.cc)
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_CPU_SOLVERS ${PATH_SRC_CAFFE_FILES}/src/caffe/solvers/*.cpp)
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_CPU_UTIL ${PATH_SRC_CAFFE_FILES}/src/caffe/util/*.cpp)
+
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_GPU_LAYERS ${PATH_SRC_CAFFE_FILES}/src/caffe/layers/*.cu)
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_GPU_SOLVERS ${PATH_SRC_CAFFE_FILES}/src/caffe/solvers/*.cu)
+FILE(GLOB_RECURSE SRC_CAFFE_LIST_GPU_UTIL ${PATH_SRC_CAFFE_FILES}/src/caffe/util/*.cu)
+
+LIST(APPEND CAFFE_SRC_LIST
+	${SRC_CAFFE_LIST_CPU_LAYERS}
+	${SRC_CAFFE_LIST_CPU_PROTO}
+	${SRC_CAFFE_LIST_CPU_SOLVERS}
+	${SRC_CAFFE_LIST_CPU_UTIL}
+)
+
+IF(BUILD_GPU)
+	LIST(APPEND CAFFE_SRC_LIST
+		${SRC_CAFFE_LIST_GPU_LAYERS}
+		${SRC_CAFFE_LIST_GPU_SOLVERS}
+		${SRC_CAFFE_LIST_GPU_UTIL}
+	)
+ENDIF()
+
+IF(BUILD_GPU)
+	FIND_PACKAGE(CUDA)
+	INCLUDE_DIRECTORIES(/usr/local/cuda-8.0/include)
+	LIST(APPEND CUDA_NVCC_FLAGS -std=c++11;-O2)
+	LIST(APPEND CUDA_NVCC_FLAGS -Xcompiler;-fPIC)
+	LIST(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_50,code=sm_50)
+	LIST(APPEND CUDA_NVCC_FLAGS -gencode arch=compute_60,code=sm_60)
+	SET(CUDA_PROPAGATE_HOST_FLAGS OFF)
+
+	CUDA_ADD_LIBRARY(caffe STATIC ${CAFFE_SRC_LIST})
+ELSE()
+	ADD_LIBRARY(caffe STATIC ${CAFFE_SRC_LIST})
+ENDIF()
 
 # find opencv library
 FIND_LIBRARY(opencv_core NAMES opencv_core PATHS ${PATH_OPENCV}/lib NO_DEFAULT_PATH)
@@ -65,7 +134,11 @@ MESSAGE(STATUS "opencv libraries: ${opencv_core} ${opencv_imgproc} ${opencv_high
 # find dep library
 SET(DEP_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/build CACHE PATH "dep library path")
 MESSAGE(STATUS "dep library dir: ${DEP_LIB_DIR}")
-LINK_DIRECTORIES(${DEP_LIB_DIR})
+IF(BUILD_GPU)
+	LINK_DIRECTORIES(${DEP_LIB_DIR} /usr/local/cuda-8.0/lib64)
+ELSE()
+	LINK_DIRECTORIES(${DEP_LIB_DIR})
+ENDIF()
 
 # find boost
 #FIND_PACKAGE(Boost REQUIRED)
@@ -80,10 +153,9 @@ FILE(GLOB_RECURSE TEST_CPP_LIST ${PATH_TEST_FILES}/*.cpp)
 FILE(GLOB_RECURSE TEST_CC_LIST ${PATH_TEST_FILES}/*.cc)
 #MESSAGE(STATUS "test cpp list: ${TEST_CPP_LIST} ${TEST_C_LIST}")
 
-# build executable program
-ADD_EXECUTABLE(ThirdPartyLibrary_Test ${TEST_CPP_LIST} ${TEST_CC_LIST})
-# add dependent library: static and dynamic
-TARGET_LINK_LIBRARIES(ThirdPartyLibrary_Test
+SET(DEP_LIBS )
+LIST(APPEND DEP_LIBS
+	caffe
 	${DEP_LIB_DIR}/libgflags.a
 	${DEP_LIB_DIR}/libglog.a
 	${DEP_LIB_DIR}/libhdf5-static.a
@@ -111,4 +183,16 @@ TARGET_LINK_LIBRARIES(ThirdPartyLibrary_Test
 	dl # hdf5: undefined reference to dlopen
 	pthread
 )
+
+IF(BUILD_GPU)
+	LIST(APPEND DEP_LIBS
+		cublas
+		curand
+	)
+ENDIF()
+
+# build executable program
+ADD_EXECUTABLE(Caffe_Test ${TEST_CPP_LIST} ${TEST_CC_LIST})
+# add dependent library: static and dynamic
+TARGET_LINK_LIBRARIES(Caffe_Test ${DEP_LIBS})
 

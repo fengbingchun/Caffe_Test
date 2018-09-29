@@ -10,7 +10,11 @@ int cifar10_train()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/cifar10_quick_solver.prototxt" };
+#else
+	const std::string filename{ "test_data/model/cifar10/cifar10_quick_solver_linux.prototxt" };
+#endif
 	caffe::SolverParameter solver_param;
 	if (!caffe::ReadProtoFromTextFile(filename.c_str(), &solver_param)) {
 		fprintf(stderr, "parse solver.prototxt fail\n");
@@ -39,10 +43,17 @@ int cifar10_predict()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/cifar10_quick_train_test_.prototxt" };
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/cifar10_quick_iter_4000.caffemodel.h5" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/object_recognition/" };
 	const std::string mean_file{"E:/GitCode/Caffe_Test/test_data/model/cifar10/mean.binaryproto"};
+#else
+	const std::string param_file{ "test_data/model/cifar10/cifar10_quick_train_test_.prototxt" };
+	const std::string trained_filename{ "test_data/model/cifar10/cifar10_quick_iter_4000.caffemodel.h5" };
+	const std::string image_path{ "test_data/images/object_recognition/" };
+	const std::string mean_file{"test_data/model/cifar10/mean.binaryproto"};
+#endif
 
 	caffe::Net<float> caffe_net(param_file, caffe::TEST);
 	caffe_net.CopyTrainedLayersFromHDF5(trained_filename);
@@ -222,10 +233,16 @@ int cifar10_convert()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/71540852
 	// reference: ./examples/cifar10/convert_CIFAR10_data.cpp
+	//FLAGS_minloglevel = 2; // Fix: WARNING: Logging before InitGoogleLogging() is written to STDERR
 	const std::vector<std::string> argv{
 		"*.exe",
+#ifdef _MSC_VER
 		"E:/GitCode/Caffe_Test/test_data/cifar10",
 		"E:/GitCode/Caffe_Test/test_data/cifar10",
+#else
+		"test_data/cifar10",
+		"test_data/cifar10",
+#endif
 		"lmdb" };
 
 	convert_dataset(argv[1], argv[2], argv[3]);

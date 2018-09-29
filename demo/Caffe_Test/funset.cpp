@@ -6,7 +6,11 @@
 
 int image_joint()
 {
+#ifdef _MSC_VER
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/object_recognition/" };
+#else
+	const std::string image_path{ "test_data/images/object_recognition/" };
+#endif
 	const int width{ 160 }, height{ 160 };
 
 	cv::Mat matDst(height * 2, width * 5, CV_8UC3);
@@ -132,9 +136,14 @@ int cifar10_compute_image_mean()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/72416951
 	const std::string db_type{ "lmdb" };
-	const std::string db_path{ "E:/GitCode/Caffe_Test/test_data/cifar10/cifar10_train_lmdb" };
 	std::vector<float> image_mean;
+#ifdef _MSC_VER
+	const std::string db_path{ "E:/GitCode/Caffe_Test/test_data/cifar10/cifar10_train_lmdb" };
 	std::string binaryproto{ "E:/GitCode/Caffe_Test/test_data/model/cifar10/mean.binaryproto" };
+#else
+	const std::string db_path{ "test_data/cifar10/cifar10_train_lmdb" };
+	std::string binaryproto{ "test_data/model/cifar10/mean.binaryproto" };
+#endif
 	if (campute_image_mean(db_type, db_path, image_mean, binaryproto) != 0) {
 		fprintf(stderr, "compute image mean fail\n");
 		return -1;
@@ -158,7 +167,11 @@ int test_caffe_solver()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+#else
+	const std::string solver_prototxt{ "test_data/model/mnist/lenet_solver_linux.prototxt" };
+#endif
 
 	caffe::SolverParameter solver_param;
 	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
@@ -178,10 +191,10 @@ int test_caffe_solver()
 			fprintf(stderr, "net param name: %s\n", net_param.name().c_str());
 	}
 	if (param.has_train_net())
-		fprintf(stderr, "train_net: %s\n", param.train_net());
+		fprintf(stderr, "train_net: %s\n", param.train_net().c_str());
 	if (param.test_net().size() > 0) {
 		for (auto test_net : param.test_net())
-			fprintf(stderr, "test_net: %s\n", test_net);
+			fprintf(stderr, "test_net: %s\n", test_net.c_str());
 	}
 	if (param.has_train_net_param()) {
 		fprintf(stderr, "has train net param\n");
@@ -297,7 +310,11 @@ int test_caffe_net2()
 #endif
 
 	// reference: caffe/src/caffe/test/test_net.cpp
+#ifdef _MSC_VER
 	std::string prototxt{ "E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt" };
+#else
+	std::string prototxt{ "test_data/model/test_net_8.prototxt" };
+#endif
 	caffe::Phase phase = caffe::Phase::TRAIN;
 
 	// 1. Net(const string& param_file, Phase phase)
@@ -413,7 +430,11 @@ int test_caffe_net1()
 #endif
 
 	// reference: caffe/src/caffe/test/test_net.cpp
+#ifdef _MSC_VER
 	std::string prototxt{"E:/GitCode/Caffe_Test/test_data/model/test_net_8.prototxt"}; // 1~8
+#else
+	std::string prototxt{"test_data/model/test_net_8.prototxt"}; // 1~8
+#endif
 	caffe::NetParameter param;
 	caffe::ReadNetParamsFromTextFileOrDie(prototxt, &param);
 
@@ -536,7 +557,7 @@ int test_caffe_net1()
 	// 17. const vector<float>& params_weight_decay()
 	std::vector<float> params_weight_decay = net->params_weight_decay();
 	fprintf(stderr, "print weight decay info: size: %d\n", params_weight_decay.size());
-	for (auto value : params) {
+	for (auto value : params_weight_decay) {
 		fprintf(stderr, "weight decay: %f\n", value);
 	}
 
@@ -635,7 +656,11 @@ int test_caffe_net1()
 	net->set_debug_info(true);
 
 	// 32. void ToHDF5(const string& filename, bool write_diff = false)
+#ifdef _MSC_VER
 	// std::string hdf5_name{"E:/GitCode/Caffe_Test/test_data/hdf5.h5"};
+#else
+	// std::string hdf5_name{"test_data/hdf5.h5"};
+#endif
 	// net->ToHDF5(hdf5_name, false); // Note: some .prototxt will crash
 
 	// 33. void ToProto(NetParameter* param, bool write_diff = false)
@@ -660,7 +685,11 @@ int test_caffe_layer_pooling()
 	layer_param.set_phase(caffe::Phase::TRAIN);
 
 	// cv::Mat -> caffe::Blob
+#ifdef _MSC_VER
 	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
+#else
+	std::string image_name = "test_data/images/a.jpg";
+#endif
 	cv::Mat mat1 = cv::imread(image_name, 1);
 	if (!mat1.data) {
 		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
@@ -690,7 +719,7 @@ int test_caffe_layer_pooling()
 		pooling_param->set_stride(2);
 		pooling_param->set_global_pooling(false);
 
-		std::vector<caffe::Blob<float>*> bottom_blob{ &blob }, top_blob{ &caffe::Blob<float>()/*, &caffe::Blob<float>() */ };
+		std::vector<caffe::Blob<float>*> bottom_blob{ &blob }, top_blob;
 
 		// test PoolingLayer function
 		caffe::PoolingLayer<float> pooling_layer(layer_param);
@@ -711,8 +740,13 @@ int test_caffe_layer_pooling()
 		cv::Mat mat4;
 		cv::merge(mat3, mat4);
 		mat4.convertTo(mat4, CV_8UC3);
+#ifdef _MSC_VER
 		if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/forward0.jpg";
 		else image_name = "E:/GitCode/Caffe_Test/test_data/images/forward1.jpg";
+#else
+		if (method == 0) image_name = "test_data/images/forward0.jpg";
+		else image_name = "test_data/images/forward1.jpg";
+#endif
 		cv::imwrite(image_name, mat4);
 
 		for (int i = 0; i < bottom_blob[0]->count(); ++i)
@@ -733,8 +767,13 @@ int test_caffe_layer_pooling()
 		cv::Mat mat6;
 		cv::merge(mat5, mat6);
 		mat6.convertTo(mat6, CV_8UC3);
+#ifdef _MSC_VER
 		if (method == 0) image_name = "E:/GitCode/Caffe_Test/test_data/images/backward0.jpg";
 		else image_name = "E:/GitCode/Caffe_Test/test_data/images/backward1.jpg";
+#else
+		if (method == 0) image_name = "test_data/images/backward0.jpg";
+		else image_name = "test_data/images/backward1.jpg";
+#endif
 		cv::imwrite(image_name, mat6);
 	}
 
@@ -859,7 +898,12 @@ int test_caffe_util_io()
 #else
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
+
+#ifdef _MSC_VER 
 	std::string filename{ "E:/GitCode/Caffe_Test/test_data/images/a.jpg" };
+#else
+	std::string filename{ "test_data/images/a.jpg" };
+#endif
 
 	// 1. caffe::ReadImageToDatum
 	caffe::Datum datum1;
@@ -920,7 +964,11 @@ int test_caffe_util_io()
 	// if (CompareDatumMat(cv_img8, cv_img_ref) != 0) return -1; // Note: some values are not equal
 
 	// 9. read prototxt and parse
+#ifdef _MSC_VER
 	std::string solver_prototxt{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+#else
+	std::string solver_prototxt{ "test_data/model/mnist/lenet_solver_linux.prototxt" };
+#endif
 
 	caffe::SolverParameter solver_param;
 	if (!caffe::ReadProtoFromTextFile(solver_prototxt.c_str(), &solver_param)) {
@@ -929,7 +977,11 @@ int test_caffe_util_io()
 	}
 
 	// 10. write prototxt to text file
+#ifdef _MSC_VER
 	std::string save_prototxt{ "E:/GitCode/Caffe_Test/test_data/test.prototxt" };
+#else
+	std::string save_prototxt{ "test_data/test.prototxt" };
+#endif
 	caffe::WriteProtoToTextFile(solver_param, save_prototxt);
 
 	// 11. make temp dir/filename
@@ -1036,7 +1088,11 @@ int test_caffe_blob()
 	// 注：以上进行的所有操作均不会申请分配任何内存
 
 	// cv::Mat -> Blob
+#ifdef _MSC_VER
 	std::string image_name = "E:/GitCode/Caffe_Test/test_data/images/a.jpg";
+#else
+	std::string image_name = "test_data/images/a.jpg";
+#endif
 	cv::Mat mat = cv::imread(image_name, 1);
 	if (!mat.data) {
 		fprintf(stderr, "read image fail: %s\n", image_name.c_str());
@@ -1062,7 +1118,11 @@ int test_caffe_blob()
 
 	cv::Mat mat3;
 	mat2.convertTo(mat3, CV_8UC3);
+#ifdef _MSC_VER
 	image_name = "E:/GitCode/Caffe_Test/test_data/images/a_ret.jpg";
+#else
+	image_name = "test_data/images/a_ret.jpg";
+#endif
 	cv::imwrite(image_name, mat3);
 
 	return 0;
@@ -1400,18 +1460,26 @@ int test_caffe_common()
 	char** argv = nullptr;
 	argv = new char*[2];
 #ifdef CPU_ONLY
+#ifdef _MSC_VER
 #ifdef _DEBUG
 	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_Test.exe";
 #else
 	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_Test.exe";
-#endif
+#endif // _DEBUG
 #else
+	argv[0] = "/Caffe_Test.exe";
+#endif // _MSC_VER
+#else
+#ifdef _MSC_VER
 #ifdef _DEBUG
 	argv[0] = "E:/GitCode/Caffe_Test/lib/dbg/x64_vc12/Caffe_GPU_Test.exe";
 #else
 	argv[0] = "E:/GitCode/Caffe_Test/lib/rel/x64_vc12/Caffe_GPU_Test.exe";
-#endif
-#endif
+#endif // _DEBUG
+#else
+	argv[0] = "Caffe_Test";
+#endif // _MSC_VER
+#endif // CPU_ONLY
 	argv[1] = "caffe_test";
 
 	caffe::GlobalInit(&argc, &argv);

@@ -1,4 +1,5 @@
 #include "funset.hpp"
+#include <stdio.h>
 #include <memory>
 #include <fstream>
 #include <tuple>
@@ -13,10 +14,17 @@ int mnist_tensorrt_predict()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string deploy_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/mnist_tensorrt.prototxt" };
 	const std::string model_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/mnist_tensorrt.caffemodel" };
 	const std::string mean_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/mnist_tensorrt_mean.binary" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/handwritten_digits/" };
+#else
+	const std::string deploy_file{ "test_data/model/mnist/mnist_tensorrt.prototxt" };
+	const std::string model_filename{ "test_data/model/mnist/mnist_tensorrt.caffemodel" };
+	const std::string mean_file{ "test_data/model/mnist/mnist_tensorrt_mean.binary" };
+	const std::string image_path{ "test_data/images/handwritten_digits/" };
+#endif
 
 	caffe::Net<float> caffe_net(deploy_file, caffe::TEST);
 	caffe_net.CopyTrainedLayersFrom(model_filename);
@@ -113,13 +121,18 @@ int mnist_train()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/49849225
 	//       http://blog.csdn.net/fengbingchun/article/details/68065338
+	
 #ifdef CPU_ONLY
 	caffe::Caffe::set_mode(caffe::Caffe::CPU);
 #else
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_solver.prototxt" };
+#else
+	const std::string filename{ "test_data/model/mnist/lenet_solver_linux.prototxt" };
+#endif
 	caffe::SolverParameter solver_param;
 	if (!caffe::ReadProtoFromTextFile(filename.c_str(), &solver_param)) {
 		fprintf(stderr, "parse solver.prototxt fail\n");
@@ -145,9 +158,15 @@ int mnist_predict()
 	caffe::Caffe::set_mode(caffe::Caffe::GPU);
 #endif
 
+#ifdef _MSC_VER
 	const std::string param_file{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_train_test_.prototxt" };
 	const std::string trained_filename{ "E:/GitCode/Caffe_Test/test_data/model/mnist/lenet_iter_10000.caffemodel" };
 	const std::string image_path{ "E:/GitCode/Caffe_Test/test_data/images/handwritten_digits/" };
+#else
+	const std::string param_file{ "test_data/model/mnist/lenet_train_test_.prototxt" };
+	const std::string trained_filename{ "test_data/model/mnist/lenet_iter_10000.caffemodel" };
+	const std::string image_path{ "test_data/images/handwritten_digits/" };
+#endif
 
 	// 有两种方法可以实例化net
 	// 1. 通过传入参数类型为std::string
@@ -302,14 +321,7 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 	else if (db_backend == "lmdb") {  // lmdb
 		int rc;
 		LOG(INFO) << "Opening lmdb " << db_path;
-		// 创建指定的存放目录
-		//CHECK_EQ(mkdir(db_path, 0744), 0)
-		std::string strPath = std::string(db_path);
-		std::string delPath = "rmdir /s/q " + strPath;
-		system(delPath.c_str());
-		strPath = "mkdir " + strPath;
-		system(strPath.c_str());
-		//CHECK_EQ(system(strPath.c_str()), 0) << "mkdir " << db_path << "failed";
+		boost::filesystem::create_directory(db_path);
 
 		// 创建lmdb数据库
 		CHECK_EQ(mdb_env_create(&mdb_env), MDB_SUCCESS) << "mdb_env_create failed";
@@ -343,8 +355,11 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 		label_file.read(&label, 1);
 		datum.set_data(pixels, rows*cols);
 		datum.set_label(label);
-		//snprintf(key_cstr, kMaxKeyLength, "%08d", item_id);
+#ifdef __linux__
+		int ret = snprintf(key_cstr, kMaxKeyLength, "%08d", item_id);
+#else
 		int ret = _snprintf(key_cstr, kMaxKeyLength, "%08d", item_id);
+#endif
 		if (ret == kMaxKeyLength || ret < 0) {
 			printf("warning ");
 			key_cstr[kMaxKeyLength - 1] = 0;
@@ -407,14 +422,27 @@ static void convert_dataset(const char* image_filename, const char* label_filena
 int mnist_convert()
 {
 	// Blog: http://blog.csdn.net/fengbingchun/article/details/49794453
-	//mnist test images
+	//mnist test images	
+	//FLAGS_minloglevel = 2; // Fix: WARNING: Logging before InitGoogleLogging() is written to STDERR
+#ifdef _MSC_VER
 	const std::string argv_test[] {"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-images.idx3-ubyte",
 		"E:/GitCode/Caffe_Test/test_data/MNIST/t10k-labels.idx1-ubyte",
 		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\test"};
+#else
+	const std::string argv_test[] {"test_data/MNIST/t10k-images.idx3-ubyte",
+		"test_data/MNIST/t10k-labels.idx1-ubyte",
+		"test_data/MNIST/test"};
+#endif
 	//mnist train images
+#ifdef _MSC_VER
 	const std::string argv_train[] { "E:/GitCode/Caffe_Test/test_data/MNIST/train-images.idx3-ubyte",
 		"E:/GitCode/Caffe_Test/test_data/MNIST/train-labels.idx1-ubyte",
 		"E:\\GitCode\\Caffe_Test\\test_data\\MNIST\\train" };
+#else
+	const std::string argv_train[] { "test_data/MNIST/train-images.idx3-ubyte",
+		"test_data/MNIST/train-labels.idx1-ubyte",
+		"test_data/MNIST/train" };
+#endif
 
 	convert_dataset(argv_train[0].c_str(), argv_train[1].c_str(), argv_train[2].c_str(), "lmdb");
 	convert_dataset(argv_test[0].c_str(), argv_test[1].c_str(), argv_test[2].c_str(), "lmdb");

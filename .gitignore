@@ -15,4 +15,6 @@
 /src/protobuf/src/google/protobuf/
 /src/openblas/
 /src/snappy/
+/prj/linux_cmake_Caffe_Test/build/
+/prj/linux_cmake_Caffe_Test/test_data
 
