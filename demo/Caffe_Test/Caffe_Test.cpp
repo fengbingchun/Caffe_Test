@@ -3,7 +3,7 @@
 
 int main()
 {
-	int ret = get_layer_type_list();
+	int ret = cifar10_predict();
 
 	if (0 == ret) fprintf(stdout, "========== test success ==========\n");
 	else fprintf(stderr, "########## test fail ##########\n");

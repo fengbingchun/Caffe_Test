@@ -718,8 +718,9 @@ int test_caffe_layer_pooling()
 		pooling_param->set_pad(2);
 		pooling_param->set_stride(2);
 		pooling_param->set_global_pooling(false);
-
-		std::vector<caffe::Blob<float>*> bottom_blob{ &blob }, top_blob;
+		
+		caffe::Blob<float> tmp;
+		std::vector<caffe::Blob<float>*> bottom_blob{ &blob }, top_blob{&tmp};
 
 		// test PoolingLayer function
 		caffe::PoolingLayer<float> pooling_layer(layer_param);

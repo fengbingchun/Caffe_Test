@@ -34,7 +34,7 @@ new_dir_name=${dir_name}/build
 mkdir -p ${new_dir_name}
 cd ${new_dir_name}
 echo "pos: ${new_dir_name}"
-<<COMMENT # multi-line comment
+#<<COMMENT # multi-line comment
 if [ "$(ls -A ${new_dir_name})" ]; then
 	echo "directory is not empty: ${new_dir_name}"
 	rm -r *
@@ -139,7 +139,7 @@ if [[ ${rc} != 0 ]]; then
 	echo "##### Error: some of thess commands have errors above, please check"
 	exit ${rc}
 fi
-COMMENT
+#COMMENT
 cd -
 cd ${new_dir_name}
 cmake -DBUILD_GPU=${GPU_MODE} ..

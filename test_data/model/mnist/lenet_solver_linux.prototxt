@@ -1,7 +1,7 @@
 # The train/test net protocol buffer definition
 # Proto filename for the train net, possibly combined with one or more test nets.
 # train net 和 test net在同一个文件中
-net: "test_data/model/mnist/lenet_train_test.prototxt"
+net: "test_data/model/mnist/lenet_train_test_linux.prototxt"
 # test_iter specifies how many forward passes the test should carry out.
 # In the case of MNIST, we have test batch size 100 and 100 test iterations,
 # covering the full 10,000 testing images.

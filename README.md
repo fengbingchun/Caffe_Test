@@ -35,6 +35,9 @@
 	- if you have already installed and configured cuda8.0 in your PC, then you can build libcaffe_gpu too.
 - Linux
 	- ThirdPartyLibrary_Test support cmake build(file position: prj/linux_cmake_ThirdPartyLibrary_Test)
+	- Caffe_Test support cmake build(file position: prj/linux_cmake_Caffe_Test)
+		- build cpu mode: build.sh 0
+		- build gpu mode: build.sh 1
 
 **Windows VS Screenshot:**  
 ![](https://github.com/fengbingchun/Caffe_Test/blob/master/prj/x86_x64_vc12/Screenshot.png)
