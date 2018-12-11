@@ -1,5 +1,5 @@
 # Caffe_Test
-**The main role of the project: Caffe's usage**
+**The main role of the project: Caffe's usage**  
 **Note: Clone this repository to E:/GitCode/ in windows**
 - Caffe's third library usage: Boost、GFlags、GLog、LevelDB、LMDB、ProtoBuf、HDF5、OpenBLAS、Snappy
 	- Boost version: 1.58.0
