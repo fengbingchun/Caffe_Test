@@ -1,0 +1,17 @@
+# solver.prototxt是一个配置文件用来告知Caffe怎样对网络进行训练
+# 其文件内的各字段名需要在caffe.proto的message SolverParameter中存在，否则会解析不成功
+
+net: "test_data/Net/lenet-5_mnist_linux_train.prototxt" # 训练网络文件名
+test_iter: 100 # test_iter * test_batch_size = 测试图像总数量
+test_interval: 500 # 指定执行多少次训练网络执行一次测试网络
+base_lr: 0.01 # 学习率
+lr_policy: "inv" # 学习策略, return base_lr * (1 + gamma * iter) ^ (- power)
+momentum: 0.9 # 动量
+weight_decay: 0.0005 # 权值衰减
+gamma: 0.0001 # 学习率计算参数
+power: 0.75 # 学习率计算参数
+display: 100 # 指定训练多少次在屏幕上显示一次结果信息，如loss值等
+max_iter: 10000 # 最多训练次数
+snapshot: 5000 # 执行多少次训练保存一次中间结果
+snapshot_prefix: "test_data/Net/lenet-5_mnist" # 结果保存位置前缀
+solver_type: SGD # 随机梯度下降

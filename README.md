@@ -17,15 +17,17 @@
 - compute image mean
 - cifar10 train and predict
 - Caffe main header files's usage, include:
-    - caffe/common.hpp
-    - caffe/util/mkl_alternate.hpp
-    - caffe/util/math_functions.hpp
+	- caffe/common.hpp
+	- caffe/util/mkl_alternate.hpp
+	- caffe/util/math_functions.hpp
 	- caffe/syncedmem.hpp
 	- caffe/blob.hpp
 	- caffe/util/io.hpp
 	- caffe/layers/pooling_layer.hpp
 	- caffe/net.hpp
 	- caffe/solver.hpp
+- Classic Networks test code:
+	- LeNet-5
 
 **The project support platform:**
 - windows7/10 64 bits: It can be directly build with VS2013 in windows7/10 64bits, compile step:
