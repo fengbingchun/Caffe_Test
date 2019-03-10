@@ -1,6 +1,8 @@
 #include "funset.hpp"
 #include "common.hpp"
 
+// Blog: https://blog.csdn.net/fengbingchun/article/details/88379067
+
 int lenet_5_mnist_train()
 {	
 #ifdef CPU_ONLY
@@ -25,7 +27,7 @@ int lenet_5_mnist_train()
 	caffe::SGDSolver<float> solver(solver_param);
 	solver.Solve();
 
-	fprintf(stderr, "train finish\n");
+	fprintf(stdout, "train finish\n");
 
 	return 0;
 }
@@ -115,9 +117,9 @@ int lenet_5_mnist_test()
 	}
 
 	for (auto i = 0; i < 10; i++)
-		fprintf(stderr, "actual digit is: %d, result digit is: %d\n", target[i], result[i]);
+		fprintf(stdout, "actual digit is: %d, result digit is: %d\n", target[i], result[i]);
 
-	fprintf(stderr, "predict finish\n");
+	fprintf(stdout, "predict finish\n");
 	return 0;
 }
 
