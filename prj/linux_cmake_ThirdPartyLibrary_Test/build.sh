@@ -1,7 +1,9 @@
 #! /bin/bash
 
-echo "Warning: install boost: $ sudo apt-get install libboost-all-dev"
-echo "Warning: install openblas: $ sudo apt-get install libopenblas-dev"
+echo "################################################################"
+echo "install boost openblas automake lmdb on ubuntu:"
+echo "$ sudo apt-get install libboost-all-dev libopenblas-dev automake liblmdb-dev"
+echo "################################################################"
 
 real_path=$(realpath $0)
 dir_name=`dirname "${real_path}"`

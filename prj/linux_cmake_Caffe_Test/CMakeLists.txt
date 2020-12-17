@@ -57,6 +57,8 @@ INCLUDE_DIRECTORIES(
 	${PATH_SRC_GFLAGS_FILES}/build/include
 	${PATH_SRC_GLOG_FILES}/build
 	${PATH_SRC_HDF5_FILES}/src
+	${PATH_SRC_HDF5_FILES}/build
+	${PATH_SRC_HDF5_FILES}/hl/src
 	${PATH_SRC_LEVELDB_FILES}/include
 	#${PATH_SRC_LMDB_FILES} # if include this directory, will have many boost errors, so make system lmdb.h file 
 	${PATH_SRC_PROTOBUF_FILES}/src

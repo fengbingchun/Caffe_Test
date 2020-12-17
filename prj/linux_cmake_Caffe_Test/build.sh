@@ -1,5 +1,10 @@
 #! /bin/bash
 
+echo "################################################################"
+echo "install boost openblas automake lmdb on ubuntu:"
+echo "$ sudo apt-get install libboost-all-dev libopenblas-dev automake liblmdb-dev"
+echo "################################################################"
+
 if [ $# != 1 ]; then
 	echo "usage: $0 param"
 	echo "if build cpu, then execute: $0 0"
@@ -15,9 +20,6 @@ else
 	echo "########## build cpu ##########"
 	GPU_MODE=OFF
 fi
-
-echo "Warning: install boost: $ sudo apt-get install libboost-all-dev"
-echo "Warning: install openblas: $ sudo apt-get install libopenblas-dev"
 
 real_path=$(realpath $0)
 dir_name=`dirname "${real_path}"`
@@ -50,6 +52,7 @@ mkdir -p ${glog_path}/build
 cd ${glog_path}/build
 cmake ..
 make
+cp ${glog_path}/src/glog/log_severity.h ${glog_path}/build/glog
 ln -s ${glog_path}/build/libglog.a ${new_dir_name}
 echo "############## finish build glog"
 
