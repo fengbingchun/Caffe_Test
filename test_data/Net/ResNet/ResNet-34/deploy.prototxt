@@ -1,46 +1,9 @@
-name: "ResNet-50-train"
-layer {
-    name: "data"
-    type: "Data"
-    top: "data"
-    top: "label"
-    include {
-        phase: TRAIN
-    }
-    transform_param {
-        mirror: true
-        crop_size: 224
-        mean_value: 104
-        mean_value: 117
-        mean_value: 123
-    }
-    data_param {
-        source: "../ilsvrc2012/ilsvrc2012_train"
-        batch_size: 32
-        backend: LMDB
-    }
-}
-layer {
-    name: "data"
-    type: "Data"
-    top: "data"
-    top: "label"
-    include {
-        phase: TEST
-    }
-    transform_param {
-        mirror: false
-        crop_size: 224
-        mean_value: 104
-        mean_value: 117
-        mean_value: 123
-    }
-    data_param {
-        source: "../ilsvrc2012/ilsvrc2012_val"
-        batch_size: 1
-        backend: LMDB
-    }
-}
+name: "ResNet-34-deploy"
+input: "data"
+input_dim: 1
+input_dim: 3
+input_dim: 224
+input_dim: 224
 
 layer {
     bottom: "data"
@@ -52,10 +15,6 @@ layer {
         kernel_size: 7
         pad: 3
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: true
     }
 }
 
@@ -65,7 +24,7 @@ layer {
     name: "bn_conv1"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -104,13 +63,10 @@ layer {
     name: "res2a_branch1"
     type: "Convolution"
     convolution_param {
-        num_output: 256
+        num_output: 64
         kernel_size: 1
         pad: 0
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -122,7 +78,7 @@ layer {
     name: "bn2a_branch1"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -143,12 +99,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 64
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -160,7 +113,7 @@ layer {
     name: "bn2a_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -191,9 +144,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -205,7 +155,7 @@ layer {
     name: "bn2a_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -220,59 +170,11 @@ layer {
 }
 
 layer {
-    bottom: "res2a_branch2b"
-    top: "res2a_branch2b"
-    name: "res2a_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res2a_branch2b"
-    top: "res2a_branch2c"
-    name: "res2a_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 256
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res2a_branch2c"
-    top: "res2a_branch2c"
-    name: "bn2a_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res2a_branch2c"
-    top: "res2a_branch2c"
-    name: "scale2a_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res2a_branch1"
-    bottom: "res2a_branch2c"
+    bottom: "res2a_branch2b"
     top: "res2a"
     name: "res2a"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -289,12 +191,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 64
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -306,7 +205,7 @@ layer {
     name: "bn2b_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -337,9 +236,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -351,7 +247,7 @@ layer {
     name: "bn2b_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -366,59 +262,11 @@ layer {
 }
 
 layer {
-    bottom: "res2b_branch2b"
-    top: "res2b_branch2b"
-    name: "res2b_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res2b_branch2b"
-    top: "res2b_branch2c"
-    name: "res2b_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 256
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res2b_branch2c"
-    top: "res2b_branch2c"
-    name: "bn2b_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res2b_branch2c"
-    top: "res2b_branch2c"
-    name: "scale2b_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res2a"
-    bottom: "res2b_branch2c"
+    bottom: "res2b_branch2b"
     top: "res2b"
     name: "res2b"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -435,12 +283,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 64
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -452,7 +297,7 @@ layer {
     name: "bn2c_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -483,9 +328,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -497,7 +339,7 @@ layer {
     name: "bn2c_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -512,59 +354,11 @@ layer {
 }
 
 layer {
-    bottom: "res2c_branch2b"
-    top: "res2c_branch2b"
-    name: "res2c_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res2c_branch2b"
-    top: "res2c_branch2c"
-    name: "res2c_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 256
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res2c_branch2c"
-    top: "res2c_branch2c"
-    name: "bn2c_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res2c_branch2c"
-    top: "res2c_branch2c"
-    name: "scale2c_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res2b"
-    bottom: "res2c_branch2c"
+    bottom: "res2c_branch2b"
     top: "res2c"
     name: "res2c"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -580,13 +374,10 @@ layer {
     name: "res3a_branch1"
     type: "Convolution"
     convolution_param {
-        num_output: 512
+        num_output: 128
         kernel_size: 1
         pad: 0
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -598,7 +389,7 @@ layer {
     name: "bn3a_branch1"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -619,12 +410,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 128
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -636,7 +424,7 @@ layer {
     name: "bn3a_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -667,9 +455,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -681,7 +466,7 @@ layer {
     name: "bn3a_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -696,59 +481,11 @@ layer {
 }
 
 layer {
-    bottom: "res3a_branch2b"
-    top: "res3a_branch2b"
-    name: "res3a_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res3a_branch2b"
-    top: "res3a_branch2c"
-    name: "res3a_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 512
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res3a_branch2c"
-    top: "res3a_branch2c"
-    name: "bn3a_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res3a_branch2c"
-    top: "res3a_branch2c"
-    name: "scale3a_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res3a_branch1"
-    bottom: "res3a_branch2c"
+    bottom: "res3a_branch2b"
     top: "res3a"
     name: "res3a"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -765,12 +502,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 128
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -782,7 +516,7 @@ layer {
     name: "bn3b_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -813,9 +547,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -827,7 +558,7 @@ layer {
     name: "bn3b_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -842,59 +573,11 @@ layer {
 }
 
 layer {
-    bottom: "res3b_branch2b"
-    top: "res3b_branch2b"
-    name: "res3b_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res3b_branch2b"
-    top: "res3b_branch2c"
-    name: "res3b_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 512
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res3b_branch2c"
-    top: "res3b_branch2c"
-    name: "bn3b_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res3b_branch2c"
-    top: "res3b_branch2c"
-    name: "scale3b_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res3a"
-    bottom: "res3b_branch2c"
+    bottom: "res3b_branch2b"
     top: "res3b"
     name: "res3b"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -911,12 +594,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 128
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -928,7 +608,7 @@ layer {
     name: "bn3c_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -959,9 +639,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -973,7 +650,7 @@ layer {
     name: "bn3c_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -988,59 +665,11 @@ layer {
 }
 
 layer {
-    bottom: "res3c_branch2b"
-    top: "res3c_branch2b"
-    name: "res3c_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res3c_branch2b"
-    top: "res3c_branch2c"
-    name: "res3c_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 512
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res3c_branch2c"
-    top: "res3c_branch2c"
-    name: "bn3c_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res3c_branch2c"
-    top: "res3c_branch2c"
-    name: "scale3c_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res3b"
-    bottom: "res3c_branch2c"
+    bottom: "res3c_branch2b"
     top: "res3c"
     name: "res3c"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1057,12 +686,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 128
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1074,7 +700,7 @@ layer {
     name: "bn3d_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1105,9 +731,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1119,7 +742,7 @@ layer {
     name: "bn3d_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1134,59 +757,11 @@ layer {
 }
 
 layer {
-    bottom: "res3d_branch2b"
-    top: "res3d_branch2b"
-    name: "res3d_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res3d_branch2b"
-    top: "res3d_branch2c"
-    name: "res3d_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 512
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res3d_branch2c"
-    top: "res3d_branch2c"
-    name: "bn3d_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res3d_branch2c"
-    top: "res3d_branch2c"
-    name: "scale3d_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res3c"
-    bottom: "res3d_branch2c"
+    bottom: "res3d_branch2b"
     top: "res3d"
     name: "res3d"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1202,13 +777,10 @@ layer {
     name: "res4a_branch1"
     type: "Convolution"
     convolution_param {
-        num_output: 1024
+        num_output: 256
         kernel_size: 1
         pad: 0
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1220,7 +792,7 @@ layer {
     name: "bn4a_branch1"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1241,12 +813,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1258,7 +827,7 @@ layer {
     name: "bn4a_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1289,9 +858,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1303,7 +869,7 @@ layer {
     name: "bn4a_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1318,59 +884,11 @@ layer {
 }
 
 layer {
-    bottom: "res4a_branch2b"
-    top: "res4a_branch2b"
-    name: "res4a_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4a_branch2b"
-    top: "res4a_branch2c"
-    name: "res4a_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4a_branch2c"
-    top: "res4a_branch2c"
-    name: "bn4a_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4a_branch2c"
-    top: "res4a_branch2c"
-    name: "scale4a_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4a_branch1"
-    bottom: "res4a_branch2c"
+    bottom: "res4a_branch2b"
     top: "res4a"
     name: "res4a"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1387,12 +905,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1404,7 +919,7 @@ layer {
     name: "bn4b_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1435,9 +950,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1449,7 +961,7 @@ layer {
     name: "bn4b_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1464,59 +976,12 @@ layer {
 }
 
 layer {
-    bottom: "res4b_branch2b"
-    top: "res4b_branch2b"
-    name: "res4b_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4b_branch2b"
-    top: "res4b_branch2c"
-    name: "res4b_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4b_branch2c"
-    top: "res4b_branch2c"
-    name: "bn4b_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4b_branch2c"
-    top: "res4b_branch2c"
-    name: "scale4b_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4a"
-    bottom: "res4b_branch2c"
+    bottom: "res4b_branch2b"
     top: "res4b"
     name: "res4b"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
+
 }
 
 layer {
@@ -1533,12 +998,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1550,7 +1012,7 @@ layer {
     name: "bn4c_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1581,9 +1043,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1595,7 +1054,7 @@ layer {
     name: "bn4c_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1610,59 +1069,11 @@ layer {
 }
 
 layer {
-    bottom: "res4c_branch2b"
-    top: "res4c_branch2b"
-    name: "res4c_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4c_branch2b"
-    top: "res4c_branch2c"
-    name: "res4c_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4c_branch2c"
-    top: "res4c_branch2c"
-    name: "bn4c_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4c_branch2c"
-    top: "res4c_branch2c"
-    name: "scale4c_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4b"
-    bottom: "res4c_branch2c"
+    bottom: "res4c_branch2b"
     top: "res4c"
     name: "res4c"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1679,12 +1090,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1696,7 +1104,7 @@ layer {
     name: "bn4d_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1727,9 +1135,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1741,7 +1146,7 @@ layer {
     name: "bn4d_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1756,59 +1161,11 @@ layer {
 }
 
 layer {
-    bottom: "res4d_branch2b"
-    top: "res4d_branch2b"
-    name: "res4d_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4d_branch2b"
-    top: "res4d_branch2c"
-    name: "res4d_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4d_branch2c"
-    top: "res4d_branch2c"
-    name: "bn4d_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4d_branch2c"
-    top: "res4d_branch2c"
-    name: "scale4d_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4c"
-    bottom: "res4d_branch2c"
+    bottom: "res4d_branch2b"
     top: "res4d"
     name: "res4d"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1825,12 +1182,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1842,7 +1196,7 @@ layer {
     name: "bn4e_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1873,9 +1227,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1887,7 +1238,7 @@ layer {
     name: "bn4e_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -1902,59 +1253,11 @@ layer {
 }
 
 layer {
-    bottom: "res4e_branch2b"
-    top: "res4e_branch2b"
-    name: "res4e_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4e_branch2b"
-    top: "res4e_branch2c"
-    name: "res4e_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4e_branch2c"
-    top: "res4e_branch2c"
-    name: "bn4e_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4e_branch2c"
-    top: "res4e_branch2c"
-    name: "scale4e_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4d"
-    bottom: "res4e_branch2c"
+    bottom: "res4e_branch2b"
     top: "res4e"
     name: "res4e"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -1971,12 +1274,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 256
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -1988,7 +1288,7 @@ layer {
     name: "bn4f_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2019,9 +1319,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2033,7 +1330,7 @@ layer {
     name: "bn4f_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2048,59 +1345,11 @@ layer {
 }
 
 layer {
-    bottom: "res4f_branch2b"
-    top: "res4f_branch2b"
-    name: "res4f_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res4f_branch2b"
-    top: "res4f_branch2c"
-    name: "res4f_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 1024
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res4f_branch2c"
-    top: "res4f_branch2c"
-    name: "bn4f_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res4f_branch2c"
-    top: "res4f_branch2c"
-    name: "scale4f_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res4e"
-    bottom: "res4f_branch2c"
+    bottom: "res4f_branch2b"
     top: "res4f"
     name: "res4f"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -2116,13 +1365,10 @@ layer {
     name: "res5a_branch1"
     type: "Convolution"
     convolution_param {
-        num_output: 2048
+        num_output: 512
         kernel_size: 1
         pad: 0
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2134,7 +1380,7 @@ layer {
     name: "bn5a_branch1"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2155,12 +1401,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 512
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 2
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2172,7 +1415,7 @@ layer {
     name: "bn5a_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2203,9 +1446,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2217,7 +1457,7 @@ layer {
     name: "bn5a_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2232,59 +1472,11 @@ layer {
 }
 
 layer {
-    bottom: "res5a_branch2b"
-    top: "res5a_branch2b"
-    name: "res5a_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res5a_branch2b"
-    top: "res5a_branch2c"
-    name: "res5a_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 2048
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res5a_branch2c"
-    top: "res5a_branch2c"
-    name: "bn5a_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res5a_branch2c"
-    top: "res5a_branch2c"
-    name: "scale5a_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res5a_branch1"
-    bottom: "res5a_branch2c"
+    bottom: "res5a_branch2b"
     top: "res5a"
     name: "res5a"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -2301,12 +1493,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 512
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2318,7 +1507,7 @@ layer {
     name: "bn5b_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2349,9 +1538,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2363,7 +1549,7 @@ layer {
     name: "bn5b_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2378,59 +1564,11 @@ layer {
 }
 
 layer {
-    bottom: "res5b_branch2b"
-    top: "res5b_branch2b"
-    name: "res5b_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res5b_branch2b"
-    top: "res5b_branch2c"
-    name: "res5b_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 2048
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res5b_branch2c"
-    top: "res5b_branch2c"
-    name: "bn5b_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res5b_branch2c"
-    top: "res5b_branch2c"
-    name: "scale5b_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res5a"
-    bottom: "res5b_branch2c"
+    bottom: "res5b_branch2b"
     top: "res5b"
     name: "res5b"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -2447,12 +1585,9 @@ layer {
     type: "Convolution"
     convolution_param {
         num_output: 512
-        kernel_size: 1
-        pad: 0
+        kernel_size: 3
+        pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2464,7 +1599,7 @@ layer {
     name: "bn5c_branch2a"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2495,9 +1630,6 @@ layer {
         kernel_size: 3
         pad: 1
         stride: 1
-        weight_filler {
-            type: "msra"
-        }
         bias_term: false
 
     }
@@ -2509,7 +1641,7 @@ layer {
     name: "bn5c_branch2b"
     type: "BatchNorm"
     batch_norm_param {
-        use_global_stats: false
+        use_global_stats: true
     }
 }
 
@@ -2524,59 +1656,11 @@ layer {
 }
 
 layer {
-    bottom: "res5c_branch2b"
-    top: "res5c_branch2b"
-    name: "res5c_branch2b_relu"
-    type: "ReLU"
-}
-
-layer {
-    bottom: "res5c_branch2b"
-    top: "res5c_branch2c"
-    name: "res5c_branch2c"
-    type: "Convolution"
-    convolution_param {
-        num_output: 2048
-        kernel_size: 1
-        pad: 0
-        stride: 1
-        weight_filler {
-            type: "msra"
-        }
-        bias_term: false
-
-    }
-}
-
-layer {
-    bottom: "res5c_branch2c"
-    top: "res5c_branch2c"
-    name: "bn5c_branch2c"
-    type: "BatchNorm"
-    batch_norm_param {
-        use_global_stats: false
-    }
-}
-
-layer {
-    bottom: "res5c_branch2c"
-    top: "res5c_branch2c"
-    name: "scale5c_branch2c"
-    type: "Scale"
-    scale_param {
-        bias_term: true
-    }
-}
-
-layer {
     bottom: "res5b"
-    bottom: "res5c_branch2c"
+    bottom: "res5c_branch2b"
     top: "res5c"
     name: "res5c"
     type: "Eltwise"
-    eltwise_param {
-        operation: SUM
-    }
 }
 
 layer {
@@ -2603,56 +1687,14 @@ layer {
     top: "fc1000"
     name: "fc1000"
     type: "InnerProduct"
-    param {
-        lr_mult: 1
-        decay_mult: 1
-    }
-    param {
-        lr_mult: 2
-        decay_mult: 1
-    }
     inner_product_param {
         num_output: 1000
-        weight_filler {
-            type: "xavier"
-        }
-        bias_filler {
-            type: "constant"
-            value: 0
-        }
     }
 }
 
 layer {
     bottom: "fc1000"
-    bottom: "label"
-    name: "loss"
-    type: "SoftmaxWithLoss"
-    top: "loss"
+    top: "prob"
+    name: "prob"
+    type: "Softmax"
 }
-
-layer {
-    bottom: "fc1000"
-    bottom: "label"
-    top: "acc/top-1"
-    name: "acc/top-1"
-    type: "Accuracy"
-    include {
-        phase: TEST
-    }
-}
-
-layer {
-    bottom: "fc1000"
-    bottom: "label"
-    top: "acc/top-5"
-    name: "acc/top-5"
-    type: "Accuracy"
-    include {
-        phase: TEST
-    }
-    accuracy_param {
-        top_k: 5
-    }
-}
-

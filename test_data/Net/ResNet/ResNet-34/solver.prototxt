@@ -1,4 +1,4 @@
-net: "ResNet-32/train.prototxt"
+net: "ResNet-34/train.prototxt"
 #test_iter: 6000
 #test_interval: 50000
 #test_initialization: true
@@ -12,5 +12,5 @@ max_iter: 800000
 momentum: 0.9
 weight_decay: 0.0001
 snapshot: 50000
-snapshot_prefix: "snapshot/resnet-32"
+snapshot_prefix: "snapshot/resnet-34"
 solver_mode: GPU
